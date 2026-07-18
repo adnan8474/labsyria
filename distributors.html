@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="assets/css/site.css"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://labsyria.com/#org","name":"LabSyria","alternateName":"لاب سوريا","url":"https://labsyria.com/","logo":"https://labsyria.com/assets/img/og.jpg","description":"IVD distribution and free Arabic lab-science academy for Syria.","parentOrganization":{"@type":"Organization","name":"POCTIFY LTD"},"areaServed":{"@type":"Country","name":"Syria"},"knowsAbout":["In vitro diagnostics","Point-of-care testing","Laboratory quality control","Clinical chemistry","Hematology","IVD distribution"],"email":"partners@labsyria.com"},{"@type":"WebSite","@id":"https://labsyria.com/#site","name":"LabSyria","url":"https://labsyria.com/","inLanguage":["ar","en"],"publisher":{"@id":"https://labsyria.com/#org"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","MedicalBusiness"],"@id":"https://labsyria.com/#org","name":"LabSyria","alternateName":"لاب سوريا","url":"https://labsyria.com/","logo":"https://labsyria.com/assets/img/og.jpg","image":"https://labsyria.com/assets/img/og.jpg","description":"IVD and point-of-care distribution and a free Arabic lab-science academy for Syria, serving laboratories since 1987.","foundingDate":"1987","parentOrganization":{"@type":"Organization","name":"POCTIFY LTD"},"telephone":"+963-11-2222797","email":"info@labsyria.com","address":{"@type":"PostalAddress","streetAddress":"108 Mussalam Baroodi Street","addressLocality":"Damascus","postOfficeBoxNumber":"11667","addressCountry":"SY"},"areaServed":{"@type":"Country","name":"Syria"},"knowsAbout":["In vitro diagnostics","Point-of-care testing","Laboratory quality control","Clinical chemistry","Hematology","Molecular diagnostics","IVD distribution"]},{"@type":"WebSite","@id":"https://labsyria.com/#site","name":"LabSyria","url":"https://labsyria.com/","inLanguage":["ar","en"],"publisher":{"@id":"https://labsyria.com/#org"}}]}</script>
 </head>
 <body>
 <a class="skip" href="#main"><span data-ar>تخطَّ إلى المحتوى</span><span data-en>Skip to content</span></a>
@@ -137,7 +137,7 @@
       <li><a href="news.html"><span data-ar>الأخبار</span><span data-en>News</span></a></li>
       <li><a href="academy.html"><span data-ar>الدورات</span><span data-en>Courses</span></a></li></ul></div>
     <div><h5><span data-ar>للمصنّعين</span><span data-en>For Manufacturers</span></h5><ul>
-      <li><a href="distributors.html"><span data-ar>كن شريك توزيع</span><span data-en>Become a distributor</span></a></li>
+      <li><a href="distributors.html"><span data-ar>كن شريكنا</span><span data-en>Partner with us</span></a></li>
       <li><a href="mailto:partners@labsyria.com">partners@labsyria.com</a></li></ul></div>
   </div>
   <div class="fbar">
@@ -152,7 +152,7 @@
 </div></footer>
 <script>
 const html=document.documentElement;
-const setPh=()=>{const e=document.getElementById('emailInput');if(e)e.placeholder=html.lang==='ar'?'بريدك الإلكتروني':'Your email address';};
+const setPh=()=>{const ar=html.lang==='ar';document.querySelectorAll('[data-ph-ar]').forEach(el=>{el.placeholder=ar?el.getAttribute('data-ph-ar'):el.getAttribute('data-ph-en')});const e=document.getElementById('emailInput');if(e)e.placeholder=ar?'بريدك الإلكتروني':'Your email address';};
 const applyLang=l=>{const en=l==='en';html.lang=en?'en':'ar';html.dir=en?'ltr':'rtl';setPh();};
 const q=(new URLSearchParams(location.search).get('lang')||'').toLowerCase();
 if(q==='en'||q==='ar')applyLang(q);

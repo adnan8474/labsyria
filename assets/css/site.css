@@ -80,12 +80,12 @@ html[lang="en"] .en-inline{display:inline}
 
 /* ---------- header ---------- */
 header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:86px;gap:18px}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:18px}
 .brand{display:flex;align-items:center;gap:12px;flex:none}
-.brand img.logo{height:64px;width:auto;display:block}
-header.site .brand img.logo{height:66px;margin-block:-4px}
-footer.site .brand img.logo{height:74px}
-@media(max-width:640px){.brand img.logo{height:50px}header.site .brand img.logo{height:52px}}
+.brand img.logo{height:48px;width:auto;display:block;max-width:min(60vw,280px);object-fit:contain}
+header.site .brand img.logo{height:46px}
+footer.site .brand img.logo{height:46px;max-width:260px;background:#fff;padding:10px 16px;border-radius:12px;box-shadow:0 6px 18px -8px rgba(0,0,0,.4)}
+@media(max-width:640px){.brand img.logo{height:34px}header.site .brand img.logo{height:34px}}
 .brand .mark{width:40px;height:40px;border-radius:11px;background:var(--teal);display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(14,124,134,.7)}
 .brand .mark svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linejoin:round}
 .brand .bt{line-height:1.05}

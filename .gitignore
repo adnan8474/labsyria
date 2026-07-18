@@ -28,3 +28,6 @@ CNAME
 qa-*.png
 qc-*.png
 qa-direct.png
+v-*.png
+shotd.js
+shotf.js
