@@ -248,6 +248,12 @@ html[dir="rtl"] .drawer{transform:translateX(-100%)}
 .prose h3{margin:28px 0 12px;font-size:1.18rem}
 .prose strong{color:var(--ink)}
 .prose a{color:var(--teal);text-decoration:underline}
+.refsec h3{font-size:1.15rem;color:var(--ink)}
+.refs{margin:0;padding-inline-start:22px;color:#3f5164}
+.refs li{margin-bottom:11px;font-size:.92rem;line-height:1.7}
+.refs em{color:var(--ink);font-style:italic}
+.refs a{color:var(--teal);text-decoration:underline;word-break:break-word}
+.refnote{color:var(--muted);font-size:.82rem;margin-top:16px;line-height:1.6}
 .prose ul{margin:0 0 20px;padding-inline-start:22px}
 .prose ul li{margin-bottom:8px}
 .artimg{max-width:46rem;margin-inline:auto;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
