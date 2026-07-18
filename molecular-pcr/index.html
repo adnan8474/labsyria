@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://labsyria.com/molecular-pcr/"/>
 <meta name="author" content="POCTIFY LTD"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
-<meta name="theme-color" content="#0E7C86"/>
+<meta name="theme-color" content="#0AA23C"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="LabSyria"/>
 <meta property="og:title" content="Molecular & PCR in Syria · IVD Distributor | LabSyria"/>
@@ -27,7 +27,7 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700;800&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="/assets/css/site.css"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","MedicalBusiness"],"@id":"https://labsyria.com/#org","name":"LabSyria","alternateName":"لاب سوريا","url":"https://labsyria.com/","logo":"https://labsyria.com/assets/img/og.jpg","image":"https://labsyria.com/assets/img/og.jpg","description":"IVD and point-of-care distribution and a free Arabic lab-science academy for Syria, serving laboratories since 1987.","foundingDate":"1987","parentOrganization":{"@type":"Organization","name":"POCTIFY LTD"},"telephone":"+963-11-2222797","email":"info@labsyria.com","address":{"@type":"PostalAddress","streetAddress":"108 Mussalam Baroodi Street","addressLocality":"Damascus","postOfficeBoxNumber":"11667","addressCountry":"SY"},"areaServed":{"@type":"Country","name":"Syria"},"knowsAbout":["In vitro diagnostics","Point-of-care testing","Laboratory quality control","Clinical chemistry","Hematology","Molecular diagnostics","IVD distribution"]},{"@type":"WebSite","@id":"https://labsyria.com/#site","name":"LabSyria","url":"https://labsyria.com/","inLanguage":["ar","en"],"publisher":{"@id":"https://labsyria.com/#org"}}]}</script>
 </head>
@@ -158,6 +158,17 @@ document.getElementById('drawerX').addEventListener('click',()=>dr.classList.rem
 dr.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>dr.classList.remove('open')));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+/* condensed header shadow after scroll */
+(function(){var h=document.querySelector('header.site');if(!h)return;var on=false;
+ addEventListener('scroll',function(){var s=scrollY>8;if(s!==on){on=s;h.classList.toggle('scrolled',s)}},{passive:true});})();
+/* count-up stats when they enter the viewport */
+(function(){var els=document.querySelectorAll('[data-count]');if(!els.length)return;
+ var ease=function(t){return 1-Math.pow(1-t,3)};
+ var run=function(el){var to=parseFloat(el.getAttribute('data-count')),sfx=el.getAttribute('data-suffix')||'',t0=null;
+  var step=function(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1400,1);el.textContent=Math.round(to*ease(p))+sfx;if(p<1)requestAnimationFrame(step);};
+  requestAnimationFrame(step);};
+ var co=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);co.unobserve(e.target)}})},{threshold:.5});
+ els.forEach(function(el){co.observe(el)});})();
 /* lead capture: forms with [data-lead-form] email to LabSyria via FormSubmit + local backup */
 (function(){var EP="https://formsubmit.co/ajax/info@labsyria.com";
  function ok(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((v||'').trim());}
