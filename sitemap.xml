@@ -53,4 +53,8 @@
   <url><loc>https://labsyria.com/hil-interferences/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/how-often-run-qc/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/verify-qualitative-tests/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/urinalysis-quality/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/coagulation-pre-analytics/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/blood-gas-pre-analytics/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/tdm-sampling-timing/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
