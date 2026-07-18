@@ -43,6 +43,19 @@ section{position:relative}
 /* language visibility */
 [data-ar],[data-en]{display:none}
 html[lang="ar"] [data-ar]{display:revert}
+/* manufacturer-facing content stays English regardless of site language */
+.en-only{direction:ltr;text-align:start}
+.en-only [data-ar]{display:none !important}
+.en-only [data-en]{display:revert !important}
+/* accessibility */
+.skip{position:fixed;top:-60px;inset-inline-start:12px;background:var(--teal);color:#fff;padding:11px 18px;z-index:300;border-radius:0 0 10px 10px;font-weight:600;transition:top .2s}
+.skip:focus{top:0}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:4px}
+/* floating WhatsApp */
+.wa{position:fixed;bottom:24px;inset-inline-end:24px;z-index:120;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.55);transition:transform .2s var(--ease)}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:32px;height:32px;fill:#fff}
+@media(max-width:640px){.wa{width:52px;height:52px;bottom:18px;inset-inline-end:18px}}
 html[lang="en"] [data-en]{display:revert}
 html[lang="ar"] .ar-inline{display:inline}
 html[lang="en"] .en-inline{display:inline}
@@ -67,12 +80,12 @@ html[lang="en"] .en-inline{display:inline}
 
 /* ---------- header ---------- */
 header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:86px;gap:18px}
 .brand{display:flex;align-items:center;gap:12px;flex:none}
-.brand img.logo{height:52px;width:auto;display:block}
-header.site .brand img.logo{height:50px}
-footer.site .brand img.logo{height:60px}
-@media(max-width:640px){.brand img.logo{height:42px}header.site .brand img.logo{height:42px}}
+.brand img.logo{height:64px;width:auto;display:block}
+header.site .brand img.logo{height:66px;margin-block:-4px}
+footer.site .brand img.logo{height:74px}
+@media(max-width:640px){.brand img.logo{height:50px}header.site .brand img.logo{height:52px}}
 .brand .mark{width:40px;height:40px;border-radius:11px;background:var(--teal);display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(14,124,134,.7)}
 .brand .mark svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linejoin:round}
 .brand .bt{line-height:1.05}

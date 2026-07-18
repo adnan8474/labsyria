@@ -7,9 +7,16 @@
     <changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://labsyria.com/products.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://labsyria.com/distributors.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://labsyria.com/hematology.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://labsyria.com/clinical-chemistry.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://labsyria.com/poct.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://labsyria.com/rapid-immunoassay.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://labsyria.com/molecular-pcr.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://labsyria.com/consumables.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://labsyria.com/academy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://labsyria.com/resources.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://labsyria.com/news.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://labsyria.com/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
