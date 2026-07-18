@@ -17,6 +17,9 @@
   <url><loc>https://labsyria.com/academy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://labsyria.com/resources.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://labsyria.com/news.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://labsyria.com/control-results-fail.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/choose-an-analyzer.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/future-of-the-syrian-lab.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

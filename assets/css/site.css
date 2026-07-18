@@ -241,7 +241,12 @@ html[dir="rtl"] .drawer{transform:translateX(-100%)}
 /* prose */
 .prose{max-width:44rem}
 .prose p{margin-bottom:18px}
-.prose h2{margin:34px 0 14px}
+.prose h2{margin:34px 0 14px;font-size:1.4rem}
+.artimg{max-width:44rem;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.artimg img{width:100%;display:block}
+.fig{margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.fig svg{width:100%;display:block}
+.fig figcaption{padding:11px 16px;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line)}
 
 /* responsive */
 @media(max-width:940px){
