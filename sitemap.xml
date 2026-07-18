@@ -42,6 +42,7 @@
   <url><loc>https://labsyria.com/glossary/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/coverage/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/editorial-standards/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/calculators/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/power-outage-lab/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/verify-reference-intervals/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/sample-rejection-criteria/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -50,4 +51,6 @@
   <url><loc>https://labsyria.com/lab-biosafety-risk/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/analyzer-water-quality/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/hil-interferences/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/how-often-run-qc/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/verify-qualitative-tests/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

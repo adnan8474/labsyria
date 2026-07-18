@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Laboratory calculators: eGFR, corrected calcium, anion gap, Sigma · LabSyria</title>
+<meta name="description" content="Free interactive laboratory calculators for Syrian lab scientists: eGFR (CKD-EPI 2021), albumin-corrected calcium, anion gap, and the QC Sigma metric, from published equations."/>
+<link rel="canonical" href="https://labsyria.com/calculators/"/>
+<meta name="author" content="POCTIFY LTD"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="theme-color" content="#0AA23C"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="LabSyria"/>
+<meta property="og:title" content="Laboratory calculators: eGFR, corrected calcium, anion gap, Sigma · LabSyria"/>
+<meta property="og:description" content="Free interactive laboratory calculators for Syrian lab scientists: eGFR (CKD-EPI 2021), albumin-corrected calcium, anion gap, and the QC Sigma metric, from published equations."/>
+<meta property="og:url" content="https://labsyria.com/calculators/"/>
+<meta property="og:image" content="https://labsyria.com/assets/img/og.jpg"/>
+<meta property="og:locale" content="ar_SY"/>
+<meta property="og:locale:alternate" content="en_US"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://labsyria.com/assets/img/og.jpg"/>
+<link rel="alternate" hreflang="ar" href="https://labsyria.com/calculators/?lang=ar"/>
+<link rel="alternate" hreflang="ar-SY" href="https://labsyria.com/calculators/?lang=ar"/>
+<link rel="alternate" hreflang="en" href="https://labsyria.com/calculators/?lang=en"/>
+<link rel="alternate" hreflang="x-default" href="https://labsyria.com/calculators/"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" href="/assets/img/favicon-64.png" type="image/png"/>
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700;800&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/site.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","MedicalBusiness"],"@id":"https://labsyria.com/#org","name":"LabSyria","alternateName":"لاب سوريا","url":"https://labsyria.com/","logo":"https://labsyria.com/assets/img/og.jpg","image":"https://labsyria.com/assets/img/og.jpg","description":"IVD and point-of-care distribution and a free Arabic lab-science academy for Syria, serving laboratories since 1987.","foundingDate":"1987","parentOrganization":{"@type":"Organization","name":"POCTIFY LTD"},"telephone":"+963-11-2222797","email":"info@labsyria.com","address":{"@type":"PostalAddress","streetAddress":"108 Mussalam Baroodi Street","addressLocality":"Damascus","postOfficeBoxNumber":"11667","addressCountry":"SY"},"areaServed":{"@type":"Country","name":"Syria"},"knowsAbout":["In vitro diagnostics","Point-of-care testing","Laboratory quality control","Clinical chemistry","Hematology","Molecular diagnostics","IVD distribution"]},{"@type":"WebSite","@id":"https://labsyria.com/#site","name":"LabSyria","url":"https://labsyria.com/","inLanguage":["ar","en"],"publisher":{"@id":"https://labsyria.com/#org"}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main"><span data-ar>تخطَّ إلى المحتوى</span><span data-en>Skip to content</span></a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+<symbol id="i-net" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.2 10.9l7.6-3.6M8.2 13.1l7.6 3.6"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 2.8v5.2c0 4-3 7-7 8-4-1-7-4-7-8V5.8z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.2A2.2 2.2 0 0 1 6.2 3H12v15.5H6.2A2.2 2.2 0 0 0 4 20.7z"/><path d="M20 5.2A2.2 2.2 0 0 0 17.8 3H12v15.5h5.8A2.2 2.2 0 0 1 20 20.7z"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+<symbol id="i-support" viewBox="0 0 24 24"><path d="M5 13a7 7 0 0 1 14 0"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19a4 4 0 0 1-4 3h-2"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.5c3.4 4 6 7 6 10a6 6 0 1 1-12 0c0-3 2.6-6 6-10z"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h2V5h-2c-2 0-3 1.2-3 3v2H9v3h2v6h3v-6h2l.5-3H14V8.5c0-.3.2-.5.5-.5z"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.6-1.2A9 9 0 1 0 12 3z"/></symbol>
+<symbol id="i-in" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 10v6M8 7v.5M12 16v-3.5a2 2 0 0 1 4 0V16"/></symbol>
+</defs></svg>
+<div class="topbar"><div class="wrap">
+  <div class="tb-left">
+    <span class="hide-sm"><svg class="ic"><use href="#i-pin"/></svg><span data-ar>دمشق، سوريا</span><span data-en>Damascus, Syria</span></span>
+    <span class="hide-sm"><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+963112222797" dir="ltr">+963 11 2222 797</a></span>
+    <span><a href="mailto:info@labsyria.com"><svg class="ic"><use href="#i-mail"/></svg> info@labsyria.com</a></span>
+  </div>
+  <div class="tb-right en-only">
+    <a href="mailto:partners@labsyria.com"><span data-ar>هل أنت مصنّع؟ كن شريكنا</span><span data-en>Are you a manufacturer? Partner with us</span></a>
+  </div>
+</div></div>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/" aria-label="LabSyria"><img class="logo" src="/assets/img/logo.png" alt="LabSyria لاب سوريا"/></a>
+  <nav class="main"><a href="/products/" class=""><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/academy/" class=""><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
+<a href="/resources/" class=""><span data-ar>المصادر</span><span data-en>Resources</span></a>
+<a href="/news/" class=""><span data-ar>الأخبار</span><span data-en>News</span></a>
+<a href="/distributors/" class=""><span data-ar>للمصنّعين</span><span data-en>For Manufacturers</span></a>
+<a href="/about/" class=""><span data-ar>من نحن</span><span data-en>About</span></a>
+</nav>
+  <div class="hactions">
+    <button class="lang" id="langBtn"><span data-ar>EN</span><span data-en>ع</span></button>
+    <a class="btn btn-primary" href="/contact/"><span data-ar>تواصل معنا</span><span data-en>Contact</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+  </div>
+</div></header>
+<div class="drawer" id="drawer"><button class="x" id="drawerX">&times;</button>
+<a href="/"><span data-ar>الرئيسية</span><span data-en>Home</span></a>
+<a href="/products/"><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/academy/"><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
+<a href="/resources/"><span data-ar>المصادر</span><span data-en>Resources</span></a>
+<a href="/news/"><span data-ar>الأخبار</span><span data-en>News</span></a>
+<a href="/distributors/"><span data-ar>للمصنّعين</span><span data-en>For Manufacturers</span></a>
+<a href="/about/"><span data-ar>من نحن</span><span data-en>About</span></a>
+
+<a href="/contact/"><span data-ar>تواصل معنا</span><span data-en>Contact</span></a>
+</div><main id="main">
+<section class="phead"><div class="wrap">
+  <div class="crumbs"><a href="/"><span data-ar>الرئيسية</span><span data-en>Home</span></a> / <a href="/resources/"><span data-ar>المصادر</span><span data-en>Resources</span></a> / <span data-ar>حاسبات المختبر</span><span data-en>Lab calculators</span></div>
+  <span class="eyebrow"><span data-ar>أدوات تفاعلية</span><span data-en>Interactive tools</span></span>
+  <h1><span data-ar>حاسبات المختبر</span><span data-en>Laboratory calculators</span></h1>
+  <p><span data-ar>حاسباتٌ عمليةٌ تعمل في متصفحك: التصفية الكبيبية، الكالسيوم المصحّح، الفجوة الأيونية، ومقياس سيجما للجودة. مبنيةٌ على معادلاتٍ منشورة.</span><span data-en>Practical calculators that run in your browser: eGFR, corrected calcium, anion gap, and the QC Sigma metric. Built on published equations.</span></p>
+</div></section>
+<section class="section"><div class="wrap" style="max-width:820px">
+  <div class="callout noprint" style="margin-bottom:26px"><span class="cico">!</span><p><span data-ar>هذه الحاسبات تعليميةٌ ومساعِدةٌ للمهنيين، ونتائجها إرشادية. اعتمد دائماً نظام مختبرك المعتمد وقيمه المرجعية للقرار السريري.</span><span data-en>These calculators are educational aids for professionals and their results are indicative. Always use your lab's validated system and reference values for clinical decisions.</span></p></div>
+
+  <div class="tool" style="margin-bottom:22px">
+    <h3 style="margin-bottom:6px"><span data-ar>التصفية الكبيبية المقدّرة (eGFR)</span><span data-en>Estimated GFR (eGFR)</span></h3>
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:16px"><span data-ar>معادلة CKD-EPI 2021 (كرياتينين، دون عامل العِرق).</span><span data-en>CKD-EPI 2021 equation (creatinine, race-free).</span></p>
+    <div class="row"><div><label for="egCr" style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>الكرياتينين</span><span data-en>Creatinine</span></label><input id="egCr" type="number" step="any" inputmode="decimal" placeholder="" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"/></div>
+    <div><label style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>الوحدة</span><span data-en>Unit</span></label><select id="egUnit" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"><option value="umol">µmol/L</option><option value="mgdl">mg/dL</option></select></div></div>
+    <div class="row"><div><label for="egAge" style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>العمر (سنوات)</span><span data-en>Age (years)</span></label><input id="egAge" type="number" step="any" inputmode="decimal" placeholder="" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"/></div>
+    <div><label style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>الجنس</span><span data-en>Sex</span></label><select id="egSex" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"><option value=""><span data-ar>اختر</span><span data-en>Select</span></option><option value="m"><span data-ar>ذكر</span><span data-en>Male</span></option><option value="f"><span data-ar>أنثى</span><span data-en>Female</span></option></select></div></div>
+    <div id="egOut" class="calcout"></div>
+  </div>
+
+  <div class="tool" style="margin-bottom:22px">
+    <h3 style="margin-bottom:6px"><span data-ar>الكالسيوم المصحّح بالألبومين</span><span data-en>Albumin-corrected calcium</span></h3>
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:16px"><span data-ar>معادلة باين: المصحّح = المقاس + ٠٫٠٢ × (٤٠ − الألبومين). الوحدات: كالسيوم mmol/L، ألبومين g/L.</span><span data-en>Payne equation: corrected = measured + 0.02 × (40 − albumin). Units: calcium mmol/L, albumin g/L.</span></p>
+    <div class="row"><div><label for="ccCa" style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>الكالسيوم المقاس (mmol/L)</span><span data-en>Measured calcium (mmol/L)</span></label><input id="ccCa" type="number" step="any" inputmode="decimal" placeholder="" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"/></div><div><label for="ccAlb" style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>الألبومين (g/L)</span><span data-en>Albumin (g/L)</span></label><input id="ccAlb" type="number" step="any" inputmode="decimal" placeholder="" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"/></div></div>
+    <div id="ccOut" class="calcout"></div>
+  </div>
+
+  <div class="tool" style="margin-bottom:22px">
+    <h3 style="margin-bottom:6px"><span data-ar>الفجوة الأيونية</span><span data-en>Anion gap</span></h3>
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:16px"><span data-ar>الفجوة = الصوديوم − (الكلور + البيكربونات)، مع خيار إضافة البوتاسيوم. كل القيم بـ mmol/L.</span><span data-en>Gap = sodium − (chloride + bicarbonate), with the option to include potassium. All values in mmol/L.</span></p>
+    <div class="row"><div><label for="agNa" style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>الصوديوم Na</span><span data-en>Sodium (Na)</span></label><input id="agNa" type="number" step="any" inputmode="decimal" placeholder="" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"/></div><div><label for="agCl" style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>الكلور Cl</span><span data-en>Chloride (Cl)</span></label><input id="agCl" type="number" step="any" inputmode="decimal" placeholder="" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"/></div></div>
+    <div class="row"><div><label for="agHco3" style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>البيكربونات HCO₃</span><span data-en>Bicarbonate (HCO₃)</span></label><input id="agHco3" type="number" step="any" inputmode="decimal" placeholder="" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"/></div><div><label for="agK" style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>البوتاسيوم K (اختياري)</span><span data-en>Potassium (K, optional)</span></label><input id="agK" type="number" step="any" inputmode="decimal" placeholder="" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"/></div></div>
+    <div id="agOut" class="calcout"></div>
+  </div>
+
+  <div class="tool">
+    <h3 style="margin-bottom:6px"><span data-ar>مقياس سيجما للجودة</span><span data-en>QC Sigma metric</span></h3>
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:16px"><span data-ar>سيجما = (الخطأ الكلي المسموح − |الانحياز|) ÷ معامل الاختلاف. أدخل القيم كنسبٍ مئوية.</span><span data-en>Sigma = (allowable total error − |bias|) ÷ CV. Enter values as percentages.</span></p>
+    <div class="row"><div><label for="sgTea" style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>الخطأ المسموح TEa %</span><span data-en>Allowable total error (TEa %)</span></label><input id="sgTea" type="number" step="any" inputmode="decimal" placeholder="" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"/></div><div><label for="sgBias" style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>الانحياز Bias %</span><span data-en>Bias %</span></label><input id="sgBias" type="number" step="any" inputmode="decimal" placeholder="" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"/></div></div>
+    <label for="sgCv" style="display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px"><span data-ar>معامل الاختلاف CV %</span><span data-en>Coefficient of variation (CV %)</span></label><input id="sgCv" type="number" step="any" inputmode="decimal" placeholder="" style="width:100%;padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-family:inherit;margin-bottom:14px"/>
+    <div id="sgOut" class="calcout"></div>
+  </div>
+  <p class="refnote" style="margin-top:20px"><span data-ar>المراجع:</span><span data-en>References:</span> CKD-EPI 2021 (<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2102953" target="_blank" rel="noopener">Inker et al., NEJM 2021</a>) · <span data-ar>معادلة الكالسيوم</span><span data-en>Calcium equation</span> (<a href="https://pubmed.ncbi.nlm.nih.gov/4759647/" target="_blank" rel="noopener">Payne et al., BMJ 1973</a>) · <span data-ar>مقياس سيجما</span><span data-en>Sigma metric</span> (<a href="https://westgard.com/lessons/basic-qc-practices/399-sixsigma.html" target="_blank" rel="noopener">Westgard QC</a>).</p>
+</div></section>
+
+<script>
+(function(){
+ var ar=function(){return document.documentElement.lang!=='en';};
+ function v(id){return document.getElementById(id).value;}
+ function out(id,html,warn){var e=document.getElementById(id);e.innerHTML=html?('<div class="'+(warn?'calc-w':'calc-r')+'">'+html+'</div>'):'';}
+ function r0(x){return Math.round(x).toString();}
+ function r2(x){return (Math.round(x*100)/100).toString();}
+ // eGFR CKD-EPI 2021
+ function egfr(){
+   var scr=parseFloat(v('egCr')),unit=document.getElementById('egUnit').value,age=parseFloat(v('egAge')),sex=document.getElementById('egSex').value;
+   if(isNaN(scr)||isNaN(age)||!sex||scr<=0){out('egOut','');return;}
+   var mgdl=unit==='umol'?scr/88.42:scr,f=sex==='f',k=f?0.7:0.9,a=f?-0.241:-0.302,rr=mgdl/k;
+   var e=142*Math.pow(Math.min(rr,1),a)*Math.pow(Math.max(rr,1),-1.200)*Math.pow(0.9938,age)*(f?1.012:1);
+   var st=e>=90?['G1 طبيعية أو مرتفعة','G1 normal or high']:e>=60?['G2 نقصٌ خفيف','G2 mildly decreased']:e>=45?['G3a خفيف-متوسط','G3a mild-moderate']:e>=30?['G3b متوسط-شديد','G3b moderate-severe']:e>=15?['G4 نقصٌ شديد','G4 severely decreased']:['G5 فشلٌ كلوي','G5 kidney failure'];
+   out('egOut','<b>'+r0(e)+'</b> mL/min/1.73m² · '+(ar()?st[0]:st[1]));
+ }
+ // corrected calcium (Payne)
+ function cca(){
+   var ca=parseFloat(v('ccCa')),alb=parseFloat(v('ccAlb'));
+   if(isNaN(ca)||isNaN(alb)){out('ccOut','');return;}
+   var c=ca+0.02*(40-alb);
+   out('ccOut','<b>'+r2(c)+'</b> mmol/L '+(ar()?'(كالسيوم مصحّح)':'(corrected calcium)'));
+ }
+ // anion gap
+ function ag(){
+   var na=parseFloat(v('agNa')),cl=parseFloat(v('agCl')),h=parseFloat(v('agHco3')),k=parseFloat(v('agK'));
+   if(isNaN(na)||isNaN(cl)||isNaN(h)){out('agOut','');return;}
+   var withK=!isNaN(k),val=na-(cl+h)+(withK?k:0);
+   var ref=withK?'(~14-18)':'(~8-16)';
+   out('agOut','<b>'+r0(val)+'</b> mmol/L '+(withK?(ar()?'مع البوتاسيوم ':'with K '):'')+ref);
+ }
+ // sigma metric
+ function sig(){
+   var tea=parseFloat(v('sgTea')),bias=parseFloat(v('sgBias')),cv=parseFloat(v('sgCv'));
+   if(isNaN(tea)||isNaN(cv)||cv<=0){out('sgOut','');return;}
+   if(isNaN(bias))bias=0;
+   var s=(tea-Math.abs(bias))/cv;
+   var band=s>=6?['ممتاز (عالمي)','world-class']:s>=4?['جيد','good']:s>=3?['حدّي','marginal']:['ضعيف','poor'];
+   out('sgOut','<b>'+r2(s)+'</b> σ · '+(ar()?band[0]:band[1]), s<3);
+ }
+ ['egCr','egUnit','egAge','egSex'].forEach(function(i){document.getElementById(i).addEventListener('input',egfr);document.getElementById(i).addEventListener('change',egfr);});
+ ['ccCa','ccAlb'].forEach(function(i){document.getElementById(i).addEventListener('input',cca);});
+ ['agNa','agCl','agHco3','agK'].forEach(function(i){document.getElementById(i).addEventListener('input',ag);});
+ ['sgTea','sgBias','sgCv'].forEach(function(i){document.getElementById(i).addEventListener('input',sig);});
+ document.getElementById('langBtn').addEventListener('click',function(){setTimeout(function(){egfr();cca();ag();sig();},0);});
+})();
+</script></main><a class="wa" href="https://wa.me/447446668474?text=Hello%20LabSyria" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.1a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.1.1-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3A3 3 0 0 0 6.6 9c0 1.7 1.3 3.4 1.4 3.6.2.2 2.5 3.8 6 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.6-.1 1.4-.6 1.6-1.2.2-.5.2-1 .1-1.1z"/></svg></a>
+<footer class="site"><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <a class="brand" href="/"><img class="logo" src="/assets/img/logo.png" alt="LabSyria"/></a>
+      <p class="about"><span data-ar>موزّع أجهزة ومستلزمات التشخيص المخبري في سوريا، وأكاديمية عربية مجانية لعلوم المختبر.</span><span data-en>An IVD distributor for Syria and a free Arabic-first academy for laboratory science.</span></p>
+    </div>
+    <div><h5><span data-ar>المنصّة</span><span data-en>Company</span></h5><ul>
+      <li><a href="/products/"><span data-ar>المنتجات</span><span data-en>Products</span></a></li>
+      <li><a href="/academy/"><span data-ar>الأكاديمية</span><span data-en>Academy</span></a></li>
+      <li><a href="/about/"><span data-ar>من نحن</span><span data-en>About</span></a></li>
+      <li><a href="/coverage/"><span data-ar>التغطية والخدمة</span><span data-en>Coverage</span></a></li>
+      <li><a href="/trust/"><span data-ar>مركز الثقة</span><span data-en>Trust centre</span></a></li>
+      <li><a href="/contact/"><span data-ar>تواصل</span><span data-en>Contact</span></a></li></ul></div>
+    <div><h5><span data-ar>المصادر</span><span data-en>Resources</span></h5><ul>
+      <li><a href="/resources/"><span data-ar>مكتبة المصادر</span><span data-en>Library</span></a></li>
+      <li><a href="/glossary/"><span data-ar>مسرد المصطلحات</span><span data-en>Glossary</span></a></li>
+      <li><a href="/news/"><span data-ar>الأخبار</span><span data-en>News</span></a></li>
+      <li><a href="/faq/"><span data-ar>الأسئلة الشائعة</span><span data-en>FAQ</span></a></li>
+      <li><a href="/verify/"><span data-ar>التحقّق من شهادة</span><span data-en>Verify a certificate</span></a></li></ul></div>
+    <div><h5><span data-ar>للمصنّعين</span><span data-en>For Manufacturers</span></h5><ul>
+      <li><a href="/distributors/"><span data-ar>كن شريكنا</span><span data-en>Partner with us</span></a></li>
+      <li><a href="mailto:partners@labsyria.com">partners@labsyria.com</a></li></ul></div>
+  </div>
+  <div class="fbar">
+    <div><span data-ar>لاب سوريا علامة تجارية تُشغّلها <b>الوكالة السورية للتجارة</b> (السجل التجاري بدمشق رقم ٥٦٥٤٧، منذ ١٩٨٧)، بالشراكة مع <a href="https://poctify.com" target="_blank" rel="noopener" style="color:#CFE3E3;text-decoration:underline"><b>POCTIFY LTD</b></a> (المملكة المتحدة، رقم الشركة ١٦٣٤٠٢٣٥). جميع الحقوق محفوظة © ٢٠٢٦ ·</span><span data-en>LabSyria is a brand operated by <b>Syrian Agency for Trade</b> (Damascus Commercial Register No. 56547, since 1987), in partnership with <a href="https://poctify.com" target="_blank" rel="noopener" style="color:#CFE3E3;text-decoration:underline"><b>POCTIFY LTD</b></a> (United Kingdom, Company No. 16340235). All rights reserved © 2026 ·</span><a href="/privacy/"><span data-ar>الخصوصية</span><span data-en>Privacy</span></a></div>
+    <div class="socials">
+      <a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+      <a href="#" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+    </div>
+  </div>
+</div></footer>
+<script>
+const html=document.documentElement;
+const setPh=()=>{const ar=html.lang==='ar';document.querySelectorAll('[data-ph-ar]').forEach(el=>{el.placeholder=ar?el.getAttribute('data-ph-ar'):el.getAttribute('data-ph-en')});const e=document.getElementById('emailInput');if(e)e.placeholder=ar?'بريدك الإلكتروني':'Your email address';};
+const applyLang=l=>{const en=l==='en';html.lang=en?'en':'ar';html.dir=en?'ltr':'rtl';setPh();};
+const q=(new URLSearchParams(location.search).get('lang')||'').toLowerCase();
+if(q==='en'||q==='ar')applyLang(q);
+document.getElementById('langBtn').addEventListener('click',()=>{const to=html.lang==='ar'?'en':'ar';applyLang(to);const u=new URL(location);u.searchParams.set('lang',to);history.replaceState(null,'',u);});
+setPh();
+const dr=document.getElementById('drawer');
+document.getElementById('menuBtn').addEventListener('click',()=>dr.classList.add('open'));
+document.getElementById('drawerX').addEventListener('click',()=>dr.classList.remove('open'));
+dr.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>dr.classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+/* condensed header shadow after scroll */
+(function(){var h=document.querySelector('header.site');if(!h)return;var on=false;
+ addEventListener('scroll',function(){var s=scrollY>8;if(s!==on){on=s;h.classList.toggle('scrolled',s)}},{passive:true});})();
+/* count-up stats when they enter the viewport */
+(function(){var els=document.querySelectorAll('[data-count]');if(!els.length)return;
+ var ease=function(t){return 1-Math.pow(1-t,3)};
+ var run=function(el){var to=parseFloat(el.getAttribute('data-count')),sfx=el.getAttribute('data-suffix')||'',t0=null;
+  var step=function(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1400,1);el.textContent=Math.round(to*ease(p))+sfx;if(p<1)requestAnimationFrame(step);};
+  requestAnimationFrame(step);};
+ var co=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);co.unobserve(e.target)}})},{threshold:.5});
+ els.forEach(function(el){co.observe(el)});})();
+/* lead capture: forms with [data-lead-form] email to LabSyria via FormSubmit + local backup */
+(function(){var EP="https://formsubmit.co/ajax/info@labsyria.com";
+ function ok(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((v||'').trim());}
+ function local(o){try{var a=JSON.parse(localStorage.getItem('labsyria_leads')||'[]');a.push(o);localStorage.setItem('labsyria_leads',JSON.stringify(a));}catch(e){}}
+ document.querySelectorAll('[data-lead-form]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();
+  var ar=html.lang!=='en';var em=f.querySelector('[data-lead-email]'),nm=f.querySelector('[data-lead-name]'),ms=f.querySelector('[data-lead-message]'),msg=f.querySelector('[data-lead-msg]');
+  var email=em?em.value.trim():'';if(!ok(email)){if(msg){msg.textContent=ar?'الرجاء إدخال بريد إلكتروني صحيح.':'Please enter a valid email.';}return;}
+  var src=f.getAttribute('data-lead-source')||'website';
+  if(msg)msg.textContent=ar?'جارٍ الإرسال…':'Sending…';
+  var lead={name:nm?nm.value.trim():'',email:email,message:ms?ms.value.trim():'',source:src,t:(new Date()).toISOString()};local(lead);
+  fetch(EP,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'LabSyria '+src+': '+(lead.name||email),name:lead.name,email:email,message:lead.message,source:src,_template:'table',_captcha:'false'})}).catch(function(){}).finally(function(){
+   f.reset();if(msg)msg.textContent=ar?'تم الإرسال بنجاح. شكراً لك.':'Sent successfully. Thank you.';});
+ });});
+})();
+</script>
+</body></html>
