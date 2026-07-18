@@ -4,22 +4,25 @@
    ============================================================ */
 :root{
   --white:#ffffff;
-  --paper:#F4F8F8;
-  --mist:#E9F3F2;
-  --ink:#0C2A2E;
-  --body:#3F565C;
-  --muted:#728A8E;
-  --line:#E2ECEC;
-  --line-2:#D3E2E1;
-  --teal:#0E7C86;
-  --teal-hover:#0A5F67;
-  --teal-bright:#16A6A0;
-  --deep:#082A30;
-  --deep-2:#0C3840;
-  --amber:#C1852A;
-  --amber-soft:#E9B872;
-  --shadow:0 18px 40px -24px rgba(8,42,48,.28);
-  --shadow-lg:0 30px 60px -30px rgba(8,42,48,.35);
+  --paper:#F5F8F6;
+  --mist:#EAF4ED;
+  --ink:#152A44;
+  --body:#3F5164;
+  --muted:#71808F;
+  --line:#E4EAE8;
+  --line-2:#D5DFDA;
+  /* brand: green primary, navy deep, red accent (from LabSyria logo) */
+  --teal:#0AA23C;
+  --teal-hover:#0A7F30;
+  --teal-bright:#16B84C;
+  --navy:#172E4B;
+  --deep:#152A44;
+  --deep-2:#1E3A5C;
+  --amber:#BA1120;
+  --amber-soft:#d64b57;
+  --red:#BA1120;
+  --shadow:0 18px 40px -24px rgba(21,42,68,.26);
+  --shadow-lg:0 30px 60px -30px rgba(21,42,68,.32);
   --font:"Readex Pro", system-ui, -apple-system, sans-serif;
   --maxw:1200px;
   --r:16px;
@@ -66,6 +69,10 @@ html[lang="en"] .en-inline{display:inline}
 header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
 .brand{display:flex;align-items:center;gap:12px;flex:none}
+.brand img.logo{height:52px;width:auto;display:block}
+header.site .brand img.logo{height:50px}
+footer.site .brand img.logo{height:60px}
+@media(max-width:640px){.brand img.logo{height:42px}header.site .brand img.logo{height:42px}}
 .brand .mark{width:40px;height:40px;border-radius:11px;background:var(--teal);display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(14,124,134,.7)}
 .brand .mark svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linejoin:round}
 .brand .bt{line-height:1.05}
