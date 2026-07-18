@@ -254,6 +254,20 @@ html[dir="rtl"] .drawer{transform:translateX(-100%)}
 .refs em{color:var(--ink);font-style:italic}
 .refs a{color:var(--teal);text-decoration:underline;word-break:break-word}
 .refnote{color:var(--muted);font-size:.82rem;margin-top:16px;line-height:1.6}
+/* printable resource sheets (checklists / logs) */
+.rsheet h3{margin:28px 0 10px;color:var(--ink);font-size:1.12rem;border-bottom:2px solid var(--teal);padding-bottom:6px}
+.rsheet .fillrow{display:flex;flex-wrap:wrap;gap:8px 22px;margin:10px 0 20px;color:var(--body);font-size:.95rem}
+.chk{list-style:none;padding:0;margin:0 0 6px}
+.chk li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.chk .box{flex:none;width:18px;height:18px;border:1.6px solid var(--ink);border-radius:4px;margin-top:3px}
+.chk .q b{color:var(--ink);font-weight:600}
+.chk .q span{display:block;color:var(--muted);font-size:.84rem;margin-top:2px}
+.deczone{border:1px dashed var(--line-2);border-radius:12px;padding:18px 20px;margin-top:24px;color:var(--body)}
+@media print{
+  .rsheet h3{page-break-after:avoid}
+  .chk li,.deczone{page-break-inside:avoid}
+  .reftable{font-size:12px}
+}
 .prose ul{margin:0 0 20px;padding-inline-start:22px}
 .prose ul li{margin-bottom:8px}
 .artimg{max-width:46rem;margin-inline:auto;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
