@@ -9,11 +9,7 @@ og.html
 og-render.js
 bgvideo.html
 capture.js
-shot.js
-shot2.js
-shot3.js
-shotpages.js
-shot-live.js
+shot*.js
 ionos_dns.py
 shot-*.png
 v2-*.png
