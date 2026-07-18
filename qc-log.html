@@ -141,5 +141,19 @@ document.getElementById('drawerX').addEventListener('click',()=>dr.classList.rem
 dr.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>dr.classList.remove('open')));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+/* lead capture: forms with [data-lead-form] email to LabSyria via FormSubmit + local backup */
+(function(){var EP="https://formsubmit.co/ajax/info@labsyria.com";
+ function ok(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((v||'').trim());}
+ function local(o){try{var a=JSON.parse(localStorage.getItem('labsyria_leads')||'[]');a.push(o);localStorage.setItem('labsyria_leads',JSON.stringify(a));}catch(e){}}
+ document.querySelectorAll('[data-lead-form]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();
+  var ar=html.lang!=='en';var em=f.querySelector('[data-lead-email]'),nm=f.querySelector('[data-lead-name]'),ms=f.querySelector('[data-lead-message]'),msg=f.querySelector('[data-lead-msg]');
+  var email=em?em.value.trim():'';if(!ok(email)){if(msg){msg.textContent=ar?'الرجاء إدخال بريد إلكتروني صحيح.':'Please enter a valid email.';}return;}
+  var src=f.getAttribute('data-lead-source')||'website';
+  if(msg)msg.textContent=ar?'جارٍ الإرسال…':'Sending…';
+  var lead={name:nm?nm.value.trim():'',email:email,message:ms?ms.value.trim():'',source:src,t:(new Date()).toISOString()};local(lead);
+  fetch(EP,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'LabSyria '+src+': '+(lead.name||email),name:lead.name,email:email,message:lead.message,source:src,_template:'table',_captcha:'false'})}).catch(function(){}).finally(function(){
+   f.reset();if(msg)msg.textContent=ar?'تم الإرسال بنجاح. شكراً لك.':'Sent successfully. Thank you.';});
+ });});
+})();
 </script>
 </body></html>
