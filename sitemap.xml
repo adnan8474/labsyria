@@ -36,6 +36,10 @@
   <url><loc>https://labsyria.com/critical-results-log/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/compare-analyzers/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://labsyria.com/trust/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/verify/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/find-your-solution/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/power-outage-lab/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/verify-reference-intervals/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/sample-rejection-criteria/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/method-verification-ep15/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

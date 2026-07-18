@@ -291,6 +291,7 @@ html[dir="rtl"] .drawer{transform:translateX(-100%)}
 .phead p{color:var(--muted);font-size:1.1rem;margin-top:14px;max-width:60ch}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:18px}
 .crumbs a:hover{color:var(--teal)}
+.byline{margin-top:18px;font-size:.9rem;color:var(--muted);display:inline-flex;flex-wrap:wrap;gap:4px;align-items:center;border-top:1px solid var(--line);padding-top:16px}
 
 /* ---------- premium article / prose ---------- */
 .readbar{position:fixed;top:0;inset-inline-start:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--teal-bright));width:0;z-index:200;transition:width .1s linear}
