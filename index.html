@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>لاب سوريا | LabSyria · علم المختبر لسوريا · Laboratory Science &amp; IVD Distribution for Syria</title>
+<meta name="description" content="منصة علوم المختبر في سوريا: دورات ومصادر مجانية وأجهزة تشخيص. LabSyria: Arabic-first laboratory training, resources and an IVD distribution partner for manufacturers entering the Syrian market." />
+<link rel="canonical" href="https://labsyria.com/" />
+<meta name="author" content="POCTIFY LTD" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#071A1F" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LabSyria" />
+<meta property="og:title" content="LabSyria · Laboratory Science for Syria" />
+<meta property="og:description" content="Arabic-first courses and resources in diagnostics and quality control, plus IVD instruments and a distribution partnership for manufacturers entering Syria." />
+<meta property="og:url" content="https://labsyria.com/" />
+<meta property="og:image" content="https://labsyria.com/assets/img/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ar_SY" />
+<meta property="og:locale:alternate" content="en_US" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="LabSyria · Laboratory Science for Syria" />
+<meta name="twitter:description" content="Arabic-first lab-science training and resources, plus IVD distribution for manufacturers entering the Syrian market." />
+<meta name="twitter:image" content="https://labsyria.com/assets/img/og.jpg" />
+<!-- hreflang -->
+<link rel="alternate" hreflang="ar" href="https://labsyria.com/?lang=ar" />
+<link rel="alternate" hreflang="en" href="https://labsyria.com/?lang=en" />
+<link rel="alternate" hreflang="x-default" href="https://labsyria.com/" />
+<!-- icons -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://labsyria.com/#org",
+      "name": "LabSyria",
+      "alternateName": "لاب سوريا",
+      "url": "https://labsyria.com/",
+      "logo": "https://labsyria.com/assets/img/og.jpg",
+      "description": "Laboratory science platform for Syria: Arabic-first education, resources, and IVD distribution for manufacturers entering the Syrian market.",
+      "parentOrganization": { "@type": "Organization", "name": "POCTIFY LTD" },
+      "areaServed": { "@type": "Country", "name": "Syria" },
+      "knowsAbout": ["In vitro diagnostics", "Point-of-care testing", "Laboratory quality control", "Clinical chemistry", "Hematology", "Medical laboratory science", "IVD distribution"],
+      "email": "partners@labsyria.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://labsyria.com/#site",
+      "name": "LabSyria",
+      "url": "https://labsyria.com/",
+      "inLanguage": ["ar", "en"],
+      "publisher": { "@id": "https://labsyria.com/#org" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does LabSyria distribute IVD and point-of-care products in Syria?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. LabSyria is a distribution partner for international IVD and point-of-care manufacturers seeking to enter the Syrian market, handling product registration, in-country distribution, user training, and after-sales support." }
+        },
+        {
+          "@type": "Question",
+          "name": "How can a manufacturer appoint LabSyria as a distributor in Syria?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Manufacturers looking for a distributor or partner in Syria can contact LabSyria at partners@labsyria.com to discuss product registration, market entry, and a distribution agreement." }
+        },
+        {
+          "@type": "Question",
+          "name": "What diagnostic products does LabSyria distribute?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Portable blood analyzers, clinical chemistry analyzers, rapid and immunoassay tests, reagents, and laboratory consumables for clinics, hospitals, and laboratories across Syria." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --ink:#071A1F;
+  --surface:#0B272E;
+  --surface-2:#0F343C;
+  --aqua:#19C7B5;
+  --aqua-soft:#6FE0D3;
+  --amber:#E9B872;
+  --paper:#EAF4F3;
+  --muted:#89ABA8;
+  --line:rgba(111,224,211,.13);
+  --glass:rgba(15,52,60,.5);
+  --disp:"Reem Kufi", "IBM Plex Sans Arabic", sans-serif;
+  --body:"IBM Plex Sans Arabic", system-ui, sans-serif;
+  --maxw:1220px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:var(--body);line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+/* English display uses the Latin cut of Plex (Reem Kufi is Arabic-only) */
+html[lang="ar"] .disp{font-family:var(--disp);font-weight:600}
+html[lang="en"] .disp{font-family:var(--body);font-weight:600;letter-spacing:-.5px}
+[data-ar],[data-en]{display:none}
+html[lang="ar"] [data-ar]{display:revert}
+html[lang="en"] [data-en]{display:revert}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+section{position:relative}
+.ico{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* grain + subtle scanline atmosphere */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.045;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- NAV ---------- */
+header{position:fixed;top:0;inset-inline:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:20px clamp(20px,5vw,58px);transition:background .4s var(--ease),padding .4s var(--ease),border-color .4s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(7,26,31,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding-top:13px;padding-bottom:13px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .mark{width:38px;height:38px;border-radius:11px;flex:none;display:grid;place-items:center;
+  background:var(--surface-2);border:1px solid var(--line);box-shadow:0 0 22px rgba(25,199,181,.22), inset 0 1px 0 rgba(255,255,255,.06)}
+.brand .mark .ico{width:20px;height:20px;stroke:var(--aqua);stroke-width:1.7}
+.brand .name{font-family:var(--disp);font-weight:600;font-size:1.35rem;line-height:1;letter-spacing:.3px}
+html[lang="en"] .brand .name{font-family:var(--body);letter-spacing:-.3px}
+.brand .name small{display:block;font-family:var(--body);font-weight:500;font-size:.6rem;letter-spacing:2.5px;color:var(--muted);margin-top:5px}
+nav.links{display:flex;align-items:center;gap:clamp(14px,2.3vw,32px)}
+nav.links a{font-size:.92rem;color:var(--muted);position:relative;transition:color .3s;padding:6px 0}
+nav.links a:hover{color:var(--paper)}
+nav.links a::after{content:"";position:absolute;bottom:0;inset-inline-start:0;width:0;height:1.5px;background:var(--aqua);transition:width .3s var(--ease)}
+nav.links a:hover::after{width:100%}
+.nav-actions{display:flex;align-items:center;gap:13px}
+.lang-toggle{border:1px solid var(--line);background:transparent;color:var(--paper);font-family:inherit;font-size:.82rem;font-weight:600;cursor:pointer;padding:8px 15px;border-radius:100px;transition:.3s;letter-spacing:.5px}
+.lang-toggle:hover{border-color:var(--aqua);color:var(--aqua)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--aqua);color:var(--ink);font-weight:600;font-family:inherit;padding:11px 22px;border-radius:100px;font-size:.9rem;cursor:pointer;border:none;transition:.35s var(--ease);box-shadow:0 8px 28px rgba(25,199,181,.24)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(25,199,181,.4)}
+.btn .ico{width:1.05em;height:1.05em;stroke:currentColor}
+.btn.ghost{background:transparent;color:var(--paper);border:1px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--aqua);color:var(--aqua)}
+.menu-btn{display:none;background:none;border:none;color:var(--paper);cursor:pointer}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:130px clamp(20px,5vw,58px) 90px}
+.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;background:#03141a}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.92}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,26,31,.5),rgba(7,26,31,.66) 60%,var(--ink))}
+#fluid{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+@media(prefers-reduced-motion:reduce){.hero-video{display:none}.hero-media{background:#061a1f url("assets/img/hero-poster.jpg") center/cover}}
+.hero::before{content:"";position:absolute;z-index:1;width:70vw;height:70vw;max-width:880px;max-height:880px;top:-12%;inset-inline-end:-14%;border-radius:50%;background:radial-gradient(circle,rgba(25,199,181,.26),transparent 62%);filter:blur(18px);pointer-events:none}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:240px;z-index:2;background:linear-gradient(to top,var(--ink),transparent);pointer-events:none}
+.hero-inner{position:relative;z-index:3;max-width:var(--maxw);margin-inline:auto;width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;letter-spacing:1.5px;color:var(--aqua-soft);margin-bottom:28px;padding:8px 16px;border:1px solid var(--line);border-radius:100px;background:var(--glass);backdrop-filter:blur(8px)}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--aqua);box-shadow:0 0 12px var(--aqua);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
+h1.headline{font-family:var(--disp);font-weight:600;font-size:clamp(2.7rem,7vw,5.3rem);line-height:1.08;letter-spacing:-.3px;max-width:15ch;margin-bottom:28px}
+html[lang="en"] h1.headline{font-weight:600;letter-spacing:-1.8px;line-height:1.02}
+h1.headline .accent{color:var(--aqua)}
+.hero p.sub{font-size:clamp(1.02rem,1.7vw,1.24rem);color:var(--muted);max-width:54ch;margin-bottom:38px}
+.hero-cta{display:flex;gap:15px;flex-wrap:wrap}
+.hero-values{display:flex;gap:clamp(20px,4vw,42px);margin-top:58px;flex-wrap:wrap}
+.hero-values .v{display:flex;align-items:center;gap:11px;color:var(--paper);font-size:.94rem}
+.hero-values .v .ico{width:20px;height:20px;stroke:var(--aqua);flex:none}
+.hero-values .v span{color:var(--muted)}
+
+/* ---------- section shell ---------- */
+.wrap{max-width:var(--maxw);margin-inline:auto;padding:clamp(78px,10vw,140px) clamp(20px,5vw,58px)}
+.sec-head{margin-bottom:56px;max-width:760px}
+.kicker{display:flex;align-items:center;gap:12px;font-size:.8rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--aqua);margin-bottom:18px}
+.kicker .idx{font-variant-numeric:tabular-nums;color:var(--muted);opacity:.7}
+.kicker .idx::after{content:"";display:inline-block;width:26px;height:1px;background:var(--line);vertical-align:middle;margin-inline-start:10px}
+h2.title{font-family:var(--disp);font-weight:600;font-size:clamp(2rem,4.3vw,3.3rem);line-height:1.14;letter-spacing:-.3px}
+html[lang="en"] h2.title{letter-spacing:-1.2px}
+.sec-head p{color:var(--muted);font-size:1.06rem;margin-top:20px;max-width:60ch}
+
+/* ---------- STORY ---------- */
+.story{background:radial-gradient(1200px 500px at 100% 0,rgba(25,199,181,.07),transparent 60%),var(--surface);border-block:1px solid var(--line)}
+.story-grid{display:grid;grid-template-columns:1.08fr 1fr;gap:clamp(40px,6vw,84px);align-items:center}
+.story blockquote{font-family:var(--disp);font-size:clamp(1.5rem,2.9vw,2.25rem);line-height:1.55;font-weight:500}
+html[lang="en"] .story blockquote{font-family:var(--body);font-weight:500;line-height:1.4}
+.story blockquote .hl{color:var(--aqua)}
+.story .who{margin-top:28px;color:var(--muted);font-size:.96rem}
+.story .who b{color:var(--paper);font-weight:600}
+.pillars{display:grid;gap:18px}
+.pillar{display:flex;gap:18px;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--glass);transition:.4s var(--ease)}
+.pillar:hover{border-color:rgba(25,199,181,.38);transform:translateY(-3px)}
+.pillar .ic{flex:none;width:48px;height:48px;border-radius:13px;display:grid;place-items:center;background:rgba(25,199,181,.1)}
+.pillar .ic .ico{width:23px;height:23px;stroke:var(--aqua)}
+.pillar h4{font-size:1.06rem;margin-bottom:4px}
+.pillar p{font-size:.9rem;color:var(--muted)}
+
+/* ---------- offer cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{position:relative;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:linear-gradient(180deg,var(--surface-2),var(--surface));transition:.5s var(--ease);min-height:330px;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);border-color:rgba(25,199,181,.4);box-shadow:0 30px 60px -34px rgba(0,0,0,.8)}
+.card .top{height:132px;position:relative;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.card .top::before{content:"";position:absolute;inset:0;opacity:.6;background:radial-gradient(circle at 50% 130%,rgba(25,199,181,.28),transparent 62%)}
+.card .medallion{position:relative;width:66px;height:66px;border-radius:50%;display:grid;place-items:center;background:rgba(7,26,31,.6);border:1px solid var(--line)}
+.card .medallion .ico{width:30px;height:30px;stroke:var(--aqua)}
+.card .body{padding:26px;flex:1;display:flex;flex-direction:column}
+.card .tag{font-size:.72rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--aqua-soft);margin-bottom:12px}
+.card h3{font-size:1.24rem;margin-bottom:10px;line-height:1.35;font-weight:600}
+.card p{font-size:.92rem;color:var(--muted);flex:1}
+.card .go{margin-top:18px;color:var(--aqua);font-weight:600;font-size:.9rem;display:inline-flex;gap:8px;align-items:center}
+.card .go .ico{width:16px;height:16px;stroke:var(--aqua);transition:transform .3s}
+html[dir="rtl"] .card .go .ico{transform:scaleX(-1)}
+.card:hover .go .ico{transform:translateX(4px)}
+html[dir="rtl"] .card:hover .go .ico{transform:scaleX(-1) translateX(4px)}
+
+/* ---------- STORE ---------- */
+.store{background:radial-gradient(900px 500px at 0 100%,rgba(233,184,114,.07),transparent 60%),var(--surface);border-block:1px solid var(--line)}
+.store-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.product{position:relative;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,var(--surface-2),rgba(11,39,46,.6));transition:.5s var(--ease);overflow:hidden;display:flex;flex-direction:column}
+.product:hover{transform:translateY(-6px);border-color:rgba(233,184,114,.42)}
+.product-media{position:relative;height:186px;overflow:hidden;border-bottom:1px solid var(--line)}
+.product-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.product:hover .product-media img{transform:scale(1.05)}
+.product-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,39,46,.85))}
+.product .soon{position:absolute;top:16px;inset-inline-end:16px;z-index:2;font-size:.66rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber);border:1px solid rgba(233,184,114,.45);border-radius:100px;padding:5px 12px;background:rgba(7,26,31,.55);backdrop-filter:blur(4px)}
+.product-body{padding:28px;display:flex;flex-direction:column;flex:1}
+.product h3{font-size:1.26rem;margin-bottom:8px;font-weight:600}
+.product .cat{font-size:.73rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.product p{font-size:.92rem;color:var(--muted)}
+.product .qt{margin-top:20px;padding-top:20px;border-top:1px solid var(--line);font-size:.88rem;color:var(--aqua-soft);position:relative;padding-inline-start:20px}
+.product .qt::before{content:"\201C";position:absolute;inset-inline-start:-2px;top:14px;font-family:var(--disp);font-size:1.7rem;line-height:0;color:var(--aqua);opacity:.6}
+
+/* ---------- PARTNER / manufacturers ---------- */
+.partner{background:linear-gradient(180deg,var(--ink),var(--surface));border-block:1px solid var(--line)}
+.partner-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:clamp(38px,5.5vw,78px);align-items:center}
+.partner-visual{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3}
+.partner-visual img{width:100%;height:100%;object-fit:cover}
+.partner-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,transparent 40%,rgba(7,26,31,.55))}
+.partner-visual .badge{position:absolute;bottom:18px;inset-inline-start:18px;z-index:2;background:rgba(7,26,31,.72);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:12px;padding:11px 16px;font-size:.86rem}
+.partner-visual .badge b{color:var(--amber)}
+.partner .kicker{color:var(--amber)}
+.partner .kicker .idx::after{background:rgba(233,184,114,.28)}
+.partner h2 .u{color:var(--amber)}
+.partner .lead{color:var(--muted);font-size:1.06rem;margin-top:20px}
+.partner-points{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:34px 0}
+.ppoint{display:flex;gap:14px}
+.ppoint .ic{flex:none;width:44px;height:44px;border-radius:12px;background:rgba(233,184,114,.1);display:grid;place-items:center}
+.ppoint .ic .ico{width:21px;height:21px;stroke:var(--amber)}
+.ppoint h4{font-size:1rem;margin-bottom:3px;font-weight:600}
+.ppoint p{font-size:.86rem;color:var(--muted)}
+.btn.amber{background:var(--amber);color:#3a2a10;box-shadow:0 8px 28px rgba(233,184,114,.22)}
+.btn.amber:hover{box-shadow:0 12px 38px rgba(233,184,114,.4)}
+@media(max-width:960px){.partner-grid{grid-template-columns:1fr}.partner-points{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.partner-points{grid-template-columns:1fr}}
+
+/* ---------- CTA band ---------- */
+.cta-band{position:relative;overflow:hidden;border-radius:26px;margin:0 clamp(20px,5vw,58px);background:linear-gradient(135deg,#0f8d80,#0a6f66);padding:clamp(44px,7vw,78px);text-align:center}
+.cta-band::before{content:"";position:absolute;inset:0;opacity:.22;background:radial-gradient(circle at 18% 20%,#fff,transparent 40%),radial-gradient(circle at 82% 84%,var(--amber),transparent 46%)}
+.cta-band>*{position:relative;z-index:2}
+.cta-band h2{font-family:var(--disp);font-weight:600;font-size:clamp(1.8rem,4vw,2.9rem);color:#fff;margin-bottom:14px}
+html[lang="en"] .cta-band h2{font-family:var(--body)}
+.cta-band p{color:rgba(255,255,255,.86);max-width:52ch;margin:0 auto 30px}
+.subscribe{display:flex;gap:12px;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.subscribe input{flex:1;min-width:220px;padding:14px 20px;border-radius:100px;border:none;font-family:inherit;font-size:.95rem;background:rgba(255,255,255,.96);color:var(--ink)}
+.subscribe input:focus{outline:2px solid var(--amber)}
+.subscribe .btn{background:var(--ink);color:#fff;box-shadow:none}
+.subscribe .btn:hover{background:#02373d}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);border-top:1px solid var(--line);padding:70px clamp(20px,5vw,58px) 34px}
+.foot-grid{max-width:var(--maxw);margin-inline:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+footer .brand{margin-bottom:18px}
+footer .about{color:var(--muted);font-size:.92rem;max-width:36ch}
+footer h5{font-size:.78rem;letter-spacing:2px;text-transform:uppercase;color:var(--aqua-soft);margin-bottom:18px}
+footer ul{list-style:none;display:grid;gap:12px}
+footer ul a{color:var(--muted);font-size:.92rem;transition:color .3s}
+footer ul a:hover{color:var(--paper)}
+.foot-bottom{max-width:var(--maxw);margin:50px auto 0;padding-top:26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:.82rem}
+.foot-bottom .poctify b{color:var(--paper);font-weight:600}
+.socials{display:flex;gap:12px}
+.socials a{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);display:grid;place-items:center;transition:.3s}
+.socials a .ico{width:18px;height:18px;stroke:var(--muted)}
+.socials a:hover{border-color:var(--aqua)}
+.socials a:hover .ico{stroke:var(--aqua)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+@media(max-width:960px){.story-grid{grid-template-columns:1fr}.cards,.store-grid{grid-template-columns:1fr 1fr}.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){nav.links{display:none}.menu-btn{display:block}.cards,.store-grid,.foot-grid{grid-template-columns:1fr}.hero-values{gap:16px}}
+.drawer{position:fixed;inset:0;z-index:70;background:rgba(7,26,31,.98);backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:24px;transform:translateX(100%);transition:transform .45s var(--ease)}
+html[dir="rtl"] .drawer{transform:translateX(-100%)}
+.drawer.open{transform:translateX(0)}
+.drawer a{font-family:var(--disp);font-size:1.5rem;color:var(--paper)}
+.drawer .close{position:absolute;top:24px;inset-inline-end:24px;background:none;border:none;color:var(--paper);font-size:2rem;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.5c3.4 4 6 7 6 10a6 6 0 1 1-12 0c0-3 2.6-6 6-10z"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 4v16h16"/><path d="M7 14l3-3 3 2 4-5"/></symbol>
+<symbol id="i-chip" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 4v3M14 4v3M10 17v3M14 17v3M4 10h3M4 14h3M17 10h3M17 14h3"/></symbol>
+<symbol id="i-clip" viewBox="0 0 24 24"><rect x="6" y="4.5" width="12" height="16" rx="2"/><path d="M9.5 4.5h5v3h-5z"/><path d="M9 11.5h6M9 15h4"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.4"/></symbol>
+<symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2.2-6 3.6 12 2.2-6H21"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-3.6-3.6"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7"/></symbol>
+<symbol id="i-flask" viewBox="0 0 24 24"><path d="M9.5 3h5M10.5 3v6l-5 9a2 2 0 0 0 1.8 3h9.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M8 15.5h8"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4M9.5 13h5M9.5 16.5h5"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.2A2.2 2.2 0 0 1 6.2 3H12v15.5H6.2A2.2 2.2 0 0 0 4 20.7z"/><path d="M20 5.2A2.2 2.2 0 0 0 17.8 3H12v15.5h5.8A2.2 2.2 0 0 1 20 20.7z"/></symbol>
+<symbol id="i-net" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.2 10.9l7.6-3.6M8.2 13.1l7.6 3.6"/></symbol>
+<symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12.5" rx="2"/><path d="M8.5 20.5h7M12 16.5v4"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 2.8v5.2c0 4-3 7-7 8-4-1-7-4-7-8V5.8z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M13 22v-9h3l.6-4H13V6.6c0-1.1.3-1.9 2-1.9h1.7V1.1C16.4 1 15.4 1 14.3 1 11.9 1 10.3 2.5 10.3 5.5V9H7v4h3.3v9z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M8.6 8.4c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2 0 .4-.1.5l-.4.5c-.1.2-.2.3 0 .6.5.8 1.2 1.4 2.1 1.8.3.1.4.1.6-.1l.5-.6c.2-.2.3-.2.6-.1l1.5.8c.2.1.3.2.3.3 0 .5-.3 1.3-1.4 1.6-1 .3-2.2 0-4-1-1.6-1-2.7-2.7-2.8-3-.1-.2-.7-1-.7-1.9 0-.9.5-1.3.7-1.5z" fill="currentColor" stroke="none"/></symbol>
+</defs></svg>
+
+<!-- ============ NAV ============ -->
+<header id="hdr">
+  <a class="brand" href="#top" aria-label="LabSyria">
+    <span class="mark"><svg class="ico"><use href="#i-drop"/></svg></span>
+    <span class="name">
+      <span data-ar>لاب سوريا</span><span data-en>LabSyria</span>
+      <small data-ar>علم المختبر لسوريا</small><small data-en>LABORATORY SCIENCE FOR SYRIA</small>
+    </span>
+  </a>
+  <nav class="links">
+    <a href="#story" data-ar>القصة</a><a href="#story" data-en>Story</a>
+    <a href="#courses" data-ar>الدورات</a><a href="#courses" data-en>Courses</a>
+    <a href="#resources" data-ar>المصادر</a><a href="#resources" data-en>Resources</a>
+    <a href="#store" data-ar>المتجر</a><a href="#store" data-en>Store</a>
+    <a href="#partners" data-ar>للمصنّعين</a><a href="#partners" data-en>Partners</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="lang-toggle" id="langBtn" aria-label="Switch language"><span data-ar>EN</span><span data-en>ع</span></button>
+    <a class="btn" href="#join"><span data-ar>انضم إلينا</span><span data-en>Join us</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="close" id="closeBtn">&times;</button>
+  <a href="#story" data-ar>القصة</a><a href="#story" data-en>Story</a>
+  <a href="#courses" data-ar>الدورات</a><a href="#courses" data-en>Courses</a>
+  <a href="#resources" data-ar>المصادر</a><a href="#resources" data-en>Resources</a>
+  <a href="#blog" data-ar>المدونة</a><a href="#blog" data-en>Blog</a>
+  <a href="#store" data-ar>المتجر</a><a href="#store" data-en>Store</a>
+  <a href="#partners" data-ar>للمصنّعين</a><a href="#partners" data-en>Partners</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg">
+      <source src="assets/video/hero.webm" type="video/webm" />
+      <source src="assets/video/hero.mp4" type="video/mp4" />
+    </video>
+    <canvas id="fluid"></canvas>
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow reveal in"><span class="dot"></span><span data-ar>منصة علوم المختبر في سوريا</span><span data-en>Syria's laboratory science platform</span></span>
+    <h1 class="headline disp reveal in d1">
+      <span data-ar>علمُ المختبر،<br><span class="accent">بلغةٍ نفهمها.</span></span>
+      <span data-en>Laboratory science,<br><span class="accent">in our own language.</span></span>
+    </h1>
+    <p class="sub reveal in d2">
+      <span data-ar>دورات ومصادر ومقالات في التشخيص المخبري وضبط الجودة، مبنية لأخصائيي المختبرات وطلابهم في سوريا. وقريباً أجهزة ومستلزمات التشخيص التي تثقون بها.</span>
+      <span data-en>Courses, resources, and articles in diagnostics and quality control, built for Syria's laboratory scientists and students. And soon, the IVD instruments and supplies you can trust.</span>
+    </p>
+    <div class="hero-cta reveal in d3">
+      <a class="btn" href="#courses"><span data-ar>ابدأ التعلّم</span><span data-en>Start learning</span><svg class="ico"><use href="#i-arrow"/></svg></a>
+      <a class="btn ghost" href="#store"><span data-ar>اكتشف المتجر</span><span data-en>Explore the store</span></a>
+    </div>
+    <div class="hero-values reveal in d3">
+      <div class="v"><svg class="ico"><use href="#i-drop"/></svg><span data-ar>مبني لواقع المختبر السوري</span><span data-en>Built for the Syrian lab</span></div>
+      <div class="v"><svg class="ico"><use href="#i-book"/></svg><span data-ar>دورات ومصادر مجانية</span><span data-en>Free courses and resources</span></div>
+      <div class="v"><svg class="ico"><use href="#i-shield"/></svg><span data-ar>بمعايير عالمية موثوقة</span><span data-en>Trusted global standards</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="reveal">
+        <span class="kicker"><span class="idx">01</span><span data-ar>قصتنا</span><span data-en>Our story</span></span>
+        <blockquote>
+          <span data-ar>بدأت <span class="hl">لاب سوريا</span> من فكرة بسيطة: أن يجد كل أخصائي مختبر في سوريا المعرفة والأدوات التي يستحقها، <span class="hl">بلغته</span>، وبمعايير عالمية.</span>
+          <span data-en>LabSyria began with a simple idea. That every laboratory scientist in Syria should find the knowledge and tools they deserve, <span class="hl">in their language</span>, to a global standard.</span>
+        </blockquote>
+        <p class="who">
+          <span data-ar>مبادرة تعليمية في جوهرها، يقودها <b>عدنان الرفاعي</b>، أخصائي علوم حيوية طبية (MIBMS).</span>
+          <span data-en>An education-first initiative, led by <b>Adnan Al-Refai</b>, biomedical scientist (MIBMS).</span>
+        </p>
+      </div>
+      <div class="pillars reveal d1">
+        <div class="pillar"><span class="ic"><svg class="ico"><use href="#i-book"/></svg></span>
+          <div><h4><span data-ar>نتعلّم معاً</span><span data-en>We learn together</span></h4>
+          <p><span data-ar>دورات عملية في التشخيص وضبط الجودة، مصمّمة للواقع المخبري السوري.</span><span data-en>Practical courses in diagnostics and QC, designed for the Syrian lab.</span></p></div></div>
+        <div class="pillar"><span class="ic"><svg class="ico"><use href="#i-net"/></svg></span>
+          <div><h4><span data-ar>نشارك المعرفة</span><span data-en>We share knowledge</span></h4>
+          <p><span data-ar>مصادر ومقالات مفتوحة، مكتوبة ومترجمة بعناية باللغة العربية.</span><span data-en>Open resources and articles, carefully written and translated into Arabic.</span></p></div></div>
+        <div class="pillar"><span class="ic"><svg class="ico"><use href="#i-monitor"/></svg></span>
+          <div><h4><span data-ar>نجهّز مختبراتكم</span><span data-en>We equip your labs</span></h4>
+          <p><span data-ar>قريباً، أجهزة ومستلزمات تشخيص مختارة بعناية، مع الدعم الذي تحتاجونه.</span><span data-en>Soon, carefully selected IVD instruments and supplies, with the support you need.</span></p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURSES ============ -->
+<section id="courses"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="kicker"><span class="idx">02</span><span data-ar>الدورات</span><span data-en>Courses</span></span>
+    <h2 class="title disp"><span data-ar>تعلّم علم المختبر، خطوة بخطوة</span><span data-en>Learn lab science, step by step</span></h2>
+    <p><span data-ar>دورات قصيرة وعملية بشهادات موثّقة قابلة للتحقق. تبدأ مجاناً لأعضاء المجتمع.</span><span data-en>Short, practical courses with verifiable certificates. Free to start for the community.</span></p>
+  </div>
+  <div class="cards">
+    <article class="card reveal"><div class="top"><span class="medallion"><svg class="ico"><use href="#i-drop"/></svg></span></div><div class="body">
+      <span class="tag"><span data-ar>أساسيات</span><span data-en>Fundamentals</span></span>
+      <h3><span data-ar>أساسيات التشخيص عند نقطة الرعاية</span><span data-en>Point-of-Care Testing Fundamentals</span></h3>
+      <p><span data-ar>ما هو الاختبار عند نقطة الرعاية، كيف يعمل، وكيف نضمن نتائج موثوقة خارج المختبر المركزي.</span><span data-en>What POCT is, how it works, and how to ensure reliable results outside the central lab.</span></p>
+      <span class="go"><span data-ar>ابدأ الدورة</span><span data-en>Start course</span><svg class="ico"><use href="#i-arrow"/></svg></span></div></article>
+    <article class="card reveal d1"><div class="top"><span class="medallion"><svg class="ico"><use href="#i-chart"/></svg></span></div><div class="body">
+      <span class="tag"><span data-ar>الجودة</span><span data-en>Quality</span></span>
+      <h3><span data-ar>ضبط الجودة وقواعد ويستغارد</span><span data-en>Quality Control and Westgard Rules</span></h3>
+      <p><span data-ar>مخططات ليفي جينينغز، قواعد ويستغارد، وقراءة انحراف جهازك قبل أن يخطئ.</span><span data-en>Levey-Jennings charts, Westgard rules, and reading your analyzer's drift before it errs.</span></p>
+      <span class="go"><span data-ar>قريباً</span><span data-en>Coming soon</span><svg class="ico"><use href="#i-arrow"/></svg></span></div></article>
+    <article class="card reveal d2"><div class="top"><span class="medallion"><svg class="ico"><use href="#i-chip"/></svg></span></div><div class="body">
+      <span class="tag"><span data-ar>متقدّم</span><span data-en>Advanced</span></span>
+      <h3><span data-ar>الذكاء الاصطناعي في المختبر</span><span data-en>AI in the Diagnostic Lab</span></h3>
+      <p><span data-ar>كيف يغيّر الذكاء الاصطناعي التشخيص المخبري، بلغة عملية بعيدة عن الضجيج.</span><span data-en>How AI is changing lab diagnostics, explained practically without the hype.</span></p>
+      <span class="go"><span data-ar>قريباً</span><span data-en>Coming soon</span><svg class="ico"><use href="#i-arrow"/></svg></span></div></article>
+  </div>
+</div></section>
+
+<!-- ============ RESOURCES ============ -->
+<section id="resources"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="kicker"><span class="idx">03</span><span data-ar>المصادر</span><span data-en>Resources</span></span>
+    <h2 class="title disp"><span data-ar>مكتبة مرجعية بين يديك</span><span data-en>A reference library at your fingertips</span></h2>
+    <p><span data-ar>أدلة، قوائم مرجعية، وقيم مرجعية قابلة للتنزيل، عربية أولاً.</span><span data-en>Guides, checklists, and reference ranges you can download, Arabic-first.</span></p>
+  </div>
+  <div class="cards">
+    <article class="card reveal"><div class="top"><span class="medallion"><svg class="ico"><use href="#i-clip"/></svg></span></div><div class="body">
+      <span class="tag"><span data-ar>تنزيل</span><span data-en>Download</span></span>
+      <h3><span data-ar>سجلّ ضبط الجودة اليومي</span><span data-en>Daily QC Log Sheet</span></h3>
+      <p><span data-ar>قالب جاهز للطباعة لتوثيق نتائج الشواهد يومياً في مختبرك.</span><span data-en>A print-ready template to record daily control results in your lab.</span></p>
+      <span class="go"><span data-ar>حمّل الملف</span><span data-en>Get the PDF</span><svg class="ico"><use href="#i-arrow"/></svg></span></div></article>
+    <article class="card reveal d1"><div class="top"><span class="medallion"><svg class="ico"><use href="#i-target"/></svg></span></div><div class="body">
+      <span class="tag"><span data-ar>مرجع</span><span data-en>Reference</span></span>
+      <h3><span data-ar>القيم المرجعية الشائعة</span><span data-en>Common Reference Ranges</span></h3>
+      <p><span data-ar>جدول القيم الطبيعية لأكثر التحاليل شيوعاً، مع الوحدات وعوامل التحويل.</span><span data-en>Normal values for the most common analytes, with units and conversion factors.</span></p>
+      <span class="go"><span data-ar>تصفّح</span><span data-en>Browse</span><svg class="ico"><use href="#i-arrow"/></svg></span></div></article>
+    <article class="card reveal d2"><div class="top"><span class="medallion"><svg class="ico"><use href="#i-pulse"/></svg></span></div><div class="body">
+      <span class="tag"><span data-ar>أداة</span><span data-en>Tool</span></span>
+      <h3><span data-ar>محاكي ليفي جينينغز</span><span data-en>Levey-Jennings Simulator</span></h3>
+      <p><span data-ar>ارسم بياناتك وشاهد قواعد ويستغارد تعمل مباشرة، أداة تفاعلية.</span><span data-en>Plot your data and watch Westgard rules fire live, an interactive tool.</span></p>
+      <span class="go"><span data-ar>جرّب الأداة</span><span data-en>Try it</span><svg class="ico"><use href="#i-arrow"/></svg></span></div></article>
+  </div>
+</div></section>
+
+<!-- ============ BLOG ============ -->
+<section id="blog"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="kicker"><span class="idx">04</span><span data-ar>المدونة</span><span data-en>Blog</span></span>
+    <h2 class="title disp"><span data-ar>مقالات من قلب المختبر</span><span data-en>Articles from inside the lab</span></h2>
+    <p><span data-ar>رؤى وخبرات عملية، مكتوبة بلغة الأخصائيين لا الشركات.</span><span data-en>Insights and hands-on experience, written by scientists, not marketers.</span></p>
+  </div>
+  <div class="cards">
+    <article class="card reveal"><div class="top"><span class="medallion"><svg class="ico"><use href="#i-search"/></svg></span></div><div class="body">
+      <span class="tag"><span data-ar>مقال · ٦ دقائق</span><span data-en>Article · 6 min</span></span>
+      <h3><span data-ar>لماذا تفشل نتائج الشواهد؟ خمسة أسباب خفية</span><span data-en>Why do control results fail? Five hidden causes</span></h3>
+      <p><span data-ar>من التخزين الخاطئ إلى معايرة منسية، تشريح عملي لأخطاء الجودة اليومية.</span><span data-en>From bad storage to a forgotten calibration, a practical look at daily QC errors.</span></p>
+      <span class="go"><span data-ar>اقرأ</span><span data-en>Read</span><svg class="ico"><use href="#i-arrow"/></svg></span></div></article>
+    <article class="card reveal d1"><div class="top"><span class="medallion"><svg class="ico"><use href="#i-compass"/></svg></span></div><div class="body">
+      <span class="tag"><span data-ar>رأي · ٨ دقائق</span><span data-en>Opinion · 8 min</span></span>
+      <h3><span data-ar>مستقبل المختبر السوري بعد ٢٠٢٥</span><span data-en>The future of the Syrian lab after 2025</span></h3>
+      <p><span data-ar>كيف نبني قدرات تشخيصية مستدامة بموارد محدودة وطموح كبير.</span><span data-en>Building sustainable diagnostic capacity with limited resources and big ambition.</span></p>
+      <span class="go"><span data-ar>اقرأ</span><span data-en>Read</span><svg class="ico"><use href="#i-arrow"/></svg></span></div></article>
+    <article class="card reveal d2"><div class="top"><span class="medallion"><svg class="ico"><use href="#i-gear"/></svg></span></div><div class="body">
+      <span class="tag"><span data-ar>دليل · ٥ دقائق</span><span data-en>Guide · 5 min</span></span>
+      <h3><span data-ar>كيف تختار جهاز تشخيص لعيادتك؟</span><span data-en>How to choose an analyzer for your clinic</span></h3>
+      <p><span data-ar>سبعة أسئلة تطرحها قبل الشراء، من الصيانة إلى الكواشف والدعم.</span><span data-en>Seven questions to ask before buying, from maintenance to reagents and support.</span></p>
+      <span class="go"><span data-ar>اقرأ</span><span data-en>Read</span><svg class="ico"><use href="#i-arrow"/></svg></span></div></article>
+  </div>
+</div></section>
+
+<!-- ============ STORE ============ -->
+<section class="store" id="store"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="kicker"><span class="idx">05</span><span data-ar>المتجر · قريباً</span><span data-en>The store · Coming soon</span></span>
+    <h2 class="title disp"><span data-ar>أجهزة ومستلزمات تشخيص، بثقة</span><span data-en>IVD instruments and supplies, with trust</span></h2>
+    <p><span data-ar>نختار كل جهاز كما لو كان لمختبرنا. لكل منتج قصة وسبب. المتجر يُفتح قريباً.</span><span data-en>We select every device as if it were for our own lab. Each product has a story and a reason. The store opens soon.</span></p>
+  </div>
+  <div class="store-grid">
+    <article class="product reveal">
+      <div class="product-media"><span class="soon"><span data-ar>قريباً</span><span data-en>Soon</span></span><img src="assets/img/prod-hema.jpg" alt="" /></div>
+      <div class="product-body">
+        <div class="cat"><span data-ar>تحاليل الدم</span><span data-en>Hematology</span></div>
+        <h3><span data-ar>محلّلات الدم المحمولة</span><span data-en>Portable Blood Analyzers</span></h3>
+        <p><span data-ar>نتائج مخبرية موثوقة عند نقطة الرعاية، في دقائق وبقطرة دم واحدة.</span><span data-en>Lab-grade results at the point of care, in minutes from a single drop.</span></p>
+        <div class="qt"><span data-ar>اخترناه لأنه يعمل حين ينقطع الكهرباء، ولا يخذل المريض.</span><span data-en>We chose it because it works when the power does not, and never lets the patient down.</span></div>
+      </div></article>
+    <article class="product reveal d1">
+      <div class="product-media"><span class="soon"><span data-ar>قريباً</span><span data-en>Soon</span></span><img src="assets/img/prod-chem.jpg" alt="" /></div>
+      <div class="product-body">
+        <div class="cat"><span data-ar>الكيمياء الحيوية</span><span data-en>Clinical Chemistry</span></div>
+        <h3><span data-ar>أجهزة الكيمياء الحيوية</span><span data-en>Chemistry Analyzers</span></h3>
+        <p><span data-ar>لوحات شاملة من وظائف الكبد إلى الكلى، بكواشف متوفرة محلياً.</span><span data-en>Full panels from liver to kidney function, with locally available reagents.</span></p>
+        <div class="qt"><span data-ar>الكاشف المتوفر أهم من أحدث موديل لا تجد له قطع غيار.</span><span data-en>An available reagent matters more than the newest model you cannot get parts for.</span></div>
+      </div></article>
+    <article class="product reveal d2">
+      <div class="product-media"><span class="soon"><span data-ar>قريباً</span><span data-en>Soon</span></span><img src="assets/img/prod-rapid.jpg" alt="" /></div>
+      <div class="product-body">
+        <div class="cat"><span data-ar>سريع · مناعي</span><span data-en>Rapid · Immunoassay</span></div>
+        <h3><span data-ar>الاختبارات السريعة والمناعية</span><span data-en>Rapid and Immunoassay Tests</span></h3>
+        <p><span data-ar>شرائط وكواشف معتمدة (CE و UKCA) للأمراض المعدية والهرمونات والحمل.</span><span data-en>Certified (CE and UKCA) strips and reagents for infectious disease, hormones, and pregnancy.</span></p>
+        <div class="qt"><span data-ar>كل صندوق يصل بسلسلة تبريد موثّقة، لأن النتيجة تبدأ من الشحن.</span><span data-en>Every box arrives with a documented cold chain, because the result starts at shipping.</span></div>
+      </div></article>
+  </div>
+</div></section>
+
+<!-- ============ PARTNER / MANUFACTURERS ============ -->
+<section class="partner" id="partners"><div class="wrap">
+  <div class="partner-grid">
+    <div class="partner-visual reveal">
+      <img src="assets/img/hero-bg.jpg" alt="IVD and point-of-care diagnostics distribution in Syria" loading="lazy" />
+      <div class="badge"><span data-ar>توزيع أجهزة التشخيص في <b>سوريا</b></span><span data-en>IVD distribution across <b>Syria</b></span></div>
+    </div>
+    <div class="reveal d1">
+      <span class="kicker"><span class="idx">06</span><span data-ar>للمصنّعين</span><span data-en>For manufacturers</span></span>
+      <h2 class="title disp"><span data-ar>تبحث عن <span class="u">شريك توزيع في سوريا</span>؟</span><span data-en>Looking for a <span class="u">distribution partner in Syria</span>?</span></h2>
+      <p class="lead"><span data-ar>تربط لاب سوريا مصنّعي أجهزة ومستلزمات التشخيص المخبري (IVD) والاختبار عند نقطة الرعاية بالمخابر والعيادات والمشافي في جميع أنحاء سوريا. نتولّى تسجيل المنتجات، والتوزيع داخل البلد، وتدريب المستخدمين، والدعم بعد البيع.</span><span data-en>LabSyria connects international IVD and point-of-care manufacturers with laboratories, clinics, and hospitals across Syria. We handle product registration, in-country distribution, user training, and after-sales support, so entering the Syrian market is straightforward.</span></p>
+      <div class="partner-points">
+        <div class="ppoint"><span class="ic"><svg class="ico"><use href="#i-net"/></svg></span>
+          <div><h4><span data-ar>شبكة ميدانية</span><span data-en>On-the-ground network</span></h4>
+          <p><span data-ar>وصول مباشر إلى المخابر والعيادات والمشافي.</span><span data-en>Direct reach into labs, clinics and hospitals.</span></p></div></div>
+        <div class="ppoint"><span class="ic"><svg class="ico"><use href="#i-shield"/></svg></span>
+          <div><h4><span data-ar>تسجيل وامتثال</span><span data-en>Registration &amp; compliance</span></h4>
+          <p><span data-ar>نتولّى تسجيل الأجهزة لدى الجهات السورية.</span><span data-en>We navigate Syrian device registration.</span></p></div></div>
+        <div class="ppoint"><span class="ic"><svg class="ico"><use href="#i-book"/></svg></span>
+          <div><h4><span data-ar>تدريب سريري</span><span data-en>Clinical training</span></h4>
+          <p><span data-ar>ندرّب المستخدمين فنخفّف عبء الدعم عنك.</span><span data-en>We train users, cutting your support burden.</span></p></div></div>
+        <div class="ppoint"><span class="ic"><svg class="ico"><use href="#i-gear"/></svg></span>
+          <div><h4><span data-ar>دعم بعد البيع</span><span data-en>After-sales support</span></h4>
+          <p><span data-ar>صيانة وكواشف ومتابعة مستمرة.</span><span data-en>Maintenance, reagents and ongoing service.</span></p></div></div>
+      </div>
+      <a class="btn amber" href="mailto:partners@labsyria.com?subject=Distribution%20partnership%20in%20Syria"><span data-ar>كن شريك توزيع</span><span data-en>Become a distribution partner</span><svg class="ico"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ JOIN ============ -->
+<section id="join" style="padding-block:0 clamp(78px,10vw,140px)">
+  <div class="cta-band reveal">
+    <h2><span data-ar>كن أول من يعرف</span><span data-en>Be the first to know</span></h2>
+    <p><span data-ar>اشترك لتصلك الدورات الجديدة، المصادر المجانية، وإطلاق المتجر. لا رسائل مزعجة، وعد.</span><span data-en>Subscribe for new courses, free resources, and the store launch. No spam, promise.</span></p>
+    <form class="subscribe" onsubmit="return false">
+      <input type="email" required id="emailInput" />
+      <button class="btn" type="submit"><span data-ar>اشترك</span><span data-en>Subscribe</span></button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-grid">
+    <div>
+      <a class="brand" href="#top"><span class="mark"><svg class="ico"><use href="#i-drop"/></svg></span>
+        <span class="name"><span data-ar>لاب سوريا</span><span data-en>LabSyria</span>
+          <small data-ar>علم المختبر لسوريا</small><small data-en>LABORATORY SCIENCE FOR SYRIA</small></span></a>
+      <p class="about"><span data-ar>منصة عربية لعلوم المختبر: نتعلّم، نشارك المعرفة، ونجهّز مختبرات سوريا بأدوات نثق بها.</span><span data-en>An Arabic platform for laboratory science: we learn, share knowledge, and equip Syria's labs with tools we trust.</span></p>
+    </div>
+    <div><h5><span data-ar>المنصة</span><span data-en>Platform</span></h5><ul>
+      <li><a href="#courses"><span data-ar>الدورات</span><span data-en>Courses</span></a></li>
+      <li><a href="#resources"><span data-ar>المصادر</span><span data-en>Resources</span></a></li>
+      <li><a href="#blog"><span data-ar>المدونة</span><span data-en>Blog</span></a></li>
+      <li><a href="#store"><span data-ar>المتجر</span><span data-en>Store</span></a></li>
+      <li><a href="#partners"><span data-ar>للمصنّعين</span><span data-en>For manufacturers</span></a></li></ul></div>
+    <div><h5><span data-ar>عن المنصة</span><span data-en>About</span></h5><ul>
+      <li><a href="#story"><span data-ar>قصتنا</span><span data-en>Our story</span></a></li>
+      <li><a href="#join"><span data-ar>انضم إلينا</span><span data-en>Join us</span></a></li>
+      <li><a href="#"><span data-ar>تواصل معنا</span><span data-en>Contact</span></a></li></ul></div>
+    <div><h5><span data-ar>تابعنا</span><span data-en>Follow</span></h5>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><svg class="ico"><use href="#i-fb"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg class="ico"><use href="#i-ig"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
+      </div></div>
+  </div>
+  <div class="foot-bottom">
+    <div class="poctify"><span data-ar>لاب سوريا مبادرة من</span><span data-en>LabSyria is an initiative by</span> <b>POCTIFY LTD</b> <span data-ar>· جميع الحقوق محفوظة © ٢٠٢٦</span><span data-en>· All rights reserved © 2026</span></div>
+    <div><span data-ar>منصة مستقلة لعلوم المختبر في سوريا</span><span data-en>An independent platform for laboratory science in Syria</span></div>
+  </div>
+</footer>
+
+<script>
+const html=document.documentElement;
+const applyLang=(l)=>{const en=l==='en';html.lang=en?'en':'ar';html.dir=en?'ltr':'rtl';setPh();};
+const setPh=()=>document.getElementById('emailInput').setAttribute('placeholder', html.lang==='ar'?'بريدك الإلكتروني':'Your email address');
+const q=(new URLSearchParams(location.search).get('lang')||'').toLowerCase();
+if(q==='en'||q==='ar')applyLang(q);
+document.getElementById('langBtn').addEventListener('click',()=>{const to=html.lang==='ar'?'en':'ar';applyLang(to);
+  const u=new URL(location);u.searchParams.set('lang',to);history.replaceState(null,'',u);});
+setPh();
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40));
+const drawer=document.getElementById('drawer');
+document.getElementById('menuBtn').addEventListener('click',()=>drawer.classList.add('open'));
+document.getElementById('closeBtn').addEventListener('click',()=>drawer.classList.remove('open'));
+drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>drawer.classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+
+/* HERO living molecular-fluid canvas */
+(function(){
+  const c=document.getElementById('fluid'),x=c.getContext('2d');
+  let w,h,dpr,parts=[],blobs=[];const AQUA='rgba(25,199,181,',AMBER='rgba(233,184,114,';
+  function size(){
+    dpr=Math.min(devicePixelRatio||1,2);w=c.width=innerWidth*dpr;h=c.height=innerHeight*dpr;
+    c.style.width=innerWidth+'px';c.style.height=innerHeight+'px';
+    const n=Math.min(84,Math.floor(innerWidth/17));
+    parts=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.24*dpr,vy:(Math.random()-.5)*.24*dpr,r:(Math.random()*1.7+.6)*dpr}));
+    blobs=[{x:w*.76,y:h*.24,r:Math.min(w,h)*.34,c:AQUA,ph:0},{x:w*.18,y:h*.72,r:Math.min(w,h)*.26,c:AMBER,ph:2},{x:w*.5,y:h*.5,r:Math.min(w,h)*.3,c:AQUA,ph:4}];
+  }
+  let t=0;
+  function frame(){t+=.006;x.clearRect(0,0,w,h);
+    blobs.forEach(b=>{const bx=b.x+Math.cos(t+b.ph)*38*dpr,by=b.y+Math.sin(t*1.3+b.ph)*38*dpr;
+      const g=x.createRadialGradient(bx,by,0,bx,by,b.r);g.addColorStop(0,b.c+'.16)');g.addColorStop(1,b.c+'0)');
+      x.fillStyle=g;x.beginPath();x.arc(bx,by,b.r,0,7);x.fill();});
+    for(let i=0;i<parts.length;i++){const p=parts[i];p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;
+      for(let j=i+1;j<parts.length;j++){const q=parts[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.hypot(dx,dy),m=125*dpr;
+        if(d<m){x.strokeStyle=AQUA+(0.11*(1-d/m))+')';x.lineWidth=1*dpr;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke();}}
+      x.fillStyle=AQUA+'.55)';x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();}
+    requestAnimationFrame(frame);}
+  size();frame();addEventListener('resize',size);
+})();
+</script>
+</body>
+</html>

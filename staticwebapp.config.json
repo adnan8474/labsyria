@@ -1,0 +1,21 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*", "/*.{svg,jpg,jpeg,png,webp,ico,xml,txt,mp4,webm,json}"]
+  },
+  "mimeTypes": {
+    ".webm": "video/webm",
+    ".mp4": "video/mp4",
+    ".svg": "image/svg+xml",
+    ".json": "application/json"
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "X-Frame-Options": "SAMEORIGIN"
+  },
+  "routes": [
+    { "route": "/assets/*", "headers": { "Cache-Control": "public, max-age=2592000, immutable" } },
+    { "route": "/favicon.svg", "headers": { "Cache-Control": "public, max-age=604800" } }
+  ]
+}

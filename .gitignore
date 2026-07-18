@@ -1,0 +1,14 @@
+node_modules/
+frames/
+dist/
+shot*.js
+shot*.png
+capture.js
+og-render.js
+og.html
+bgvideo.html
+package.json
+package-lock.json
+labsyria-deploy.zip
+COURSES-ARCHITECTURE.md
+.ionos*
