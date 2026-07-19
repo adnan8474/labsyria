@@ -201,7 +201,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
  var co=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);co.unobserve(e.target)}})},{threshold:.5});
  els.forEach(function(el){co.observe(el)});})();
 /* lead capture: forms with [data-lead-form] email to LabSyria via FormSubmit + local backup */
-(function(){var EP="https://formsubmit.co/ajax/info@labsyria.com";
+(function(){var EP="https://formsubmit.co/ajax/67e43928aca5f6238eaa9d3342ea4eef";
  function ok(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((v||'').trim());}
  function local(o){try{var a=JSON.parse(localStorage.getItem('labsyria_leads')||'[]');a.push(o);localStorage.setItem('labsyria_leads',JSON.stringify(a));}catch(e){}}
  document.querySelectorAll('[data-lead-form]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();
