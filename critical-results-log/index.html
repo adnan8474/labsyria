@@ -156,8 +156,14 @@ const html=document.documentElement;
 const setPh=()=>{const ar=html.lang==='ar';document.querySelectorAll('[data-ph-ar]').forEach(el=>{el.placeholder=ar?el.getAttribute('data-ph-ar'):el.getAttribute('data-ph-en')});const e=document.getElementById('emailInput');if(e)e.placeholder=ar?'بريدك الإلكتروني':'Your email address';};
 const applyLang=l=>{const en=l==='en';html.lang=en?'en':'ar';html.dir=en?'ltr':'rtl';setPh();};
 const q=(new URLSearchParams(location.search).get('lang')||'').toLowerCase();
-let sv='';try{sv=localStorage.getItem('labsyria_lang')||''}catch(e){}if(q==='en'||q==='ar'){applyLang(q);try{localStorage.setItem('labsyria_lang',q)}catch(e){}}else if(sv==='en'||sv==='ar')applyLang(sv);
-document.getElementById('langBtn').addEventListener('click',()=>{const to=html.lang==='ar'?'en':'ar';applyLang(to);try{localStorage.setItem('labsyria_lang',to)}catch(e){}const u=new URL(location);u.searchParams.set('lang',to);history.replaceState(null,'',u);});
+const saveLang=l=>{try{localStorage.setItem('labsyria_lang',l)}catch(e){}};
+const readLang=()=>{try{return localStorage.getItem('labsyria_lang')||''}catch(e){return''}};
+if(q==='en'||q==='ar'){applyLang(q);saveLang(q);const u=new URL(location);u.searchParams.delete('lang');history.replaceState(null,'',u);}else{const sv=readLang();if(sv==='en'||sv==='ar')applyLang(sv);}
+const syncLang=()=>{const sv=readLang();if((sv==='en'||sv==='ar')&&sv!==html.lang)applyLang(sv);};
+addEventListener('storage',e=>{if(e.key==='labsyria_lang')syncLang();});
+addEventListener('pageshow',e=>{if(e.persisted)syncLang();});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncLang();});
+document.getElementById('langBtn').addEventListener('click',()=>{const to=html.lang==='ar'?'en':'ar';applyLang(to);saveLang(to);});
 setPh();
 const dr=document.getElementById('drawer');
 document.getElementById('menuBtn').addEventListener('click',()=>dr.classList.add('open'));
