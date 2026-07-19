@@ -147,10 +147,26 @@ h2.h2{font-size:clamp(1.8rem,3.6vw,2.8rem);font-weight:700}
 .sec-head p{color:var(--muted);font-size:1.06rem;margin-top:16px}
 
 /* ---------- HERO ---------- */
-.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--mist),var(--white) 78%)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 88% at 86% -24%,rgba(10,162,60,.13),transparent 54%),radial-gradient(85% 78% at -6% 4%,rgba(28,195,86,.09),transparent 56%),radial-gradient(130% 120% at 50% 130%,rgba(23,46,75,.07),transparent 62%),linear-gradient(180deg,var(--mist),var(--white) 82%)}
 .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(15,34,57,.07) 1px,transparent 1.4px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 72%);mask-image:linear-gradient(180deg,#000 0%,transparent 72%);pointer-events:none}
 .hero::after{content:"";position:absolute;inset:0;background:var(--grain);pointer-events:none}
-.hero .glow{position:absolute;top:-180px;inset-inline-end:-140px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(10,162,60,.13),transparent 65%);pointer-events:none}
+.hero .glow{position:absolute;top:-190px;inset-inline-end:-150px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(10,162,60,.16),transparent 66%);pointer-events:none;animation:glowDrift 17s ease-in-out infinite}
+@keyframes glowDrift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-26px,20px) scale(1.06)}}
+/* Sihtak app showcase card (home "From our family") */
+.appcard{position:relative;overflow:hidden;text-align:center;background:linear-gradient(165deg,var(--mist),#fff 72%);border:1px solid var(--line);border-radius:26px;padding:40px 30px 32px}
+.appcard::after{content:"";position:absolute;inset:0;background:var(--grain);opacity:.55;pointer-events:none}
+.appcard-glow{position:absolute;top:-110px;left:50%;transform:translateX(-50%);width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(10,162,60,.2),transparent 62%);pointer-events:none}
+.applogo{width:118px;height:118px;border-radius:27px;display:inline-block;position:relative;z-index:1;box-shadow:0 24px 48px -18px rgba(10,162,60,.6),0 6px 16px rgba(8,42,48,.22),inset 0 0 0 1px rgba(255,255,255,.5);animation:appFloat 5.5s var(--ease) infinite}
+@keyframes appFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.appname{position:relative;z-index:1;font-family:var(--font-d);font-weight:700;color:var(--ink);font-size:1.62rem;margin-top:22px;letter-spacing:-.01em}
+html[lang="ar"] .appname{letter-spacing:0}
+.apptag{position:relative;z-index:1;color:var(--muted);font-size:.92rem;margin-top:5px}
+.appshot{position:relative;z-index:1;max-width:205px;margin:24px auto 0}
+.appshot img{width:100%;border-radius:20px;border:1px solid var(--line);box-shadow:0 26px 52px -24px rgba(8,42,48,.5)}
+.appstores{position:relative;z-index:1;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.storepill{display:inline-flex;align-items:center;gap:7px;padding:9px 17px;border-radius:50px;background:var(--ink);color:#fff;font-size:.82rem;font-weight:500;transition:background .2s var(--ease)}
+.storepill svg{width:15px;height:15px;fill:currentColor}
+.appcard a:hover .applogo{box-shadow:0 30px 56px -18px rgba(10,162,60,.7),0 8px 18px rgba(8,42,48,.26),inset 0 0 0 1px rgba(255,255,255,.55)}
 .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,68px);align-items:center;padding-block:clamp(52px,7vw,96px)}
 .hero-copy{max-width:38rem}
 .hero-copy .h1{margin-bottom:22px}
