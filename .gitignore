@@ -36,3 +36,17 @@ va-*.png
 r-*.png
 _newcontent.py
 _articles_src.txt
+
+# local debug artifacts - never publish
+_*
+shots-*/
+ai-probe.js
+extract-ai.py
+find-syntax-err.js
+gate-selftest.py
+js-parse-check.js
+js-parse-local.js
+rtl-test.js
+test-fix.js
+verify-analytics.js
+rtl-forced-home.png
