@@ -176,6 +176,23 @@ a.storepill:hover{background:var(--teal)}
    The title and subtitle are wrapped in their own elements because the
    language spans inside them use display:revert, so making those blocks
    would fight the AR/EN switching. */
+/* Download banner across the top, phones only. Sits above the sticky header
+   and scrolls away with the page, which is how the native ones behave. */
+.appbanner{display:flex;align-items:center;gap:11px;padding:9px 14px;
+  background:var(--deep);color:#fff;position:relative;z-index:60}
+.appbanner[hidden]{display:none}
+.appbanner-icon{width:40px;height:40px;border-radius:10px;flex:none}
+.appbanner-text{flex:1 1 auto;min-width:0;line-height:1.3}
+.appbanner-title{display:block;font-size:.88rem;font-weight:600;color:#fff}
+.appbanner-sub{display:block;font-size:.76rem;color:#C6D2DE}
+.appbanner-cta{flex:none;background:var(--teal);color:#fff;border-radius:50px;
+  padding:8px 17px;font-size:.82rem;font-weight:600;white-space:nowrap}
+.appbanner-cta:hover{background:var(--teal-hover)}
+.appbanner-x{flex:none;background:none;border:0;color:#8DA0B4;font-size:21px;
+  line-height:1;padding:4px 2px;cursor:pointer}
+/* Desktop already has the strip under the hero; a banner too would be nagging. */
+@media (min-width:821px){.appbanner{display:none!important}}
+
 .appbar{border-block:1px solid var(--line);background:var(--paper)}
 .appbar .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-block:14px}
 .appbar-icon{width:44px;height:44px;border-radius:11px;flex:none;

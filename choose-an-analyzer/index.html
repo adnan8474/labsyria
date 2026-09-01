@@ -36,6 +36,40 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labsyria.com/"},{"@type":"ListItem","position":2,"name":"How to choose an analyzer for your clinic: seven questions before you buy","item":"https://labsyria.com/choose-an-analyzer/"}]}</script>
 </head>
 <body>
+<div class="appbanner" id="appbanner" hidden>
+  <img class="appbanner-icon" src="/assets/img/labsyria-app-icon.png" width="40" height="40" alt="" loading="lazy"/>
+  <span class="appbanner-text">
+    <b class="appbanner-title"><span data-ar>تطبيق لاب سوريا</span><span data-en>The LabSyria app</span></b>
+    <span class="appbanner-sub"><span data-ar>مجاني · يعمل بدون إنترنت</span><span data-en>Free · works offline</span></span>
+  </span>
+  <a class="appbanner-cta" id="appbanner-cta" href="https://labsyria.com/" target="_blank" rel="noopener"><span data-ar>تحميل</span><span data-en>Get</span></a>
+  <button class="appbanner-x" id="appbanner-x" type="button" aria-label="Dismiss">&#215;</button>
+</div>
+<script>
+/* Show a download banner only to phones, pointing at the store that device can
+   actually install from. Dismissal sticks so it is not nagging on every page. */
+(function(){
+  try{
+    var el=document.getElementById('appbanner');
+    if(!el) return;
+    if(localStorage.getItem('labsyria_appbanner')==='off') return;
+    var ua=navigator.userAgent||'';
+    /* iPadOS 13+ reports itself as a Mac, so touch points are the tell. */
+    var ios=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
+    var android=/Android/i.test(ua);
+    if(!ios&&!android) return;
+    document.getElementById('appbanner-cta').href = ios
+      ? 'https://apps.apple.com/app/id6793185713'
+      : 'https://play.google.com/store/apps/details?id=com.poctify.labsyria';
+    el.hidden=false;
+    document.getElementById('appbanner-x').addEventListener('click',function(){
+      el.hidden=true;
+      try{localStorage.setItem('labsyria_appbanner','off');}catch(e){}
+    });
+  }catch(e){}
+})();
+</script>
+
 <a class="skip" href="#main"><span data-ar>تخطَّ إلى المحتوى</span><span data-en>Skip to content</span></a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
