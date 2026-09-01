@@ -226,7 +226,7 @@ a.storepill:hover{background:var(--teal)}
 .cred .item:first-child{border-inline-start:none;padding-inline-start:0}
 .cred .item:hover{transform:translateY(-3px)}
 .cred .item .ic{width:42px;height:42px;flex:none;border-radius:12px;background:linear-gradient(145deg,var(--mist),#fff);border:1px solid var(--line);display:grid;place-items:center}
-.cred .item .ic svg{width:20px;height:20px;stroke:var(--teal);fill:none;stroke-width:1.8}
+.cred .item .ic svg{width:20px;height:20px;stroke:var(--teal);fill:none;stroke-width:1.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:6}
 .cred .item b{color:var(--ink);font-size:.98rem;font-weight:600;display:block;line-height:1.3}
 .cred .item span{color:var(--muted);font-size:.84rem}
 @media(max-width:940px){.cred .item{border-inline-start:none;padding-inline-start:0}}
