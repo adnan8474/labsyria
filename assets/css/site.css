@@ -166,6 +166,33 @@ html[lang="ar"] .appname{letter-spacing:0}
 .appstores{position:relative;z-index:1;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
 .storepill{display:inline-flex;align-items:center;gap:7px;padding:9px 17px;border-radius:50px;background:var(--ink);color:#fff;font-size:.82rem;font-weight:500;transition:background .2s var(--ease)}
 .storepill svg{width:15px;height:15px;fill:currentColor}
+/* The store pills on the app strip are real links, unlike the decorative ones
+   on the Sihtak card, so they get a hover and must not wrap mid-label. */
+a.storepill{white-space:nowrap}
+a.storepill:hover{background:var(--teal)}
+
+/* App download strip: a thin band under the hero, not a section. The site
+   already explains itself; this only has to carry the two buttons.
+   The title and subtitle are wrapped in their own elements because the
+   language spans inside them use display:revert, so making those blocks
+   would fight the AR/EN switching. */
+.appbar{border-block:1px solid var(--line);background:var(--paper)}
+.appbar .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-block:14px}
+.appbar-icon{width:44px;height:44px;border-radius:11px;flex:none;
+  box-shadow:0 6px 16px -6px rgba(8,42,48,.4)}
+.appbar-text{flex:1 1 auto;min-width:0;margin-inline-end:auto}
+.appbar-title{display:block;color:var(--ink);font-size:.95rem;font-weight:600;line-height:1.35}
+.appbar-sub{display:block;color:var(--muted);font-size:.85rem;line-height:1.4}
+.appbar-btns{display:flex;gap:9px;flex-wrap:wrap;flex:none}
+
+@media (max-width:720px){
+  /* Icon and wording share the first row; the buttons take a full row under
+     them and split it, so neither is a small target on a phone. */
+  .appbar .wrap{gap:12px}
+  .appbar-text{flex:1 1 0;margin-inline-end:0}
+  .appbar-btns{flex:1 0 100%;gap:10px}
+  .appbar-btns .storepill{flex:1 1 0;justify-content:center;padding-block:11px}
+}
 .appcard a:hover .applogo{box-shadow:0 30px 56px -18px rgba(10,162,60,.7),0 8px 18px rgba(8,42,48,.26),inset 0 0 0 1px rgba(255,255,255,.55)}
 .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,68px);align-items:center;padding-block:clamp(52px,7vw,96px)}
 .hero-copy{max-width:38rem}
