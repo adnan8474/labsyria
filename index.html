@@ -36,40 +36,6 @@
 
 </head>
 <body>
-<div class="appbanner" id="appbanner" hidden>
-  <img class="appbanner-icon" src="/assets/img/labsyria-app-icon.png" width="40" height="40" alt="" loading="lazy"/>
-  <span class="appbanner-text">
-    <b class="appbanner-title"><span data-ar>تطبيق لاب سوريا</span><span data-en>The LabSyria app</span></b>
-    <span class="appbanner-sub"><span data-ar>مجاني · يعمل بدون إنترنت</span><span data-en>Free · works offline</span></span>
-  </span>
-  <a class="appbanner-cta" id="appbanner-cta" href="https://labsyria.com/" target="_blank" rel="noopener"><span data-ar>تحميل</span><span data-en>Get</span></a>
-  <button class="appbanner-x" id="appbanner-x" type="button" aria-label="Dismiss">&#215;</button>
-</div>
-<script>
-/* Show a download banner only to phones, pointing at the store that device can
-   actually install from. Dismissal sticks so it is not nagging on every page. */
-(function(){
-  try{
-    var el=document.getElementById('appbanner');
-    if(!el) return;
-    if(localStorage.getItem('labsyria_appbanner')==='off') return;
-    var ua=navigator.userAgent||'';
-    /* iPadOS 13+ reports itself as a Mac, so touch points are the tell. */
-    var ios=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
-    var android=/Android/i.test(ua);
-    if(!ios&&!android) return;
-    document.getElementById('appbanner-cta').href = ios
-      ? 'https://apps.apple.com/app/id6793185713'
-      : 'https://play.google.com/store/apps/details?id=com.poctify.labsyria';
-    el.hidden=false;
-    document.getElementById('appbanner-x').addEventListener('click',function(){
-      el.hidden=true;
-      try{localStorage.setItem('labsyria_appbanner','off');}catch(e){}
-    });
-  }catch(e){}
-})();
-</script>
-
 <a class="skip" href="#main"><span data-ar>تخطَّ إلى المحتوى</span><span data-en>Skip to content</span></a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
@@ -101,6 +67,7 @@
 <header class="site"><div class="wrap">
   <a class="brand" href="/" aria-label="LabSyria"><img class="logo" src="/assets/img/logo.png" alt="LabSyria لاب سوريا"/></a>
   <nav class="main"><a href="/products/" class=""><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/lims/" class=""><span data-ar>نظام المختبر</span><span data-en>Lab system</span></a>
 <a href="/academy/" class=""><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
 <a href="/resources/" class=""><span data-ar>المصادر</span><span data-en>Resources</span></a>
 <a href="/news/" class=""><span data-ar>مقالات</span><span data-en>Articles</span></a>
@@ -116,6 +83,7 @@
 <div class="drawer" id="drawer"><button class="x" id="drawerX">&times;</button>
 <a href="/"><span data-ar>الرئيسية</span><span data-en>Home</span></a>
 <a href="/products/"><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/lims/"><span data-ar>نظام المختبر</span><span data-en>Lab system</span></a>
 <a href="/academy/"><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
 <a href="/resources/"><span data-ar>المصادر</span><span data-en>Resources</span></a>
 <a href="/news/"><span data-ar>مقالات</span><span data-en>Articles</span></a>
@@ -146,7 +114,7 @@
 
 <div class="appbar"><div class="wrap">
   <img class="appbar-icon" src="/assets/img/labsyria-app-icon.png" width="44" height="44" alt="LabSyria app icon" loading="lazy"/>
-  <span class="appbar-text"><b class="appbar-title"><span data-ar>تطبيق لاب سوريا</span><span data-en>The LabSyria app</span></b><span class="appbar-sub"><span data-ar>دورات وأدوات مخبرية تعمل بدون إنترنت. مجاناً.</span><span data-en>Courses and lab tools that work offline. Free.</span></span></span>
+  <span class="appbar-text"><b><span data-ar>تطبيق لاب سوريا</span><span data-en>The LabSyria app</span></b><span data-ar>دورات وأدوات مخبرية تعمل بدون إنترنت. مجاناً.</span><span data-en>Courses and lab tools that work offline. Free.</span></span>
   <span class="appbar-btns">
     <a class="storepill" href="https://apps.apple.com/app/id6793185713" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.9c0-2 1.6-3 1.7-3.05-.9-1.35-2.35-1.5-2.85-1.55-1.2-.12-2.4.72-3 .72-.6 0-1.6-.7-2.6-.68-1.35.02-2.6.78-3.3 1.98-1.4 2.45-.36 6.05 1 8.03.68 1 1.47 2.1 2.5 2.06 1-.04 1.38-.65 2.6-.65 1.2 0 1.55.65 2.6.63 1.07-.02 1.75-1 2.4-2 .76-1.15 1.07-2.27 1.09-2.33-.03-.02-2.1-.8-2.13-3.2zM14.6 6.3c.55-.67.92-1.6.82-2.53-.8.03-1.75.53-2.32 1.2-.5.6-.95 1.55-.83 2.46.88.07 1.78-.45 2.33-1.13z"/></svg><span data-ar>آب ستور</span><span data-en>App Store</span></a>
     <a class="storepill" href="https://play.google.com/store/apps/details?id=com.poctify.labsyria" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.3v17.4c0 .6.62 1 1.15.72l14.1-8.7c.5-.3.5-1.04 0-1.34L5.15 2.58C4.62 2.3 4 2.7 4 3.3z"/></svg><span data-ar>جوجل بلاي</span><span data-en>Google Play</span></a>
@@ -182,6 +150,20 @@
   </div>
   <div style="text-align:center;margin-top:40px" class="reveal"><a class="btn btn-outline" href="/products/"><span data-ar>كل فئات المنتجات</span><span data-en>All product categories</span><svg class="arw"><use href="#i-arrow"/></svg></a></div>
 </div></section>
+
+
+<section class="section bg-deep" id="lab-system"><div class="wrap"><div class="split">
+  <div class="split-copy reveal">
+    <span class="eyebrow"><span data-ar>نظام المختبر</span><span data-en>The laboratory system</span></span>
+    <h2 class="h2"><span data-ar>مختبرك كلّه على حاسوب واحد. بلا إنترنت. بالعربية.</span><span data-en>Your whole laboratory on one computer. No internet. In Arabic.</span></h2>
+    <p class="lead" style="margin-top:14px"><span data-ar>نظام معلومات مختبر مبني للمختبرات السورية: الطلبات والإيصالات، النتائج من الأجهزة، تقرير موقّع يصل المريض على هاتفه، الإحالات بين المختبرات، والحسابات. والحوكمة مبنيّة في مسار العمل: سلسلة عهدة العيّنة، وضبط الجودة قبل التوقيع، وسجل تدقيق، وتقارير يمكن التحقق منها.</span><span data-en>A laboratory information system built for laboratories in Syria: orders and receipts, results from the analysers, a signed report the patient opens on a phone, referrals between laboratories, and the accounts. Governance is built into the workflow: the specimen custody chain, quality control before the signature, an audit trail, and reports that can be verified.</span></p>
+    <div class="hero-cta" style="margin-top:22px">
+      <a class="btn btn-primary" href="/lims/"><span data-ar>اكتشف النظام</span><span data-en>Explore the system</span><svg class="arw"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-white" href="/governance/"><span data-ar>دليل حوكمة المختبر</span><span data-en>Laboratory governance guide</span></a>
+    </div>
+  </div>
+  <div class="split-media reveal d1"><figure class="shot framed"><img src="/assets/img/lims/order.jpg" alt="The new order screen of the laboratory system" loading="lazy"/></figure></div>
+</div></div></section>
 
 <section class="section bg-paper"><div class="wrap">
   <div class="split">

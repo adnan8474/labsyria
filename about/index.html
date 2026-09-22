@@ -36,40 +36,6 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labsyria.com/"},{"@type":"ListItem","position":2,"name":"من نحن | LabSyria · مبادرة من POCTIFY LTD","item":"https://labsyria.com/about/"}]}</script>
 </head>
 <body>
-<div class="appbanner" id="appbanner" hidden>
-  <img class="appbanner-icon" src="/assets/img/labsyria-app-icon.png" width="40" height="40" alt="" loading="lazy"/>
-  <span class="appbanner-text">
-    <b class="appbanner-title"><span data-ar>تطبيق لاب سوريا</span><span data-en>The LabSyria app</span></b>
-    <span class="appbanner-sub"><span data-ar>مجاني · يعمل بدون إنترنت</span><span data-en>Free · works offline</span></span>
-  </span>
-  <a class="appbanner-cta" id="appbanner-cta" href="https://labsyria.com/" target="_blank" rel="noopener"><span data-ar>تحميل</span><span data-en>Get</span></a>
-  <button class="appbanner-x" id="appbanner-x" type="button" aria-label="Dismiss">&#215;</button>
-</div>
-<script>
-/* Show a download banner only to phones, pointing at the store that device can
-   actually install from. Dismissal sticks so it is not nagging on every page. */
-(function(){
-  try{
-    var el=document.getElementById('appbanner');
-    if(!el) return;
-    if(localStorage.getItem('labsyria_appbanner')==='off') return;
-    var ua=navigator.userAgent||'';
-    /* iPadOS 13+ reports itself as a Mac, so touch points are the tell. */
-    var ios=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
-    var android=/Android/i.test(ua);
-    if(!ios&&!android) return;
-    document.getElementById('appbanner-cta').href = ios
-      ? 'https://apps.apple.com/app/id6793185713'
-      : 'https://play.google.com/store/apps/details?id=com.poctify.labsyria';
-    el.hidden=false;
-    document.getElementById('appbanner-x').addEventListener('click',function(){
-      el.hidden=true;
-      try{localStorage.setItem('labsyria_appbanner','off');}catch(e){}
-    });
-  }catch(e){}
-})();
-</script>
-
 <a class="skip" href="#main"><span data-ar>تخطَّ إلى المحتوى</span><span data-en>Skip to content</span></a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
@@ -101,6 +67,7 @@
 <header class="site"><div class="wrap">
   <a class="brand" href="/" aria-label="LabSyria"><img class="logo" src="/assets/img/logo.png" alt="LabSyria لاب سوريا"/></a>
   <nav class="main"><a href="/products/" class=""><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/lims/" class=""><span data-ar>نظام المختبر</span><span data-en>Lab system</span></a>
 <a href="/academy/" class=""><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
 <a href="/resources/" class=""><span data-ar>المصادر</span><span data-en>Resources</span></a>
 <a href="/news/" class=""><span data-ar>مقالات</span><span data-en>Articles</span></a>
@@ -116,6 +83,7 @@
 <div class="drawer" id="drawer"><button class="x" id="drawerX">&times;</button>
 <a href="/"><span data-ar>الرئيسية</span><span data-en>Home</span></a>
 <a href="/products/"><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/lims/"><span data-ar>نظام المختبر</span><span data-en>Lab system</span></a>
 <a href="/academy/"><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
 <a href="/resources/"><span data-ar>المصادر</span><span data-en>Resources</span></a>
 <a href="/news/"><span data-ar>مقالات</span><span data-en>Articles</span></a>
@@ -136,7 +104,7 @@
       <span class="eyebrow"><span data-ar>قصتنا</span><span data-en>Our story</span></span>
       <h2 class="h2"><span data-ar>من جيلٍ إلى جيل</span><span data-en>From one generation to the next</span></h2>
       <p style="margin-top:16px"><span data-ar>بدأت الحكاية في دمشق عام ١٩٨٧، مع عملٍ عائلي متخصّصٍ في جلب أفضل ما في العالم من أجهزة ومستلزمات التشخيص إلى مختبرات سوريا. وعلى مدى أربعة عقود، بُنيت الثقة اسماً اسماً: تمثيلٌ لكبرى الشركات العالمية، ووقوفٌ خلف كل جهاز بالخدمة والدعم في كل محافظة.</span><span data-en>The story began in Damascus in 1987, with a family business built to bring the world's best diagnostic instruments and supplies to Syria's laboratories. Over four decades, trust was earned one name at a time: representing leading international manufacturers, and standing behind every instrument with service and support, in every governorate.</span></p>
-      <p><span data-ar>واليوم يفتح عدنان الرفاعي، أخصائي العلوم الحيوية الطبية (MIBMS)، فصلاً جديداً. فمن خلال POCTIFY LTD في المملكة المتحدة، يضيف إلى هذا الإرث تقنياتٍ حديثة وأنظمة جودة وتعليماً عربياً مفتوحاً.</span><span data-en>Today, Adnan Al-Refai, a biomedical scientist (MIBMS), opens a new chapter. Through POCTIFY LTD in the United Kingdom, he brings modern technology, quality systems, and open Arabic education to that heritage.</span></p>
+      <p><span data-ar>واليوم يفتح عدنان الرفاعي، المختص في التشخيص المخبري، فصلاً جديداً. فمن خلال POCTIFY LTD في المملكة المتحدة، يضيف إلى هذا الإرث تقنياتٍ حديثة وأنظمة جودة وتعليماً عربياً مفتوحاً.</span><span data-en>Today, Adnan Alrefai, a laboratory diagnostics specialist, opens a new chapter. Through POCTIFY LTD in the United Kingdom, he brings modern technology, quality systems, and open Arabic education to that heritage.</span></p>
       <p><span data-ar>لاب سوريا هو حيث يلتقي الجانبان: أربعة عقود على أرض الواقع، ودقّة أخصائيٍّ ممارس، وأكاديمية عربية مجانية ليتعلّم الجيل القادم بمعايير عالمية. من الجهاز إلى النتيجة، بلغتنا.</span><span data-en>LabSyria is where the two meet: four decades on the ground, the rigour of a practising scientist, and a free Arabic academy so the next generation learns to a global standard. From the instrument to the result, in our language.</span></p>
     </div>
   </div>

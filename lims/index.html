@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>نظام معلومات المختبر (LIMS) في سوريا | Laboratory Information System (LIMS) · أجهزة ومستلزمات مخبرية | LabSyria</title>
-<meta name="description" content="نظام معلومات المختبر (LIMS) في سوريا: أجهزة تحليل وكواشف مخبرية ومستلزمات مخبرية مع التركيب والتدريب والدعم الفني منذ 1987. An Arabic-first laboratory information system (LIMS) for Syrian labs: instrument connectivity, quality control and full traceability, with local support."/>
+<title>Laboratory system for Syrian laboratories: Arabic, offline, on your own PC · LabSyria</title>
+<meta name="description" content="The LabSyria laboratory system: orders, receipts, specimens, analyser connectivity, quality control before signing, bilingual reports with a results QR, patient results on the phone, referrals between laboratories and accounts. Runs on the laboratory's PC without the internet."/>
 <meta name="keywords" content="تجهيزات طبية ومخبرية, مستلزمات مخبرية, أجهزة مخبرية, أجهزة تحليل, كواشف مخبرية, مستلزمات طبية, معدات مخبرية, مستلزمات المخابر, مستودع تجهيزات طبية, أجهزة تحاليل, مخابر طبية, تجهيزات طبية سوريا, IVD Syria, point-of-care testing, lab supplies Syria"/>
 <link rel="canonical" href="https://labsyria.com/lims/"/>
 <meta name="author" content="POCTIFY LTD"/>
@@ -12,8 +12,8 @@
 <meta name="theme-color" content="#0AA23C"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="LabSyria"/>
-<meta property="og:title" content="نظام معلومات المختبر (LIMS) في سوريا | Laboratory Information System (LIMS) · أجهزة ومستلزمات مخبرية | LabSyria"/>
-<meta property="og:description" content="نظام معلومات المختبر (LIMS) في سوريا: أجهزة تحليل وكواشف مخبرية ومستلزمات مخبرية مع التركيب والتدريب والدعم الفني منذ 1987. An Arabic-first laboratory information system (LIMS) for Syrian labs: instrument connectivity, quality control and full traceability, with local support."/>
+<meta property="og:title" content="Laboratory system for Syrian laboratories: Arabic, offline, on your own PC · LabSyria"/>
+<meta property="og:description" content="The LabSyria laboratory system: orders, receipts, specimens, analyser connectivity, quality control before signing, bilingual reports with a results QR, patient results on the phone, referrals between laboratories and accounts. Runs on the laboratory's PC without the internet."/>
 <meta property="og:url" content="https://labsyria.com/lims/"/>
 <meta property="og:image" content="https://labsyria.com/assets/img/og.jpg"/>
 <meta property="og:locale" content="ar_SY"/>
@@ -36,40 +36,6 @@
 
 </head>
 <body>
-<div class="appbanner" id="appbanner" hidden>
-  <img class="appbanner-icon" src="/assets/img/labsyria-app-icon.png" width="40" height="40" alt="" loading="lazy"/>
-  <span class="appbanner-text">
-    <b class="appbanner-title"><span data-ar>تطبيق لاب سوريا</span><span data-en>The LabSyria app</span></b>
-    <span class="appbanner-sub"><span data-ar>مجاني · يعمل بدون إنترنت</span><span data-en>Free · works offline</span></span>
-  </span>
-  <a class="appbanner-cta" id="appbanner-cta" href="https://labsyria.com/" target="_blank" rel="noopener"><span data-ar>تحميل</span><span data-en>Get</span></a>
-  <button class="appbanner-x" id="appbanner-x" type="button" aria-label="Dismiss">&#215;</button>
-</div>
-<script>
-/* Show a download banner only to phones, pointing at the store that device can
-   actually install from. Dismissal sticks so it is not nagging on every page. */
-(function(){
-  try{
-    var el=document.getElementById('appbanner');
-    if(!el) return;
-    if(localStorage.getItem('labsyria_appbanner')==='off') return;
-    var ua=navigator.userAgent||'';
-    /* iPadOS 13+ reports itself as a Mac, so touch points are the tell. */
-    var ios=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
-    var android=/Android/i.test(ua);
-    if(!ios&&!android) return;
-    document.getElementById('appbanner-cta').href = ios
-      ? 'https://apps.apple.com/app/id6793185713'
-      : 'https://play.google.com/store/apps/details?id=com.poctify.labsyria';
-    el.hidden=false;
-    document.getElementById('appbanner-x').addEventListener('click',function(){
-      el.hidden=true;
-      try{localStorage.setItem('labsyria_appbanner','off');}catch(e){}
-    });
-  }catch(e){}
-})();
-</script>
-
 <a class="skip" href="#main"><span data-ar>تخطَّ إلى المحتوى</span><span data-en>Skip to content</span></a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
@@ -100,7 +66,8 @@
 </div></div>
 <header class="site"><div class="wrap">
   <a class="brand" href="/" aria-label="LabSyria"><img class="logo" src="/assets/img/logo.png" alt="LabSyria لاب سوريا"/></a>
-  <nav class="main"><a href="/products/" class="active"><span data-ar>المنتجات</span><span data-en>Products</span></a>
+  <nav class="main"><a href="/products/" class=""><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/lims/" class="active"><span data-ar>نظام المختبر</span><span data-en>Lab system</span></a>
 <a href="/academy/" class=""><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
 <a href="/resources/" class=""><span data-ar>المصادر</span><span data-en>Resources</span></a>
 <a href="/news/" class=""><span data-ar>مقالات</span><span data-en>Articles</span></a>
@@ -116,6 +83,7 @@
 <div class="drawer" id="drawer"><button class="x" id="drawerX">&times;</button>
 <a href="/"><span data-ar>الرئيسية</span><span data-en>Home</span></a>
 <a href="/products/"><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/lims/"><span data-ar>نظام المختبر</span><span data-en>Lab system</span></a>
 <a href="/academy/"><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
 <a href="/resources/"><span data-ar>المصادر</span><span data-en>Resources</span></a>
 <a href="/news/"><span data-ar>مقالات</span><span data-en>Articles</span></a>
@@ -123,37 +91,189 @@
 <a href="/about/"><span data-ar>من نحن</span><span data-en>About</span></a>
 
 <a href="/contact/"><span data-ar>تواصل معنا</span><span data-en>Contact</span></a>
-</div><main id="main">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labsyria.com/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://labsyria.com/products.html"},{"@type":"ListItem","position":3,"name":"Laboratory Information System (LIMS)","item":"https://labsyria.com/lims.html"}]}</script>
+</div><main id="main"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labsyria.com/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://labsyria.com/products/"},{"@type":"ListItem","position":3,"name":"Laboratory system","item":"https://labsyria.com/lims/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the system need the internet?", "acceptedAnswer": {"@type": "Answer", "text": "No. The whole system runs on the laboratory's own PC and uses the internet only when it is there: to sync referrals through the hub, for updates, and for the patient results page if you choose to publish it. Reception, results, reports and accounts carry on when the connection drops."}}, {"@type": "Question", "name": "How long does installation take?", "acceptedAnswer": {"@type": "Answer", "text": "One setup file on an ordinary Windows PC, then an Arabic setup wizard that asks for the laboratory's identity, the first user, the printers and the backup folder. Most laboratories register their first patient within an hour of starting."}}, {"@type": "Question", "name": "Does it work with my current analysers?", "acceptedAnswer": {"@type": "Answer", "text": "It connects chemistry, haematology, immunoassay and blood-gas analysers that send results over the usual laboratory protocols, through an analyser gateway installed on a PC in the laboratory's network. Send us your instrument models and we will tell you what is supported before you buy."}}, {"@type": "Question", "name": "Where is patient data stored?", "acceptedAnswer": {"@type": "Answer", "text": "On the laboratory PC's own disk, with an encrypted backup every night in the folder you choose. No patient data leaves the laboratory. The optional weekly census that reaches LabSyria carries numbers and the names of analysers and tests only, and can be switched off with one button."}}, {"@type": "Question", "name": "How does a patient receive results?", "acceptedAnswer": {"@type": "Answer", "text": "The receipt carries a retrieval code and a QR code. The patient opens the results page on a phone with the code and date of birth, or scans the code printed on the paper report, where the date of birth alone is enough. They see the results once signed, and open, save and share the report with their doctor."}}, {"@type": "Question", "name": "Does it suit a reference laboratory that receives specimens from others?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The same setup runs in the laboratory role or the reference-laboratory role. The reference laboratory receives the referral as a visit of its own, its results return to the patient's visit at the sending laboratory, and the laboratories settle between themselves on a monthly statement both sides check."}}, {"@type": "Question", "name": "What about moving my data from the old system?", "acceptedAnswer": {"@type": "Answer", "text": "The system imports patients, referring doctors, historical results and opening balances from Excel or CSV files with Arabic or English headers. The preview names every problem row before anything is imported."}}, {"@type": "Question", "name": "How do I see the system before deciding?", "acceptedAnswer": {"@type": "Answer", "text": "Install a demonstration copy on any PC, then load the demonstration laboratory from the maintenance screen: a full month of a fictional laboratory's patients, visits, reports, referrals and accounts. Or contact us for a live demonstration in your laboratory."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LabSyria laboratory system","applicationCategory":"MedicalApplication","operatingSystem":"Windows","inLanguage":["ar","en"],"description":"An Arabic-first laboratory information system for laboratories in Syria that runs on the laboratory's own PC without the internet: orders, invoices, specimens, analyser connectivity, quality control, signed reports, patient results on the phone, referrals between laboratories and accounts.","offers":{"@type":"Offer","availability":"https://schema.org/InStock","priceCurrency":"USD","price":"0","description":"Pricing on request"},"publisher":{"@id":"https://labsyria.com/#org"}}</script>
 <section class="phead"><div class="wrap">
-  <div class="crumbs"><a href="/"><span data-ar>الرئيسية</span><span data-en>Home</span></a> / <a href="/products/"><span data-ar>المنتجات</span><span data-en>Products</span></a> / <span data-ar>نظام معلومات المختبر (LIMS)</span><span data-en>Laboratory Information System (LIMS)</span></div>
-  <span class="eyebrow"><span data-ar>فئة المنتجات</span><span data-en>Product category</span></span>
-  <h1><span data-ar>نظام معلومات المختبر (LIMS)</span><span data-en>Laboratory Information System (LIMS)</span></h1>
-  <p><span data-ar>نظام إدارة معلومات المختبر (LIMS) يربط أجهزتك بنتائجك: من طلب الفحص إلى التقرير الموقّع، مع ضبط الجودة والتتبّع الكامل. مدعومٌ بخبرة POCTIFY في ربط أجهزة التشخيص.</span><span data-en>A Laboratory Information Management System (LIMS) that connects your instruments to your results: from test request to signed report, with quality control and full traceability. Powered by POCTIFY's diagnostics-connectivity expertise.</span></p>
+  <div class="crumbs"><a href="/"><span data-ar>الرئيسية</span><span data-en>Home</span></a> / <a href="/products/"><span data-ar>المنتجات</span><span data-en>Products</span></a> / <span data-ar>نظام المختبر</span><span data-en>Laboratory system</span></div>
+  <span class="eyebrow"><span data-ar>نظام المختبر من لاب سوريا</span><span data-en>The LabSyria laboratory system</span></span>
+  <h1><span data-ar>مختبرك كلّه على حاسوب واحد. بلا إنترنت. بالعربية.</span><span data-en>Your whole laboratory on one computer. No internet. In Arabic.</span></h1>
+  <p><span data-ar>نظام معلومات مختبر مبني للمختبرات السورية: من تسجيل المريض وإصدار الإيصال، إلى النتائج من الأجهزة، إلى تقرير موقّع يصل المريض على هاتفه، إلى الإحالات بين المختبرات والحسابات. يعمل على حاسوب المختبر نفسه، ويستمر حين تنقطع الكهرباء أو الإنترنت.</span><span data-en>A laboratory information system built for laboratories in Syria: from registering the patient and issuing the receipt, to results from the analysers, to a signed report the patient opens on a phone, to referrals between laboratories and the accounts. It runs on the laboratory's own PC and carries on through power cuts and lost connections.</span></p>
+  <div class="hero-cta" style="margin-top:22px">
+    <a class="btn btn-primary" href="/contact/"><span data-ar>اطلب عرضاً في مختبرك</span><span data-en>Request a demonstration</span><svg class="arw"><use href="#i-arrow"/></svg></a>
+    <a class="btn btn-outline" href="/governance/"><span data-ar>الحوكمة في المختبر</span><span data-en>Governance in the laboratory</span></a>
+  </div>
 </div></section>
+
 <section class="section"><div class="wrap"><div class="split">
-  <div class="split-media reveal"><video autoplay muted loop playsinline preload="metadata" poster="/assets/img/cat-lims-poster.jpg"><source src="/assets/video/cat-lims.mp4" type="video/mp4"/></video></div>
+  <div class="split-media reveal"><figure class="shot framed"><img src="/assets/img/lims/home.jpg" alt="The system's home screen in Arabic: every screen as a tile by section" loading="lazy"/><figcaption><span data-ar>الشاشة الرئيسية: كل شاشة بلاطة بحسب القسم، مع أعداد ما ينتظر.</span><span data-en>The home screen: every screen as a tile by section, with the counts of what is waiting.</span></figcaption></figure></div>
   <div class="split-copy reveal d1">
-    <span class="eyebrow"><span data-ar>لماذا لاب سوريا</span><span data-en>Why LabSyria</span></span>
-    <h2 class="h2"><span data-ar>موثوقية تبدأ من الاختيار</span><span data-en>Reliability that starts with selection</span></h2>
-    <div class="points"><div class="point"><span class="ic"><svg><use href="#i-net"/></svg></span>
-  <div><b><span data-ar>ربط الأجهزة</span><span data-en>Instrument connectivity</span></b><span><span data-ar>تتدفّق النتائج تلقائياً من الجهاز إلى السجل، دون إدخال يدوي.</span><span data-en>Results flow automatically from device to record, with no manual entry.</span></span></div></div><div class="point"><span class="ic"><svg><use href="#i-shield"/></svg></span>
-  <div><b><span data-ar>ضبط الجودة</span><span data-en>Quality control</span></b><span><span data-ar>مخططات ليفي-جينينغز وقواعد ويستغارد مدمجة في النظام.</span><span data-en>Built-in Levey-Jennings charts and Westgard rules.</span></span></div></div><div class="point"><span class="ic"><svg><use href="#i-check"/></svg></span>
-  <div><b><span data-ar>تتبّع كامل</span><span data-en>Full traceability</span></b><span><span data-ar>كل نتيجة موثّقة وقابلة للتدقيق من العيّنة إلى التقرير.</span><span data-en>Every result documented and auditable, from sample to report.</span></span></div></div><div class="point"><span class="ic"><svg><use href="#i-support"/></svg></span>
-  <div><b><span data-ar>بالعربية</span><span data-en>Arabic-first</span></b><span><span data-ar>واجهة وتقارير بالعربية، بدعمٍ وتدريبٍ محلي.</span><span data-en>Arabic interface and reports, with local support and training.</span></span></div></div></div>
-    <div style="margin-top:28px"><a class="btn btn-primary" href="/contact/"><span data-ar>اطلب عرض سعر</span><span data-en>Request a quote</span><svg class="arw"><use href="#i-arrow"/></svg></a></div>
+    <span class="eyebrow"><span data-ar>لماذا هذا النظام</span><span data-en>Why this system</span></span>
+    <h2 class="h2"><span data-ar>مبنيٌّ لظروف المختبر السوري</span><span data-en>Built for the Syrian laboratory as it is</span></h2>
+    <div class="points">
+      <div class="point"><span class="ic"><svg><use href="#i-shield"/></svg></span>
+  <div><b><span data-ar>يعمل بلا إنترنت</span><span data-en>Works without the internet</span></b><span><span data-ar>كل العمل اليومي على حاسوب المختبر. الإنترنت للمزامنة والتحديث فقط، حين يتوفر.</span><span data-en>All daily work on the laboratory PC. The internet is for sync and updates only, when it is there.</span></span></div></div>
+      <div class="point"><span class="ic"><svg><use href="#i-book"/></svg></span>
+  <div><b><span data-ar>بالعربية أولاً</span><span data-en>Arabic first</span></b><span><span data-ar>واجهة وتقارير وإيصالات بالعربية من اليمين إلى اليسار، والإنكليزية بضغطة واحدة.</span><span data-en>Interface, reports and receipts in Arabic, right to left, with English one click away.</span></span></div></div>
+      <div class="point"><span class="ic"><svg><use href="#i-net"/></svg></span>
+  <div><b><span data-ar>شبكة المختبرات</span><span data-en>A network of laboratories</span></b><span><span data-ar>الإحالة إلى المختبر المرجعي بملف موقّع أو عبر المركز، والنتائج تعود إلى الزيارة نفسها.</span><span data-en>Referral to the reference laboratory by signed file or through the hub, with the results returning to the same visit.</span></span></div></div>
+      <div class="point"><span class="ic"><svg><use href="#i-support"/></svg></span>
+  <div><b><span data-ar>دعم محلي</span><span data-en>Local support</span></b><span><span data-ar>تنصيب وتدريب ودعم من فريق لاب سوريا، وأكاديمية مجانية لفريقك.</span><span data-en>Installation, training and support from the LabSyria team, and a free academy for your staff.</span></span></div></div>
+    </div>
   </div>
 </div></div></section>
 
 <section class="section bg-paper"><div class="wrap">
-  <div class="sec-head reveal"><span class="eyebrow"><span data-ar>ما نوفّره</span><span data-en>What we offer</span></span><h2 class="h2"><span data-ar>قدرات النظام</span><span data-en>System capabilities</span></h2></div>
-  <div class="grid g-3"><div class="card reveal "><div class="cbody"><span class="chip soon" style="position:static;display:inline-block;margin-bottom:12px"><span data-ar>قريباً</span><span data-en>Soon</span></span><h3><span data-ar>إدارة العينات والطلبات</span><span data-en>Sample & order management</span></h3><p><span data-ar>من الاستقبال إلى النتيجة.</span><span data-en>From reception to result.</span></p></div></div><div class="card reveal d1"><div class="cbody"><span class="chip soon" style="position:static;display:inline-block;margin-bottom:12px"><span data-ar>قريباً</span><span data-en>Soon</span></span><h3><span data-ar>لوحات المؤشرات والتقارير</span><span data-en>Dashboards & reporting</span></h3><p><span data-ar>تقارير موقّعة وقابلة للتخصيص.</span><span data-en>Signed, customizable reports.</span></p></div></div><div class="card reveal d2"><div class="cbody"><span class="chip soon" style="position:static;display:inline-block;margin-bottom:12px"><span data-ar>قريباً</span><span data-en>Soon</span></span><h3><span data-ar>الربط مع الأجهزة (HL7/ASTM)</span><span data-en>Instrument interfacing (HL7/ASTM)</span></h3><p><span data-ar>توافق مع أجهزتك الحالية.</span><span data-en>Compatible with your existing devices.</span></p></div></div></div>
+  <div class="sec-head reveal"><span class="eyebrow"><span data-ar>رحلة الزيارة</span><span data-en>The visit, start to finish</span></span><h2 class="h2"><span data-ar>من الاستقبال إلى هاتف المريض في ست خطوات</span><span data-en>From reception to the patient's phone in six steps</span></h2></div>
+  <div class="lsteps">
+    <div class="lstep reveal">
+  <div class="lstep-copy"><span class="lstep-n">1</span><h3><span data-ar>الاستقبال والطلب</span><span data-en>Reception and the order</span></h3><p><span data-ar>يجد الاستقبال المريض برقم الهاتف أو يسجّله، ويختار الفحوص أو اللوحات بأسعارها بالليرة بسعر صرف اليوم. نقداً أو سيرياتيل كاش أو على حساب جهة. ضغطة واحدة تُصدر الفاتورة والإيصال وملصقاً لكل أنبوب.</span><span data-en>Reception finds the patient by phone number or registers them, picks tests or panels priced in pounds at today's rate, and takes cash, Syriatel Cash or an account payment. One click issues the invoice, the receipt and a label for every tube.</span></p></div>
+  <div class="lstep-media"><figure class="shot framed"><img src="/assets/img/lims/order.jpg" alt="The new order screen with three panels ticked and the total in Syrian pounds" loading="lazy"/></figure></div>
+</div>
+    <div class="lstep reveal">
+  <div class="lstep-copy"><span class="lstep-n">2</span><h3><span data-ar>الأنابيب والملصقات</span><span data-en>Tubes and labels</span></h3><p><span data-ar>لكل أنبوب رمز شريطي ورمز QR على ملصق 50 في 25 مم. حقل المسح في أعلى كل شاشة يفتح الشاشة الصحيحة. كل انتقال للأنبوب يُكتب في سلسلة عهدة لا تُعدَّل، والرفض قبل التحليل يُسجَّل بسبب من القائمة المعتمدة.</span><span data-en>Every tube gets a barcode and a QR code on a 50 by 25 mm label. The scan field at the top of every screen opens the right one. Every move of a tube is written to a custody chain that cannot be edited, and rejection before analysis is recorded with a reason from the standard list.</span></p></div>
+  <div class="lstep-media"><figure class="shot framed"><img src="/assets/img/lims/labels.jpg" alt="Tube labels with the specimen barcode and the patient's name" loading="lazy"/></figure></div>
+</div>
+    <div class="lstep reveal">
+  <div class="lstep-copy"><span class="lstep-n">3</span><h3><span data-ar>النتائج</span><span data-en>Results</span></h3><p><span data-ar>الأجهزة ترسل نتائجها مباشرة إلى ملف المريض مطابقةً برمز الأنبوب، ومعها الجهاز والمشغّل ودفعة الكاشف. النتائج اليدوية تُدخل في جدول تكون فيه الفحوص ومجالاتها جاهزة، أو في ورقة عمل لفحص واحد عبر كل الزيارات.</span><span data-en>Analysers send results straight into the patient's file, matched by the tube barcode, with the analyser, the operator and the reagent lot attached. Manual results go into a table with the tests and their ranges ready, or onto a worksheet for one test across every visit.</span></p></div>
+  <div class="lstep-media"><figure class="shot framed"><img src="/assets/img/lims/results.jpg" alt="The results entry screen for a visit" loading="lazy"/></figure></div>
+</div>
+    <div class="lstep reveal">
+  <div class="lstep-copy"><span class="lstep-n">4</span><h3><span data-ar>التحقق والتوقيع</span><span data-en>Checks and signature</span></h3><p><span data-ar>قبل التوقيع يفحص النظام: فحوص محسوبة وانعكاسية، وفروقاً كبيرة عن آخر نتيجة، وقيماً حرجة تنتظر إقراراً، وبوابة ضبط جودة ترفض التوقيع إن كان الجهاز موقوفاً أو فشل آخر ضبط. الموقّع يرى كل نتيجة أمام مجالها وقيمتها السابقة.</span><span data-en>Before signing, the system checks: calculated and reflex tests, large changes from the last result, critical values awaiting acknowledgement, and a quality gate that refuses the signature while an analyser is locked out or its last control failed. The signer sees every result against its range and previous value.</span></p></div>
+  <div class="lstep-media"><figure class="shot framed"><img src="/assets/img/lims/worklist.jpg" alt="The worklist with tubes by state" loading="lazy"/></figure></div>
+</div>
+    <div class="lstep reveal">
+  <div class="lstep-copy"><span class="lstep-n">5</span><h3><span data-ar>التقرير</span><span data-en>The report</span></h3><p><span data-ar>تقرير بلغتين: شعار المختبر، ملخّص ما خرج عن المجال، كل نتيجة مع مجالها وشريط يبيّن موقعها وقيمتها السابقة، والزراعات بجدول. رمز شريطي لرقم القيد، ورمز QR لنتائج الزيارة على الهاتف، ورمز آخر للتحقق من أن النسخة أصلية.</span><span data-en>A bilingual report: the laboratory's logo, a summary of what is out of range, every result with its range, a bar showing where it sits and its previous value, cultures as a table. A barcode of the accession, a QR code for the visit's results on a phone, and another to check that the copy is genuine.</span></p></div>
+  <div class="lstep-media"><figure class="shot framed"><img src="/assets/img/lims/report.jpg" alt="The Arabic patient report" loading="lazy"/></figure></div>
+</div>
+    <div class="lstep reveal">
+  <div class="lstep-copy"><span class="lstep-n">6</span><h3><span data-ar>النتائج على الهاتف</span><span data-en>Results on the phone</span></h3><p><span data-ar>يفتح المريض صفحة النتائج بالرمز المطبوع على الإيصال وتاريخ ميلاده، أو يمسح رمز التقرير. قبل الاعتماد يرى مراحل الفحص وموعد النتيجة المتوقع. بعده يقرأ النتائج، ويفتح التقرير ويحفظه ويشاركه مع طبيبه.</span><span data-en>The patient opens the results page with the code on the receipt and a date of birth, or scans the code on the report. Before signing they see the steps and when to expect the result; after it they read the results and open, save and share the report with their doctor.</span></p></div>
+  <div class="lstep-media"><figure class="shot framed"><img src="/assets/img/lims/phone_ready.jpg" alt="The patient results page on a phone" loading="lazy"/></figure></div>
+</div>
+  </div>
 </div></section>
-<section class="section en-only"><div class="wrap"><div class="ctapanel reveal">
-  <h2 class="h2"><span data-ar>تصنّع في هذه الفئة؟</span><span data-en>Do you manufacture in this category?</span></h2>
-  <p><span data-ar>إذا كنت مصنّعاً تبحث عن موزّع في سوريا، نودّ التحدث إليك.</span><span data-en>If you are a manufacturer looking for a distributor in Syria, we would love to talk.</span></p>
-  <a class="btn btn-white" href="/distributors/"><span data-ar>كن شريكنا</span><span data-en>Partner with us</span><svg class="arw"><use href="#i-arrow"/></svg></a>
-</div></div></section></main><a class="wa" href="https://wa.me/447446668474?text=Hello%20LabSyria" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.1a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.1.1-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3A3 3 0 0 0 6.6 9c0 1.7 1.3 3.4 1.4 3.6.2.2 2.5 3.8 6 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.6-.1 1.4-.6 1.6-1.2.2-.5.2-1 .1-1.1z"/></svg></a>
+
+<section class="section"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow"><span data-ar>الحوكمة</span><span data-en>Governance</span></span><h2 class="h2"><span data-ar>الحوكمة مبنيّة في النظام، لا مضافة إليه</span><span data-en>Governance built into the system</span></h2>
+    <p><span data-ar>كل ما تطلبه المراجعة والاعتماد وثقة الطبيب والمريض موجود في مسار العمل اليومي نفسه. </span><span data-en>Everything a review, an accreditation, a doctor and a patient ask for sits in the daily workflow itself. </span><a href="/governance/"><span data-ar>اقرأ دليل حوكمة المختبر</span><span data-en>Read the laboratory governance guide</span></a>.</p></div>
+  <div class="pillars">
+    <div class="gov reveal">
+  <span class="ic"><svg><use href="#i-check"/></svg></span>
+  <h3><span data-ar>هوية العيّنة وسلسلة العهدة</span><span data-en>Specimen identity and custody</span></h3>
+  <p><span data-ar>لكل أنبوب معرّف فريد لا يتكرر بين المختبرات، وكل انتقال له مسجّل بالوقت والشخص.</span><span data-en>Every tube has an identifier that never repeats across laboratories, and every move is recorded with the time and the person.</span></p>
+  <p class="how"><b><span data-ar>في النظام:</span><span data-en>In the system:</span></b> <span data-ar>سلسلة عهدة مترابطة لا تُعدَّل، ورفض بسبب معتمد، وأماكن حفظ ومدد احتفاظ.</span><span data-en>A linked custody chain that cannot be edited, rejection with a standard reason, storage places and retention periods.</span></p>
+</div>
+    <div class="gov reveal">
+  <span class="ic"><svg><use href="#i-shield"/></svg></span>
+  <h3><span data-ar>ضبط الجودة شرطاً للإفراج</span><span data-en>Quality control as a condition of release</span></h3>
+  <p><span data-ar>لا يُوقَّع تقرير من جهاز موقوف أو فشل ضبطه، ولا يمرّ تغيير دفعة كاشف من غير ضبط جديد.</span><span data-en>No report is signed from a locked-out analyser or one whose control failed, and no reagent lot changes without a new control.</span></p>
+  <p class="how"><b><span data-ar>في النظام:</span><span data-en>In the system:</span></b> <span data-ar>مخططات ليفي جينينغز، قواعد ويستغارد، إيقاف الأجهزة، وبوابة قبل التوقيع تُضبط نافذتها في الإعدادات.</span><span data-en>Levey-Jennings charts, Westgard rules, analyser lockouts, and a gate before the signature whose window is set in Settings.</span></p>
+</div>
+    <div class="gov reveal">
+  <span class="ic"><svg><use href="#i-support"/></svg></span>
+  <h3><span data-ar>المسؤولية والتوقيع</span><span data-en>Responsibility and the signature</span></h3>
+  <p><span data-ar>لكل عامل حساب بصلاحياته، والتوقيع باسم من وقّع، والتعديل بعد الاعتماد بسبب مسجّل والنسخة الأولى محفوظة.</span><span data-en>Every member of staff has an account with their permissions, the signature is under the signer's name, and an amendment after signing carries a reason with the first version kept.</span></p>
+  <p class="how"><b><span data-ar>في النظام:</span><span data-en>In the system:</span></b> <span data-ar>أدوار الاستقبال والفني والمعتمِد والمدير، سجل تدقيق لا يُحذف منه شيء، واسم الحاسوب مع كل إجراء.</span><span data-en>Roles for reception, technician, signer and manager, an audit trail nothing is deleted from, and the workstation's name with every action.</span></p>
+</div>
+    <div class="gov reveal">
+  <span class="ic"><svg><use href="#i-globe"/></svg></span>
+  <h3><span data-ar>حماية بيانات المرضى</span><span data-en>Patient data protection</span></h3>
+  <p><span data-ar>البيانات على قرص المختبر، لا في خدمة خارجية. الوصول بحساب وصلاحية، ورمز الاستعلام محفوظ بصورة لا تُقرأ.</span><span data-en>Data on the laboratory's disk, in no external service. Access by account and permission, and the retrieval code stored in a form nobody can read back.</span></p>
+  <p class="how"><b><span data-ar>في النظام:</span><span data-en>In the system:</span></b> <span data-ar>نسخة احتياطية مشفّرة كل ليلة، تحقق منها بضغطة، وصفحة تحقق من التقرير لا تعرض أي نتيجة.</span><span data-en>An encrypted backup every night, verified with one click, and a report check page that shows no result.</span></p>
+</div>
+    <div class="gov reveal">
+  <span class="ic"><svg><use href="#i-book"/></svg></span>
+  <h3><span data-ar>تقارير يمكن التحقق منها</span><span data-en>Reports anyone can verify</span></h3>
+  <p><span data-ar>كل تقرير موقّع يحمل رمزاً يؤكد لأي جهة أن الورقة هي النسخة المعتمدة الحالية، من غير أن يرى شيئاً من محتواها.</span><span data-en>Every signed report carries a code that confirms to any party that the paper is the current signed version, without showing any of its content.</span></p>
+  <p class="how"><b><span data-ar>في النظام:</span><span data-en>In the system:</span></b> <span data-ar>إعادة الإصدار تُبطل رموز النسخة القديمة تلقائياً، والنسخة المعدَّلة تقول إنها معدَّلة.</span><span data-en>A re-issue voids the older copy's codes automatically, and an amended copy says so.</span></p>
+</div>
+    <div class="gov reveal">
+  <span class="ic"><svg><use href="#i-net"/></svg></span>
+  <h3><span data-ar>المؤشرات والمراجعة الإدارية</span><span data-en>Indicators and management review</span></h3>
+  <p><span data-ar>ما لا يُقاس لا يُدار: زمن الإنجاز لكل فحص، ونسبة الرفض، ونسبة نجاح الضبط، والعمل حسب الطبيب المحيل.</span><span data-en>What is not measured is not managed: turnaround per test, rejection rate, control pass rate, work by referring doctor.</span></p>
+  <p class="how"><b><span data-ar>في النظام:</span><span data-en>In the system:</span></b> <span data-ar>شاشة تقارير بأرقام المدة، ووسيط زمن الإنجاز والتسعون بالمئة مقارنةً بالموعود، وإحصاء أسبوعي اختياري بلا بيانات مرضى.</span><span data-en>A reports screen with the period's numbers, median and 90th percentile turnaround against the promise, and an optional weekly census with no patient data.</span></p>
+</div>
+  </div>
+</div></section>
+
+<section class="section bg-paper"><div class="wrap"><div class="split">
+  <div class="split-copy reveal">
+    <span class="eyebrow"><span data-ar>شبكة المختبرات</span><span data-en>The laboratory network</span></span>
+    <h2 class="h2"><span data-ar>الإحالة إلى المختبر المرجعي بضغطة</span><span data-en>Referral to the reference laboratory in one click</span></h2>
+    <p class="lead" style="margin-top:12px"><span data-ar>حين يضم الطلب فحصاً يُجرى في مختبر آخر، تُنشأ الإحالة تلقائياً كملف موقّع يرافق الأنابيب على ذاكرة USB أو عبر واتساب، أو يُرسل عبر مركز لاب سوريا حين يكون المختبر مربوطاً. يستقبله المختبر المرجعي كزيارة خاصة به، وحين يوقّع تعود النتائج إلى زيارة المريض نفسها عندك.</span><span data-en>When an order includes a test done elsewhere, the referral is created automatically as a signed file that travels with the tubes on a USB stick or over WhatsApp, or is sent through the LabSyria hub when the laboratory is connected. The reference laboratory receives it as a visit of its own, and when it signs, the results return to the same patient visit at your laboratory.</span></p>
+    <div class="points">
+      <div class="point"><span class="ic"><svg><use href="#i-check"/></svg></span>
+  <div><b><span data-ar>كشوف الإرسال والناقلون</span><span data-en>Manifests and couriers</span></b><span><span data-ar>كشف إرسال مختوم برقم ودرجة حرارة، وصفحة هاتف للناقل يمسح بها الكشف عند الاستلام والتسليم، وتعمل بلا إشارة.</span><span data-en>A manifest sealed with a number and a temperature, and a phone page where the courier scans it at pickup and delivery, working without signal.</span></span></div></div>
+      <div class="point"><span class="ic"><svg><use href="#i-shield"/></svg></span>
+  <div><b><span data-ar>ملفات موقّعة ومفاتيح مثبّتة</span><span data-en>Signed files and pinned keys</span></b><span><span data-ar>كل ملف بين مختبرين موقّع، ومفتاح كل مختبر يُثبَّت من أول ملف، فلا يُقبل ملف بمفتاح آخر إلا بقرار مدير.</span><span data-en>Every file between laboratories is signed, and each laboratory's key is pinned from its first file, so a file with another key is refused unless a manager decides.</span></span></div></div>
+      <div class="point"><span class="ic"><svg><use href="#i-globe"/></svg></span>
+  <div><b><span data-ar>محاسبة بين المختبرات</span><span data-en>Accounts between laboratories</span></b><span><span data-ar>قائمة أسعار لكل مختبر مرسِل، وكشف شهري موقّع يطابقه الطرفان سطراً سطراً ويسجّلان تسويته.</span><span data-en>A price list per sending laboratory, and a signed monthly statement both sides check line by line and settle.</span></span></div></div>
+    </div>
+  </div>
+  <div class="split-media reveal d1"><figure class="shot framed"><img src="/assets/img/lims/referrals.jpg" alt="The referrals screen" loading="lazy"/><figcaption><span data-ar>شاشة الإحالات: الصادرة والواردة، وحالة كل إحالة.</span><span data-en>The referrals screen: outgoing and incoming, and the state of each.</span></figcaption></figure>
+    <div style="margin-top:18px"><figure class="shot framed"><img src="/assets/img/lims/phone_courier.jpg" alt="The courier's phone page" loading="lazy"/><figcaption><span data-ar>صفحة الناقل على الهاتف.</span><span data-en>The courier's phone page.</span></figcaption></figure></div></div>
+</div></div></section>
+
+<section class="section"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow"><span data-ar>الحسابات والجودة والمخزون</span><span data-en>Accounts, quality and stock</span></span><h2 class="h2"><span data-ar>ما يحتاجه مدير المختبر كل يوم</span><span data-en>What the laboratory manager needs every day</span></h2></div>
+  <div class="grid g-3">
+    <div class="feature reveal"><h3><span data-ar>الصندوق والفواتير</span><span data-en>Cash book and invoices</span></h3><p><span data-ar>فواتير بأرقام متسلسلة بلا فجوات، دفعات جزئية، إلغاء بسبب، ورديات لكل صرّاف، وتقرير صندوق يومي بحسب طريقة الدفع.</span><span data-en>Gapless invoice numbers, part payments, voids with a reason, a shift per cashier, and a daily cash report by payment method.</span></p></div>
+    <div class="feature reveal d1"><h3><span data-ar>حسابات الجهات</span><span data-en>Payer accounts</span></h3><p><span data-ar>الشركات والتأمين والعيادات على الحساب: خصم متفق عليه، سقف ائتمان، أعمار الذمم، قبض يوزَّع على أقدم الفواتير، وكشف شهري يُطبع.</span><span data-en>Companies, insurers and clinics on account: an agreed discount, a credit limit, ageing, receipts spread over the oldest invoices, and a printable monthly statement.</span></p></div>
+    <div class="feature reveal d2"><h3><span data-ar>الأطباء المُحيلون</span><span data-en>Referring doctors</span></h3><p><span data-ar>دليل بأرقام واتساب ونسب، نسخة للطبيب بعد التوقيع، وكشف شهري بزياراته ونصيبه.</span><span data-en>A directory with WhatsApp numbers and shares, a doctor's copy after signing, and a monthly statement of visits and share.</span></p></div>
+    <div class="feature reveal"><h3><span data-ar>ضبط الجودة</span><span data-en>Quality control</span></h3><p><span data-ar>مواد ودفعات، تشغيلات يومية باليد أو من الجهاز، مخططات ليفي جينينغز، قواعد ويستغارد، إيقاف، ونسبة نجاح تظهر في التقارير مع عدد التشغيلات.</span><span data-en>Materials and lots, daily runs by hand or from the analyser, Levey-Jennings charts, Westgard rules, lockouts, and a pass rate on the reports screen with the run count behind it.</span></p></div>
+    <div class="feature reveal d1"><h3><span data-ar>المستلزمات</span><span data-en>Consumables</span></h3><p><span data-ar>كل نتيجة تُنقص مخزون كاشفها تلقائياً، وتنبيه قبل النفاد، وتغيير الدفعة يُسجَّل ليطلب ضبطاً جديداً.</span><span data-en>Every result draws down its reagent automatically, a warning comes before it runs out, and a lot change is recorded so a new control is asked for.</span></p></div>
+    <div class="feature reveal d2"><h3><span data-ar>النمو والمستلزمات</span><span data-en>Growth and supplies</span></h3><p><span data-ar>شاشة تقرأ إحالاتك أنت وتقدّر أي جهاز يعوّض ثمنه، وما ينفد، وما يحتاج فنياً، مع عروض لاب سوريا الحالية.</span><span data-en>A screen that reads your own referrals and estimates which analyser would pay for itself, what is running out and what needs an engineer, with LabSyria's current offers.</span></p></div>
+  </div>
+  <div style="margin-top:34px" class="reveal"><figure class="shot framed"><img src="/assets/img/lims/reports.jpg" alt="The reports screen with the period's figures and turnaround per test" loading="lazy"/><figcaption><span data-ar>شاشة التقارير: أرقام المدة، الفحوص حسب الإيراد، الأطباء المحيلون، وزمن الإنجاز لكل فحص.</span><span data-en>The reports screen: the period's figures, tests by revenue, referring doctors, and turnaround per test.</span></figcaption></figure></div>
+</div></section>
+
+<section class="section bg-paper"><div class="wrap"><div class="split">
+  <div class="split-media reveal"><figure class="shot framed"><img src="/assets/img/lims/maintenance.jpg" alt="The backup and maintenance screen" loading="lazy"/><figcaption><span data-ar>شاشة النسخ الاحتياطي والصيانة.</span><span data-en>The backup and maintenance screen.</span></figcaption></figure></div>
+  <div class="split-copy reveal d1">
+    <span class="eyebrow"><span data-ar>الاعتمادية</span><span data-en>Reliability</span></span>
+    <h2 class="h2"><span data-ar>يعمل حين ينقطع كل شيء</span><span data-en>Works when everything else stops</span></h2>
+    <div class="points">
+      <div class="point"><span class="ic"><svg><use href="#i-shield"/></svg></span>
+  <div><b><span data-ar>نسخة احتياطية كل ليلة</span><span data-en>A backup every night</span></b><span><span data-ar>مشفّرة بكلمة سر المختبر، تُتحقّق بضغطة واحدة، وتُستعاد على حاسوب جديد بخطوات موثّقة.</span><span data-en>Encrypted with the laboratory's passphrase, verified with one click, and restored on a new PC by documented steps.</span></span></div></div>
+      <div class="point"><span class="ic"><svg><use href="#i-book"/></svg></span>
+  <div><b><span data-ar>نماذج ورقية لانقطاع الكهرباء</span><span data-en>Paper forms for a power cut</span></b><span><span data-ar>حزمة مرقّمة من تسلسل النظام تُطبع مسبقاً، وتُدخل أرقامها حين تعود الكهرباء.</span><span data-en>A numbered pack printed in advance from the system's own sequence, entered when the power returns.</span></span></div></div>
+      <div class="point"><span class="ic"><svg><use href="#i-net"/></svg></span>
+  <div><b><span data-ar>تحديثات موقّعة</span><span data-en>Signed updates</span></b><span><span data-ar>عبر الإنترنت أو على ذاكرة USB، يتحقق النظام من توقيعها قبل التطبيق، ولا يقبل الرجوع إلى إصدار أقدم.</span><span data-en>Online or on a USB stick, the system checks the signature before applying, and never goes back to an older version.</span></span></div></div>
+      <div class="point"><span class="ic"><svg><use href="#i-support"/></svg></span>
+  <div><b><span data-ar>حزمة دعم في ثوانٍ</span><span data-en>A support bundle in seconds</span></b><span><span data-ar>ملف واحد بما يسأل عنه الدعم أولاً، مع حجب كل سر ومن غير أي سجل مريض.</span><span data-en>One file with what support asks for first, every secret blanked and no patient record.</span></span></div></div>
+    </div>
+  </div>
+</div></div></section>
+
+<section class="section"><div class="wrap"><div class="split">
+  <div class="split-copy reveal">
+    <span class="eyebrow"><span data-ar>البدء</span><span data-en>Getting started</span></span>
+    <h2 class="h2"><span data-ar>من التنصيب إلى أول مريض في ساعة</span><span data-en>From installation to the first patient in an hour</span></h2>
+    <div class="points">
+      <div class="point"><span class="ic"><svg><use href="#i-check"/></svg></span>
+  <div><b><span data-ar>ملف تنصيب واحد</span><span data-en>One setup file</span></b><span><span data-ar>على حاسوب ويندوز عادي، ثم معالج إعداد بالعربية.</span><span data-en>On an ordinary Windows PC, then an Arabic setup wizard.</span></span></div></div>
+      <div class="point"><span class="ic"><svg><use href="#i-check"/></svg></span>
+  <div><b><span data-ar>نقل البيانات من النظام القديم</span><span data-en>Move your data from the old system</span></b><span><span data-ar>المرضى والأطباء والنتائج السابقة والأرصدة من Excel، بمعاينة تسمّي كل مشكلة.</span><span data-en>Patients, doctors, past results and balances from Excel, with a preview that names every problem.</span></span></div></div>
+      <div class="point"><span class="ic"><svg><use href="#i-check"/></svg></span>
+  <div><b><span data-ar>مختبر عرض في دقيقة</span><span data-en>A demonstration laboratory in a minute</span></b><span><span data-ar>شهر كامل من عمل مختبر افتراضي لتجربة كل شاشة قبل أن تقرر.</span><span data-en>A full month of a fictional laboratory's work, to try every screen before you decide.</span></span></div></div>
+      <div class="point"><span class="ic"><svg><use href="#i-check"/></svg></span>
+  <div><b><span data-ar>تدريب ودعم</span><span data-en>Training and support</span></b><span><span data-ar>فريق لاب سوريا في التنصيب والتدريب، ودليل مستخدم عربي داخل النظام يعمل بلا إنترنت.</span><span data-en>The LabSyria team for installation and training, and an Arabic user guide inside the system that works offline.</span></span></div></div>
+    </div>
+    <div style="margin-top:26px"><a class="btn btn-primary" href="/contact/"><span data-ar>اطلب عرضاً في مختبرك</span><span data-en>Request a demonstration</span><svg class="arw"><use href="#i-arrow"/></svg></a></div>
+  </div>
+  <div class="split-media reveal d1"><figure class="shot framed"><img src="/assets/img/lims/migrate.jpg" alt="The data migration screen" loading="lazy"/><figcaption><span data-ar>شاشة نقل البيانات.</span><span data-en>The data migration screen.</span></figcaption></figure></div>
+</div></div></section>
+
+<section class="section bg-paper"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow"><span data-ar>الأسئلة الشائعة</span><span data-en>Frequently asked</span></span><h2 class="h2"><span data-ar>أسئلة يطرحها أصحاب المختبرات</span><span data-en>Questions laboratory owners ask</span></h2></div>
+  <div class="faqs reveal"><details class="faq"><summary><span data-ar>هل يحتاج النظام إلى إنترنت؟</span><span data-en>Does the system need the internet?</span></summary><div class="faq-a"><p><span data-ar>لا. يعمل النظام كاملاً على حاسوب المختبر، ويستخدم الإنترنت فقط حين يتوفر: لمزامنة الإحالات عبر المركز، وللتحديثات، ولصفحة نتائج المرضى إن أردت نشرها. الاستقبال والنتائج والتقارير والحسابات لا تتوقف حين ينقطع الاتصال.</span><span data-en>No. The whole system runs on the laboratory's own PC and uses the internet only when it is there: to sync referrals through the hub, for updates, and for the patient results page if you choose to publish it. Reception, results, reports and accounts carry on when the connection drops.</span></p></div></details><details class="faq"><summary><span data-ar>كم يستغرق التنصيب؟</span><span data-en>How long does installation take?</span></summary><div class="faq-a"><p><span data-ar>ملف تنصيب واحد على حاسوب عادي بنظام ويندوز، ثم معالج إعداد بالعربية يسأل عن هوية المختبر والمستخدم الأول والطابعات والنسخ الاحتياطي. معظم المختبرات تسجّل أول مريض خلال ساعة من بدء التنصيب.</span><span data-en>One setup file on an ordinary Windows PC, then an Arabic setup wizard that asks for the laboratory's identity, the first user, the printers and the backup folder. Most laboratories register their first patient within an hour of starting.</span></p></div></details><details class="faq"><summary><span data-ar>هل يعمل مع أجهزتي الحالية؟</span><span data-en>Does it work with my current analysers?</span></summary><div class="faq-a"><p><span data-ar>يربط النظام أجهزة الكيمياء والدم والمناعة وغازات الدم التي ترسل نتائجها عبر البروتوكولات المخبرية المعتادة، بواسطة بوابة أجهزة تُنصَّب على حاسوب في شبكة المختبر. أرسل لنا طرازات أجهزتك ونخبرك بما هو مدعوم قبل الشراء.</span><span data-en>It connects chemistry, haematology, immunoassay and blood-gas analysers that send results over the usual laboratory protocols, through an analyser gateway installed on a PC in the laboratory's network. Send us your instrument models and we will tell you what is supported before you buy.</span></p></div></details><details class="faq"><summary><span data-ar>أين تُخزَّن بيانات المرضى؟</span><span data-en>Where is patient data stored?</span></summary><div class="faq-a"><p><span data-ar>على قرص حاسوب المختبر نفسه، مع نسخة احتياطية مشفّرة كل ليلة في المجلد الذي تختاره. لا تُرسل أي بيانات مرضى خارج المختبر. الإحصاء الأسبوعي الاختياري الذي يصل إلى لاب سوريا يحمل أرقاماً وأسماء أجهزة وفحوص فقط، ويمكن إيقافه بزر.</span><span data-en>On the laboratory PC's own disk, with an encrypted backup every night in the folder you choose. No patient data leaves the laboratory. The optional weekly census that reaches LabSyria carries numbers and the names of analysers and tests only, and can be switched off with one button.</span></p></div></details><details class="faq"><summary><span data-ar>كيف يستلم المريض نتائجه؟</span><span data-en>How does a patient receive results?</span></summary><div class="faq-a"><p><span data-ar>على الإيصال رمز استعلام ورمز QR. يفتح المريض صفحة النتائج من هاتفه بالرمز وتاريخ ميلاده، أو يمسح الرمز المطبوع على التقرير الورقي فيكفيه تاريخ الميلاد. يرى النتائج بعد اعتمادها، ويفتح التقرير ويحفظه ويشاركه مع طبيبه.</span><span data-en>The receipt carries a retrieval code and a QR code. The patient opens the results page on a phone with the code and date of birth, or scans the code printed on the paper report, where the date of birth alone is enough. They see the results once signed, and open, save and share the report with their doctor.</span></p></div></details><details class="faq"><summary><span data-ar>هل يناسب المختبر المرجعي الذي يستقبل عيّنات من مختبرات أخرى؟</span><span data-en>Does it suit a reference laboratory that receives specimens from others?</span></summary><div class="faq-a"><p><span data-ar>نعم. التنصيب نفسه يعمل بدور المختبر أو المختبر المرجعي. المختبر المرجعي يستقبل الإحالة كزيارة خاصة به، وتعود نتائجه إلى زيارة المريض في المختبر المرسِل، وتُحاسَب المختبرات فيما بينها بكشف شهري يطابقه الطرفان.</span><span data-en>Yes. The same setup runs in the laboratory role or the reference-laboratory role. The reference laboratory receives the referral as a visit of its own, its results return to the patient's visit at the sending laboratory, and the laboratories settle between themselves on a monthly statement both sides check.</span></p></div></details><details class="faq"><summary><span data-ar>ماذا عن نقل بياناتي من النظام القديم؟</span><span data-en>What about moving my data from the old system?</span></summary><div class="faq-a"><p><span data-ar>يستورد النظام المرضى والأطباء المحيلين والنتائج السابقة والأرصدة الافتتاحية من ملفات Excel أو CSV بعناوين عربية أو إنكليزية. المعاينة تسمّي كل صف فيه مشكلة قبل أي استيراد.</span><span data-en>The system imports patients, referring doctors, historical results and opening balances from Excel or CSV files with Arabic or English headers. The preview names every problem row before anything is imported.</span></p></div></details><details class="faq"><summary><span data-ar>كيف أرى النظام قبل أن أقرر؟</span><span data-en>How do I see the system before deciding?</span></summary><div class="faq-a"><p><span data-ar>نصّب نسخة عرض على أي حاسوب، ثم حمّل مختبر العرض من شاشة الصيانة: شهر كامل من عمل مختبر افتراضي بمرضاه وزياراته وتقاريره وإحالاته وحساباته. أو تواصل معنا لعرض حي في مختبرك.</span><span data-en>Install a demonstration copy on any PC, then load the demonstration laboratory from the maintenance screen: a full month of a fictional laboratory's patients, visits, reports, referrals and accounts. Or contact us for a live demonstration in your laboratory.</span></p></div></details></div>
+</div></section>
+
+<section class="section"><div class="wrap"><div class="ctapanel reveal">
+  <h2 class="h2"><span data-ar>شاهده يعمل في مختبرك</span><span data-en>See it working in your laboratory</span></h2>
+  <p><span data-ar>عرض حي على أجهزتك وبياناتك، أو نسخة عرض تنصّبها بنفسك. تواصل معنا عبر الصفحة أو واتساب.</span><span data-en>A live demonstration on your own analysers and data, or a demonstration copy you install yourself. Reach us through the contact page or WhatsApp.</span></p>
+  <a class="btn btn-white" href="/contact/"><span data-ar>تواصل معنا</span><span data-en>Contact us</span><svg class="arw"><use href="#i-arrow"/></svg></a>
+</div></div></section>
+</main><a class="wa" href="https://wa.me/447446668474?text=Hello%20LabSyria" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.1a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.1.1-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3A3 3 0 0 0 6.6 9c0 1.7 1.3 3.4 1.4 3.6.2.2 2.5 3.8 6 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.6-.1 1.4-.6 1.6-1.2.2-.5.2-1 .1-1.1z"/></svg></a>
 <footer class="site"><div class="wrap">
   <div class="fgrid">
     <div>

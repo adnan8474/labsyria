@@ -36,40 +36,6 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labsyria.com/"},{"@type":"ListItem","position":2,"name":"Why do control results fail? Five hidden causes","item":"https://labsyria.com/control-results-fail/"}]}</script>
 </head>
 <body>
-<div class="appbanner" id="appbanner" hidden>
-  <img class="appbanner-icon" src="/assets/img/labsyria-app-icon.png" width="40" height="40" alt="" loading="lazy"/>
-  <span class="appbanner-text">
-    <b class="appbanner-title"><span data-ar>تطبيق لاب سوريا</span><span data-en>The LabSyria app</span></b>
-    <span class="appbanner-sub"><span data-ar>مجاني · يعمل بدون إنترنت</span><span data-en>Free · works offline</span></span>
-  </span>
-  <a class="appbanner-cta" id="appbanner-cta" href="https://labsyria.com/" target="_blank" rel="noopener"><span data-ar>تحميل</span><span data-en>Get</span></a>
-  <button class="appbanner-x" id="appbanner-x" type="button" aria-label="Dismiss">&#215;</button>
-</div>
-<script>
-/* Show a download banner only to phones, pointing at the store that device can
-   actually install from. Dismissal sticks so it is not nagging on every page. */
-(function(){
-  try{
-    var el=document.getElementById('appbanner');
-    if(!el) return;
-    if(localStorage.getItem('labsyria_appbanner')==='off') return;
-    var ua=navigator.userAgent||'';
-    /* iPadOS 13+ reports itself as a Mac, so touch points are the tell. */
-    var ios=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
-    var android=/Android/i.test(ua);
-    if(!ios&&!android) return;
-    document.getElementById('appbanner-cta').href = ios
-      ? 'https://apps.apple.com/app/id6793185713'
-      : 'https://play.google.com/store/apps/details?id=com.poctify.labsyria';
-    el.hidden=false;
-    document.getElementById('appbanner-x').addEventListener('click',function(){
-      el.hidden=true;
-      try{localStorage.setItem('labsyria_appbanner','off');}catch(e){}
-    });
-  }catch(e){}
-})();
-</script>
-
 <a class="skip" href="#main"><span data-ar>تخطَّ إلى المحتوى</span><span data-en>Skip to content</span></a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
@@ -101,6 +67,7 @@
 <header class="site"><div class="wrap">
   <a class="brand" href="/" aria-label="LabSyria"><img class="logo" src="/assets/img/logo.png" alt="LabSyria لاب سوريا"/></a>
   <nav class="main"><a href="/products/" class=""><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/lims/" class=""><span data-ar>نظام المختبر</span><span data-en>Lab system</span></a>
 <a href="/academy/" class=""><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
 <a href="/resources/" class=""><span data-ar>المصادر</span><span data-en>Resources</span></a>
 <a href="/news/" class=""><span data-ar>مقالات</span><span data-en>Articles</span></a>
@@ -116,6 +83,7 @@
 <div class="drawer" id="drawer"><button class="x" id="drawerX">&times;</button>
 <a href="/"><span data-ar>الرئيسية</span><span data-en>Home</span></a>
 <a href="/products/"><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/lims/"><span data-ar>نظام المختبر</span><span data-en>Lab system</span></a>
 <a href="/academy/"><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
 <a href="/resources/"><span data-ar>المصادر</span><span data-en>Resources</span></a>
 <a href="/news/"><span data-ar>مقالات</span><span data-en>Articles</span></a>
@@ -125,13 +93,13 @@
 <a href="/contact/"><span data-ar>تواصل معنا</span><span data-en>Contact</span></a>
 </div><main id="main">
 <div class="readbar" id="readbar"></div>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why do control results fail? Five hidden causes","image":"https://labsyria.com/assets/img/news-1.jpg","author":{"@type":"Organization","name":"LabSyria","url":"https://labsyria.com/"},"reviewedBy":{"@type":"Person","name":"Adnan Al-Refai","jobTitle":"Biomedical Scientist (MIBMS)","affiliation":{"@type":"Organization","name":"POCTIFY LTD"}},"publisher":{"@type":"Organization","name":"LabSyria"},"inLanguage":"ar"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why do control results fail? Five hidden causes","image":"https://labsyria.com/assets/img/news-1.jpg","author":{"@type":"Organization","name":"LabSyria","url":"https://labsyria.com/"},"reviewedBy":{"@type":"Person","name":"Adnan Alrefai","jobTitle":"Laboratory diagnostics specialist","affiliation":{"@type":"Organization","name":"POCTIFY LTD"}},"publisher":{"@type":"Organization","name":"LabSyria"},"inLanguage":"ar"}</script>
 <section class="phead"><div class="wrap">
   <div class="crumbs"><a href="/"><span data-ar>الرئيسية</span><span data-en>Home</span></a> / <a href="/news/"><span data-ar>مقالات</span><span data-en>Articles</span></a> / <span data-ar>مقال</span><span data-en>Article</span></div>
   <span class="eyebrow"><span data-ar>مقال</span><span data-en>Article</span> · 7 <span data-ar>دقائق قراءة</span><span data-en>min read</span></span>
   <h1><span data-ar>لماذا تفشل نتائج الشواهد؟ خمسة أسباب خفية</span><span data-en>Why do control results fail? Five hidden causes</span></h1>
   <p><span data-ar>حين يخرج الشاهد عن حدوده، يكون رد الفعل الأول إعادة التشغيل. لكن الشاهد لا يكذب: إنه يخبرك بشيءٍ عن جهازك أو كواشفك أو طريقتك. في هذا المقال نقرأ نمط الفشل بدل تجاهله.</span><span data-en>When a control falls outside its limits, the first instinct is to repeat the run. But controls rarely lie: they are telling you something about your instrument, your reagents, or your process. This article reads the failure pattern instead of ignoring it.</span></p>
-  <div class="byline"><span data-ar>بقلم فريق لاب سوريا</span><span data-en>By the LabSyria team</span> · <span data-ar>مراجعة علمية: عدنان الرفاعي، أخصائي علوم حيوية طبية (MIBMS)</span><span data-en>Scientifically reviewed by Adnan Al-Refai, Biomedical Scientist (MIBMS)</span> · <a href="/editorial-standards/" style="color:var(--teal);text-decoration:underline"><span data-ar>معايير التحرير</span><span data-en>Editorial standards</span></a></div>
+  <div class="byline"><span data-ar>بقلم فريق لاب سوريا</span><span data-en>By the LabSyria team</span> · <span data-ar>مراجعة علمية: عدنان الرفاعي</span><span data-en>Scientifically reviewed by Adnan Alrefai</span> · <a href="/editorial-standards/" style="color:var(--teal);text-decoration:underline"><span data-ar>معايير التحرير</span><span data-en>Editorial standards</span></a></div>
 </div></section>
 <section class="section"><div class="wrap">
   <div class="artimg reveal"><img src="/assets/img/news-1.jpg" alt="Why do control results fail? Five hidden causes" loading="lazy"/></div>

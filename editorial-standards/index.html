@@ -36,40 +36,6 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labsyria.com/"},{"@type":"ListItem","position":2,"name":"Editorial standards","item":"https://labsyria.com/editorial-standards/"}]}</script>
 </head>
 <body>
-<div class="appbanner" id="appbanner" hidden>
-  <img class="appbanner-icon" src="/assets/img/labsyria-app-icon.png" width="40" height="40" alt="" loading="lazy"/>
-  <span class="appbanner-text">
-    <b class="appbanner-title"><span data-ar>تطبيق لاب سوريا</span><span data-en>The LabSyria app</span></b>
-    <span class="appbanner-sub"><span data-ar>مجاني · يعمل بدون إنترنت</span><span data-en>Free · works offline</span></span>
-  </span>
-  <a class="appbanner-cta" id="appbanner-cta" href="https://labsyria.com/" target="_blank" rel="noopener"><span data-ar>تحميل</span><span data-en>Get</span></a>
-  <button class="appbanner-x" id="appbanner-x" type="button" aria-label="Dismiss">&#215;</button>
-</div>
-<script>
-/* Show a download banner only to phones, pointing at the store that device can
-   actually install from. Dismissal sticks so it is not nagging on every page. */
-(function(){
-  try{
-    var el=document.getElementById('appbanner');
-    if(!el) return;
-    if(localStorage.getItem('labsyria_appbanner')==='off') return;
-    var ua=navigator.userAgent||'';
-    /* iPadOS 13+ reports itself as a Mac, so touch points are the tell. */
-    var ios=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
-    var android=/Android/i.test(ua);
-    if(!ios&&!android) return;
-    document.getElementById('appbanner-cta').href = ios
-      ? 'https://apps.apple.com/app/id6793185713'
-      : 'https://play.google.com/store/apps/details?id=com.poctify.labsyria';
-    el.hidden=false;
-    document.getElementById('appbanner-x').addEventListener('click',function(){
-      el.hidden=true;
-      try{localStorage.setItem('labsyria_appbanner','off');}catch(e){}
-    });
-  }catch(e){}
-})();
-</script>
-
 <a class="skip" href="#main"><span data-ar>تخطَّ إلى المحتوى</span><span data-en>Skip to content</span></a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
@@ -101,6 +67,7 @@
 <header class="site"><div class="wrap">
   <a class="brand" href="/" aria-label="LabSyria"><img class="logo" src="/assets/img/logo.png" alt="LabSyria لاب سوريا"/></a>
   <nav class="main"><a href="/products/" class=""><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/lims/" class=""><span data-ar>نظام المختبر</span><span data-en>Lab system</span></a>
 <a href="/academy/" class=""><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
 <a href="/resources/" class=""><span data-ar>المصادر</span><span data-en>Resources</span></a>
 <a href="/news/" class=""><span data-ar>مقالات</span><span data-en>Articles</span></a>
@@ -116,6 +83,7 @@
 <div class="drawer" id="drawer"><button class="x" id="drawerX">&times;</button>
 <a href="/"><span data-ar>الرئيسية</span><span data-en>Home</span></a>
 <a href="/products/"><span data-ar>المنتجات</span><span data-en>Products</span></a>
+<a href="/lims/"><span data-ar>نظام المختبر</span><span data-en>Lab system</span></a>
 <a href="/academy/"><span data-ar>الأكاديمية</span><span data-en>Academy</span></a>
 <a href="/resources/"><span data-ar>المصادر</span><span data-en>Resources</span></a>
 <a href="/news/"><span data-ar>مقالات</span><span data-en>Articles</span></a>
@@ -133,7 +101,7 @@
   <div class="grid g-2">
     <div class="card reveal"><div class="cbody"><h3><span data-ar>عربيٌّ أولاً، بيد أخصائيين</span><span data-en>Arabic first, by specialists</span></h3><p><span data-ar>نكتب بالعربية المهنية الصحيحة، لا ترجمةً آلية. المحتوى موجَّهٌ لأخصائيي المختبر بلغتهم ومصطلحاتهم.</span><span data-en>We write in correct professional Arabic, not machine translation. The content speaks to laboratory scientists in their language and terminology.</span></p></div></div>
     <div class="card reveal d1"><div class="cbody"><h3><span data-ar>كل ادعاءٍ له مرجع</span><span data-en>Every claim has a source</span></h3><p><span data-ar>نستند إلى معايير ISO 15189، وبروتوكولات CLSI، وإرشادات منظمة الصحة العالمية، وأبحاثٍ محكّمة. المراجع منشورةٌ في نهاية كل مقال.</span><span data-en>We rely on ISO 15189, CLSI protocols, WHO guidance, and peer-reviewed research. References are published at the end of each article.</span></p></div></div>
-    <div class="card reveal"><div class="cbody"><h3><span data-ar>مراجعةٌ علمية</span><span data-en>Scientific review</span></h3><p><span data-ar>يراجع المحتوى العلمي عدنان الرفاعي، أخصائي العلوم الحيوية الطبية (MIBMS)، لضمان الدقّة والملاءمة السريرية.</span><span data-en>Scientific content is reviewed by Adnan Al-Refai, biomedical scientist (MIBMS), to ensure accuracy and clinical relevance.</span></p></div></div>
+    <div class="card reveal"><div class="cbody"><h3><span data-ar>مراجعةٌ علمية</span><span data-en>Scientific review</span></h3><p><span data-ar>يراجع المحتوى العلمي عدنان الرفاعي، المختص في التشخيص المخبري، لضمان الدقّة والملاءمة السريرية.</span><span data-en>Scientific content is reviewed by Adnan Alrefai, laboratory diagnostics specialist, to ensure accuracy and clinical relevance.</span></p></div></div>
     <div class="card reveal d1"><div class="cbody"><h3><span data-ar>تعليميٌّ لا سريري</span><span data-en>Educational, not clinical</span></h3><p><span data-ar>محتوانا تعليميٌّ عام، لا يحلّ محلّ إجراءات مختبرك المعتمدة ولا الحكم السريري. اعتمد دائماً قيم مختبرك وطريقته.</span><span data-en>Our content is general education; it does not replace your lab's validated procedures or clinical judgement. Always use your own lab's values and method.</span></p></div></div>
     <div class="card reveal"><div class="cbody"><h3><span data-ar>نصحّح ما يستوجب التصحيح</span><span data-en>We correct what needs correcting</span></h3><p><span data-ar>إن لاحظت خطأً أو مرجعاً يحتاج تحديثاً، راسلنا على info@labsyria.com وسنراجعه ونصحّحه.</span><span data-en>If you notice an error or a reference that needs updating, email us at info@labsyria.com and we will review and correct it.</span></p></div></div>
     <div class="card reveal d1"><div class="cbody"><h3><span data-ar>استقلالٌ عن البيع</span><span data-en>Independent of the sale</span></h3><p><span data-ar>المحتوى التعليمي مستقلٌّ عن أي عملية بيع. لا نُخضع العلم للتسويق، ونذكر المعايير لا الأسماء التجارية في التعليم.</span><span data-en>Educational content is independent of any sale. We do not bend science to marketing, and we cite standards, not brand names, in teaching.</span></p></div></div>
