@@ -62,6 +62,7 @@
   <url><loc>https://labsyria.com/glossary/assay/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/between-run-precision/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/bias/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/biomarker/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/clinical-chemistry/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/clinical-laboratory/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/constant-bias/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -70,6 +71,7 @@
   <url><loc>https://labsyria.com/glossary/expanded-uncertainty/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/imprecision/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/international-system-of-units/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/laboratory-diagnosis/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/laboratory-medicine/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/measurand/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/measurement/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -158,6 +160,7 @@
   <url><loc>https://labsyria.com/glossary/4-1s-rule/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/analytical-performance-specification/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/analytical-run/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/blind-sample/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/consensus-value/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/control-chart/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/control-limits/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -325,6 +328,8 @@
   <url><loc>https://labsyria.com/glossary/sample-retention/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/transcription-error/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/turnaround-time/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/atherosclerosis-risk-assessment/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/cardiovascular-risk-stratification/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/clinical-decision-limit/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/confirmatory-test/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/cutoff/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -357,8 +362,10 @@
   <url><loc>https://labsyria.com/glossary/signal-to-cutoff-ratio/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/accreditation/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/accreditation-body/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/after-sales-service/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/audit-finding/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/business-continuity-plan/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/central-laboratories-committee/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/certification/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/clsi/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/clinical-governance/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -370,16 +377,20 @@
   <url><loc>https://labsyria.com/glossary/correction/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/corrective-action/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/capa/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/data-protection-officer/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/document-control/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/document-revision/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/impartiality/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/import-licence/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/internal-audit/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/iso-15189-2022/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/iso-22367/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/iso-9001/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/laboratory-director/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/laboratory-licensing/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/laboratory-supplies/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/management-review/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/medical-supplies/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/nonconforming-work/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/nonconformity/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/objective-evidence/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -400,10 +411,12 @@
   <url><loc>https://labsyria.com/glossary/risk-control/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/risk-management/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/root-cause-analysis/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/scientific-officer/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/scope-of-accreditation/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/service-agreement/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/standard-operating-procedure/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/supplier-evaluation/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/temperature-monitored-cold-room/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/verification-vs-validation/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/work-instruction/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/3-part-differential-hematology-analyzer/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -415,6 +428,7 @@
   <url><loc>https://labsyria.com/glossary/buffer/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/ce-and-ukca-marking/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/chemiluminescence-immunoassay/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/chromatography/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/coagulation-analyzer/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/cross-reactivity/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/cuvette/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -438,6 +452,7 @@
   <url><loc>https://labsyria.com/glossary/ion-selective-electrode/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/kinetic-assay/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/lateral-flow-immunoassay/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/mass-spectrometry/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/nephelometry/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/operational-qualification/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/performance-qualification/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -459,43 +474,62 @@
   <url><loc>https://labsyria.com/glossary/wavelength/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/working-reagent/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/activated-partial-thromboplastin-time/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/acute-leukaemia/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/alanine-aminotransferase/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/aspartate-aminotransferase/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/beta-thalassaemia/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/biological-variation/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/blood-smear/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/blood-urea-nitrogen/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/c-reactive-protein/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/cardiac-biomarkers/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/cardiac-troponin/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/complete-blood-count/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/congenital-adrenal-hyperplasia/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/creatinine/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/d-dimer/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/diabetic-nephropathy/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/differential-leukocyte-count/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/electrolytes/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/endocrinology/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/enzyme-activity/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/erythrocyte-sedimentation-rate/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/estimated-glomerular-filtration-rate/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/ferritin/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/glucose/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/glycated-hemoglobin/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/haematological-diseases/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/haemoglobin-electrophoresis/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/heart-failure/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/hematocrit/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/hemoglobin/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/high-sensitivity-troponin/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/international-normalized-ratio/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/kidney-injury/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/lipid-profile/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/lipoprotein-a/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/mean-corpuscular-volume/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/neonatal-metabolic-screening/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/platelet-count/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/precocious-puberty/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/prothrombin-time/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/red-blood-cell-count/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/red-cell-distribution-width/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/stem-cells/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/thyroid-stimulating-hormone/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/transfusion-medicine/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/urea/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/urinalysis/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/white-blood-cell-count/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/antimicrobial-resistance/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/antimicrobial-susceptibility-testing/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/biofilm/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/blood-agar/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/blood-culture/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/breakpoint/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/broth-microdilution/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/catalase-test/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/clinical-microbiology/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/coagulase-test/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/colony/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/colony-forming-unit/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -505,6 +539,8 @@
   <url><loc>https://labsyria.com/glossary/disk-diffusion/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/extended-spectrum-beta-lactamase/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/gram-stain/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/hepatitis-viruses/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/infectious-diseases/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/inhibition-zone/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/inoculum/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/intermediate/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -523,15 +559,22 @@
   <url><loc>https://labsyria.com/glossary/amplicon/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/amplification-inhibitor/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/cycle-threshold/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/cytogenetics/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/detected/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/extracellular-vesicles/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/extraction/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/extraction-control/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/gel-electrophoresis/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/genotyping/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/immuno-pcr/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/internal-amplification-control/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/loop-mediated-isothermal-amplification/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/master-mix/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/melting-curve-analysis/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/microrna/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/molecular-amplification/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/molecular-diagnostics/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/molecular-genetics/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/multiplex-assay/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/negative-control/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/next-generation-sequencing/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -540,6 +583,7 @@
   <url><loc>https://labsyria.com/glossary/nucleic-acid-amplification-test/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/polymerase-chain-reaction/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/positive-control/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/precision-medicine/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/primer/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/probe-molecular/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/quantification-cycle/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -578,6 +622,7 @@
   <url><loc>https://labsyria.com/glossary/data-integrity/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/de-identification/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/downtime/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://labsyria.com/glossary/e-health-application/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/electronic-signature/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/flag/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/glossary/hl7/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
