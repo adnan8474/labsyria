@@ -5,6 +5,7 @@ dist/
 __pycache__/
 build.py
 pages.py
+leads.py
 og.html
 og-render.js
 bgvideo.html

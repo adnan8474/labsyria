@@ -30,7 +30,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700;800&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/assets/css/site.css"/>
+<link rel="stylesheet" href="/assets/css/site.css?v=20261001"/>
 <script src="/assets/js/analytics.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","MedicalBusiness"],"@id":"https://labsyria.com/#org","name":"LabSyria","alternateName":"لاب سوريا","url":"https://labsyria.com/","logo":"https://labsyria.com/assets/img/og.jpg","image":"https://labsyria.com/assets/img/og.jpg","description":"IVD and point-of-care distribution and a free Arabic lab-science academy for Syria, serving laboratories since 1987.","foundingDate":"1987","parentOrganization":{"@type":"Organization","name":"POCTIFY LTD"},"telephone":"+963-11-2222797","email":"info@labsyria.com","address":{"@type":"PostalAddress","streetAddress":"108 Mussalam Baroodi Street","addressLocality":"Damascus","postOfficeBoxNumber":"11667","addressCountry":"SY"},"areaServed":{"@type":"Country","name":"Syria"},"knowsAbout":["In vitro diagnostics","Point-of-care testing","Laboratory quality control","Clinical chemistry","Hematology","Molecular diagnostics","IVD distribution","تجهيزات طبية ومخبرية","مستلزمات مخبرية","أجهزة تحليل","كواشف مخبرية","أجهزة مخبرية"],"keywords":"تجهيزات طبية ومخبرية, مستلزمات مخبرية, أجهزة مخبرية, أجهزة تحليل, كواشف مخبرية, مستلزمات طبية, معدات مخبرية, مستلزمات المخابر, مستودع تجهيزات طبية, أجهزة تحاليل, مخابر طبية, تجهيزات طبية سوريا, IVD Syria, point-of-care testing, lab supplies Syria","slogan":"تجهيزات طبية ومخبرية وأكاديمية عربية للمختبر في سوريا","sameAs":["https://poctify.com","https://learn.labsyria.com"]},{"@type":"WebSite","@id":"https://labsyria.com/#site","name":"LabSyria","url":"https://labsyria.com/","inLanguage":["ar","en"],"publisher":{"@id":"https://labsyria.com/#org"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://labsyria.com/"},{"@type":"ListItem","position":2,"name":"المصادر | أدوات وقوالب المختبر","item":"https://labsyria.com/resources/"}]}</script>
@@ -182,8 +182,8 @@
   <div class="fbar">
     <div><span data-ar>لاب سوريا تُدار بالشراكة مع <a href="https://poctify.com" target="_blank" rel="noopener" style="color:#CFE3E3;text-decoration:underline"><b>POCTIFY LTD</b></a> (المملكة المتحدة، رقم الشركة ١٦٣٤٠٢٣٥). جميع الحقوق محفوظة © ٢٠٢٦ ·</span><span data-en>LabSyria operates in partnership with <a href="https://poctify.com" target="_blank" rel="noopener" style="color:#CFE3E3;text-decoration:underline"><b>POCTIFY LTD</b></a> (United Kingdom, Company No. 16340235). All rights reserved © 2026 ·</span><a href="/privacy/"><span data-ar>الخصوصية</span><span data-en>Privacy</span></a></div>
     <div class="socials">
-      <a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
-      <a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=61592507400602" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+      <a href="https://www.instagram.com/labsyria/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
       <a href="#" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
       <a href="#" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
     </div>
@@ -191,7 +191,7 @@
 </div></footer>
 <script>
 const html=document.documentElement;
-const setPh=()=>{const ar=html.lang==='ar';document.querySelectorAll('[data-ph-ar]').forEach(el=>{el.placeholder=ar?el.getAttribute('data-ph-ar'):el.getAttribute('data-ph-en')});const e=document.getElementById('emailInput');if(e)e.placeholder=ar?'بريدك الإلكتروني':'Your email address';};
+const setPh=()=>{const ar=html.lang==='ar';document.querySelectorAll('[data-ph-ar]').forEach(el=>{el.placeholder=ar?el.getAttribute('data-ph-ar'):el.getAttribute('data-ph-en')});document.querySelectorAll('option[data-oar]').forEach(o=>{o.textContent=ar?o.getAttribute('data-oar'):o.getAttribute('data-oen')});};
 const applyLang=l=>{const en=l==='en';html.lang=en?'en':'ar';html.dir=en?'ltr':'rtl';setPh();};
 const q=(new URLSearchParams(location.search).get('lang')||'').toLowerCase();
 const saveLang=l=>{try{localStorage.setItem('labsyria_lang',l)}catch(e){}};
@@ -220,19 +220,72 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   requestAnimationFrame(step);};
  var co=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);co.unobserve(e.target)}})},{threshold:.5});
  els.forEach(function(el){co.observe(el)});})();
-/* lead capture: forms with [data-lead-form] email to LabSyria via FormSubmit + local backup */
+/* lead capture: forms with [data-lead-form] email to LabSyria via FormSubmit + local backup.
+   kind=newsletter (name, whatsapp/email, city, lab, role, consent) or kind=contact. */
 (function(){var EP="https://formsubmit.co/ajax/67e43928aca5f6238eaa9d3342ea4eef";
- function ok(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((v||'').trim());}
- function local(o){try{var a=JSON.parse(localStorage.getItem('labsyria_leads')||'[]');a.push(o);localStorage.setItem('labsyria_leads',JSON.stringify(a));}catch(e){}}
- document.querySelectorAll('[data-lead-form]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();
-  var ar=html.lang!=='en';var em=f.querySelector('[data-lead-email]'),nm=f.querySelector('[data-lead-name]'),ms=f.querySelector('[data-lead-message]'),msg=f.querySelector('[data-lead-msg]');
-  var email=em?em.value.trim():'';if(!ok(email)){if(msg){msg.textContent=ar?'الرجاء إدخال بريد إلكتروني صحيح.':'Please enter a valid email.';}return;}
-  var src=f.getAttribute('data-lead-source')||'website';
-  if(msg)msg.textContent=ar?'جارٍ الإرسال…':'Sending…';
-  var lead={name:nm?nm.value.trim():'',email:email,message:ms?ms.value.trim():'',source:src,t:(new Date()).toISOString()};local(lead);
-  fetch(EP,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'LabSyria '+src+': '+(lead.name||email),name:lead.name,email:email,message:lead.message,source:src,_template:'table',_captcha:'false'})}).catch(function(){}).finally(function(){
-   f.reset();if(msg)msg.textContent=ar?'تم الإرسال بنجاح. شكراً لك.':'Sent successfully. Thank you.';});
+ var utm='';try{utm=(new URLSearchParams(location.search).get('utm_source')||'').slice(0,80);}catch(e){}
+ function okEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}
+ function digits(v){var o='';for(var i=0;i<v.length;i++){var c=v.charCodeAt(i);if(c>=0x660&&c<=0x669)o+=String(c-0x660);else if(c>=0x6F0&&c<=0x6F9)o+=String(c-0x6F0);else o+=v.charAt(i);}return o;}
+ function normWa(v){var d=digits(v||'').replace(/[\s().\/-]/g,'');if(/^00[1-9]/.test(d))d='+'+d.slice(2);if(/^09[0-9]{8}$/.test(d))d='+963'+d.slice(1);return d;}
+ function okWa(d){return /^\+?[0-9]{8,15}$/.test(d);}
+ function local(o){try{var a=JSON.parse(localStorage.getItem('labsyria_leads')||'[]');a.push(o);localStorage.setItem('labsyria_leads',JSON.stringify(a.slice(-50)));}catch(e){}}
+ function el(f,n){return f.querySelector('[name="'+n+'"]');}
+ function fv(f,n){var x=el(f,n);return x?(x.value||'').trim():'';}
+ function say(f,ar,en,bad){var m=f.querySelector('[data-lead-msg]');if(m){m.textContent=html.lang!=='en'?ar:en;m.classList.toggle('bad',!!bad);}}
+ function bad(f,n){var x=el(f,n);if(x){x.setAttribute('aria-invalid','true');}return x;}
+ function openMore(f){var b=f.querySelector('[data-nl-more]');if(b&&b.getAttribute('aria-expanded')!=='true')b.click();}
+ document.querySelectorAll('[data-nl-more]').forEach(function(b){b.addEventListener('click',function(){
+  var p=document.getElementById(b.getAttribute('aria-controls'));var o=b.getAttribute('aria-expanded')==='true';
+  b.setAttribute('aria-expanded',o?'false':'true');if(p)p.hidden=o;
+  if(b.classList.contains('nl-open')&&p){b.hidden=true;var i=p.querySelector('input');if(i)i.focus();}});});
+ document.querySelectorAll('[data-lead-form]').forEach(function(f){
+  f.addEventListener('input',function(e){if(e.target&&e.target.removeAttribute)e.target.removeAttribute('aria-invalid');});
+  f.addEventListener('submit',function(e){e.preventDefault();if(f.getAttribute('data-busy'))return;
+  var kind=f.getAttribute('data-lead-kind')||'contact',nl=kind==='newsletter';
+  f.querySelectorAll('[aria-invalid]').forEach(function(x){x.removeAttribute('aria-invalid');});
+  var name=fv(f,'name'),waRaw=fv(f,'whatsapp'),wa=waRaw?normWa(waRaw):'',email=fv(f,'email'),city=fv(f,'city'),lab=fv(f,'lab'),role=fv(f,'role'),message=fv(f,'message');
+  var cons=el(f,'consent'),x;
+  if(!name){x=bad(f,'name');say(f,'الرجاء كتابة اسمك.','Please enter your name.',1);if(x)x.focus();return;}
+  if(!wa&&!email){bad(f,'whatsapp');bad(f,'email');openMore(f);say(f,'أدخل رقم واتساب أو بريداً إلكترونياً، أحدهما على الأقل، لنتمكّن من التواصل معك.','Please enter a WhatsApp number or an email address (at least one) so we can reach you.',1);x=el(f,'whatsapp');if(x)x.focus();return;}
+  if(wa&&!okWa(wa)){x=bad(f,'whatsapp');say(f,'رقم واتساب غير صحيح. اكتبه مع رمز الدولة، مثل ‎+963 9xx xxx xxx، أو بصيغة 09 المحلية.','That WhatsApp number does not look right. Include the country code, for example +963 9xx xxx xxx, or use the local 09 format.',1);if(x)x.focus();return;}
+  if(email&&!okEmail(email)){openMore(f);x=bad(f,'email');say(f,'الرجاء إدخال بريد إلكتروني صحيح.','Please enter a valid email address.',1);if(x)x.focus();return;}
+  if(nl&&!city){x=bad(f,'city');say(f,'الرجاء اختيار المحافظة أو «خارج سوريا».','Please choose your governorate, or Outside Syria.',1);if(x)x.focus();return;}
+  if(cons&&!cons.checked){cons.setAttribute('aria-invalid','true');say(f,'الرجاء الموافقة على تلقّي النشرة للمتابعة.','Please tick the consent box to continue.',1);cons.focus();return;}
+  var place=f.getAttribute('data-lead-place')||kind,path=location.pathname;
+  var body={_subject:nl?('LabSyria newsletter: '+name+' ('+city+')'):('LabSyria contact: '+name+(city?' ('+city+')':'')),_template:'table',_captcha:'false',
+   name:name,whatsapp:wa,city:city,lab:lab,source:path,form:place,utm_source:utm};
+  if(email)body.email=email;
+  if(nl){body.role=role;body.consent='yes';}else{body.message=message;}
+  local({kind:kind,name:name,whatsapp:wa,email:email,city:city,lab:lab,role:role,message:message,source:path,form:place,t:(new Date()).toISOString()});
+  f.setAttribute('data-busy','1');var btn=f.querySelector('[type=submit]');if(btn)btn.disabled=true;
+  say(f,'جارٍ الإرسال…','Sending…');
+  fetch(EP,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)})
+  .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return r.ok&&String(j.success)!=='false';});})
+  .catch(function(){return false;})
+  .then(function(good){f.removeAttribute('data-busy');if(btn)btn.disabled=false;
+   if(!good){say(f,'تعذّر الإرسال الآن. حاول مرة أخرى بعد قليل، أو راسلنا على واتساب.','We could not send this right now. Please try again shortly, or message us on WhatsApp.',1);return;}
+   if(nl){try{localStorage.setItem('labsyria_nl','1');}catch(e){}}
+   f.reset();say(f,'','');
+   var w=f.closest('[data-lead-wrap]'),d=w&&w.querySelector('[data-lead-done]');
+   if(d){f.hidden=true;var p=f.parentNode;if(p&&p.id==='nls-body')p.hidden=true;d.hidden=false;try{d.focus({preventScroll:true});}catch(e){d.focus();}}
+   else say(f,'تم الإرسال بنجاح. شكراً لك.','Sent successfully. Thank you.');
+  });
  });});
+})();
+/* newsletter slide-in: article pages only, once per visitor, after 45 s or 60% scroll */
+(function(){var s=document.querySelector('[data-nl-slide]');if(!s||/^\/contact/.test(location.pathname))return;
+ var K='labsyria_nl_slide';
+ try{if(localStorage.getItem(K)||localStorage.getItem('labsyria_nl'))return;}catch(e){}
+ var shown=false,t=0;
+ function busy(){var a=document.activeElement;return !!(a&&a.closest&&a.closest('[data-lead-form]'));}
+ function show(){if(shown||busy())return;shown=true;clearTimeout(t);removeEventListener('scroll',onS);
+  try{localStorage.setItem(K,String(Date.now()));}catch(e){}
+  s.hidden=false;requestAnimationFrame(function(){requestAnimationFrame(function(){s.classList.add('on');});});}
+ function hide(){s.classList.remove('on');setTimeout(function(){s.hidden=true;},350);}
+ function onS(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;if(max>0&&h.scrollTop/max>=0.6)show();}
+ t=setTimeout(show,45000);addEventListener('scroll',onS,{passive:true});
+ s.querySelector('[data-nl-close]').addEventListener('click',hide);
+ s.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});
 })();
 </script>
 </body></html>
