@@ -55,3 +55,5 @@ pages_lims.py
 pages_glossary.py
 _glossary/
 pages_catalog.py
+pages_request.py
+pages_lims_more.py
