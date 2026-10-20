@@ -17,9 +17,9 @@
   <url><loc>https://labsyria.com/services/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://labsyria.com/hematology/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://labsyria.com/clinical-chemistry/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://labsyria.com/poct/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://labsyria.com/poct/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://labsyria.com/rapid-immunoassay/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://labsyria.com/molecular-pcr/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://labsyria.com/molecular-pcr/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://labsyria.com/consumables/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://labsyria.com/microscopy/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://labsyria.com/immunoassay/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -35,6 +35,9 @@
   <url><loc>https://labsyria.com/rx-monza/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://labsyria.com/sinnowa-bs-3000m/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://labsyria.com/stat-fax/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://labsyria.com/disc-chemistry-analyzer/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://labsyria.com/respiratory-pcr-panel/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://labsyria.com/urogenital-pcr-panel/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://labsyria.com/optika-b-series/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://labsyria.com/control-results-fail/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://labsyria.com/choose-an-analyzer/</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
