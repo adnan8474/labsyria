@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>نتائج الفحوص · Laboratory results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<!--
+  Results viewer for reports whose QR carries the results (Catenix
+  src/patient_retrieval/qr_payload.py). Everything after "#" stays in this browser
+  and is never sent to labsyria.com or anywhere else. The page fetches only
+  labs.json (the laboratories' public keys), checks the laboratory's signature,
+  and, for locked codes (version 2), decrypts with the patient's date of birth
+  here on the phone. No analytics on this page, by design.
+-->
+<style>
+:root{--ink:#0F2239;--body:#3D4F63;--muted:#6C7B8B;--line:#E6ECE9;--paper:#F5F8F6;--ok:#0A8F3A;--red:#C0182B;--blue:#1C6FD1;--brand:#172E4B;--brand2:#0B7B79}
+*{box-sizing:border-box}
+html,body{margin:0;background:linear-gradient(180deg,#E6EEEB 0,#F3F6F5 340px);color:var(--body);font-family:"Readex Pro",system-ui,sans-serif;font-size:16px;line-height:1.55;min-height:100vh}
+.wrap{max-width:680px;margin:0 auto;padding:14px 14px 28px}
+.card{background:#fff;border-radius:22px;box-shadow:0 10px 30px rgba(15,34,57,.08),0 1px 0 rgba(15,34,57,.04);overflow:hidden}
+.hd{position:relative;background:linear-gradient(135deg,var(--brand) 0%,var(--brand2) 100%);color:#fff;padding:22px 22px 54px}
+.hd .row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.hd h1{font-family:"Alexandria",sans-serif;font-size:1.25rem;margin:0;line-height:1.35}
+.hd .sub{opacity:.82;font-size:.86rem;margin-top:2px}
+.hd .logo{background:#fff;border-radius:12px;padding:6px 8px;display:flex}
+.hd .logo img{max-height:42px;max-width:110px;display:block}
+.hd .mono-ic{width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.16);display:grid;place-items:center;font-family:"Alexandria",sans-serif;font-size:1.25rem}
+.seal{margin:-34px 16px 0;position:relative;background:#fff;border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 6px 18px rgba(15,34,57,.10)}
+.seal .ic{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:1.2rem;color:#fff}
+.seal.ok .ic{background:var(--ok)} .seal.wait .ic{background:var(--muted)}
+.seal b{display:block;color:var(--ink);font-family:"Alexandria",sans-serif;font-size:.98rem}
+.seal span{font-size:.84rem;color:var(--muted)}
+.pt{padding:18px 20px 6px}
+.pt .name{font-family:"Alexandria",sans-serif;font-size:1.3rem;color:var(--ink);line-height:1.35}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.82rem}
+.chip b{color:var(--ink);font-weight:500}
+.mono{font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.sum{margin:14px 16px 4px;border-radius:16px;padding:14px 16px;display:flex;gap:14px;align-items:center}
+.sum.ok{background:#EAF7EF} .sum.ab{background:#FFF3F1}
+.sum .big{font-family:"Alexandria",sans-serif;font-size:1.6rem;line-height:1;min-width:58px;text-align:center}
+.sum.ok .big{color:var(--ok)} .sum.ab .big{color:var(--red)}
+.sum .txt{font-size:.92rem;color:var(--ink)}
+.sum .txt small{display:block;color:var(--muted);font-size:.8rem;margin-top:2px}
+.grp{padding:6px 16px 4px}
+.grp h2{font-family:"Alexandria",sans-serif;font-size:.95rem;color:var(--brand2);margin:14px 4px 8px;display:flex;align-items:center;gap:8px}
+.grp h2:after{content:"";flex:1;height:1px;background:var(--line)}
+.res{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:8px;background:#fff}
+.res.A,.res.C{border-color:#F3C9CE;background:#FFFBFB}
+.res .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.res .n{color:var(--ink);font-weight:500;font-size:.95rem}
+.res .v{white-space:nowrap;font-family:"Alexandria",sans-serif;font-size:1.15rem;color:var(--ink)}
+.res .v small{font-family:"Readex Pro",sans-serif;font-size:.75rem;color:var(--muted);margin-inline-start:4px}
+.res.A .v,.res.C .v{color:var(--red)}
+.res .meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px;gap:10px;font-size:.78rem;color:var(--muted)}
+.tag{border-radius:999px;padding:2px 10px;font-size:.76rem;font-weight:600;white-space:nowrap}
+.tag.ok{background:#EAF7EF;color:var(--ok)} .tag.hi{background:#FDECEE;color:var(--red)} .tag.lo{background:#EAF1FC;color:var(--blue)} .tag.cr{background:var(--red);color:#fff}
+.bar{position:relative;height:6px;border-radius:6px;background:#EEF2F0;margin-top:9px}
+.bar .in{position:absolute;top:0;bottom:0;border-radius:6px;background:#BFE6CC}
+.bar .dot{position:absolute;top:50%;width:13px;height:13px;margin-top:-6.5px;border-radius:50%;background:var(--ok);border:2px solid #fff;box-shadow:0 0 0 1px rgba(15,34,57,.18)}
+.res.A .bar .dot,.res.C .bar .dot{background:var(--red)}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px}
+button{font:inherit;border:0;border-radius:14px;padding:13px 14px;cursor:pointer;background:var(--brand);color:#fff;font-weight:600}
+button.alt{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
+button:disabled{opacity:.6}
+.ft{padding:0 20px 18px;font-size:.8rem;color:var(--muted)}
+.priv{font-size:.78rem;color:var(--muted);text-align:center;margin:16px 10px 0}
+.empty{padding:34px 24px;text-align:center}
+.empty .ic{width:64px;height:64px;border-radius:18px;margin:0 auto 14px;display:grid;place-items:center;font-size:1.8rem;background:var(--paper)}
+.empty h2{font-family:"Alexandria",sans-serif;color:var(--ink);font-size:1.15rem;margin:0 0 8px}
+.empty.bad .ic{background:#FDECEE;color:var(--red)}
+.gate{padding:22px 20px 24px}
+.gate h2{font-family:"Alexandria",sans-serif;color:var(--ink);font-size:1.12rem;margin:6px 0 4px}
+.gate p{margin:0 0 16px;color:var(--muted);font-size:.9rem}
+.dob{display:grid;grid-template-columns:1fr 1.3fr 1.2fr;gap:8px;margin-bottom:12px}
+.dob label{font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px}
+select{width:100%;font:inherit;font-size:16px;padding:11px 10px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+.err{color:var(--red);font-size:.86rem;min-height:1.3em;margin:4px 0 8px}
+.gate button{width:100%}
+.sample{background:#FFF4E0;color:#7A4A00;text-align:center;font-weight:600;padding:8px;font-size:.82rem}
+@media print{body{background:#fff}.btns,.priv{display:none}.card{box-shadow:none}.res{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="card" id="card"><div class="empty"><div class="ic">⏳</div><h2>جارٍ فتح النتائج…</h2></div></div>
+<p class="priv" id="priv">🔒 تُقرأ النتائج من الرمز نفسه على هاتفك، ولا تُرسل إلى أي خادم.</p></div>
+<script>
+window.addEventListener("hashchange",function(){location.reload()});
+(function(){
+var T={ar:{title:"تقرير نتائج الفحوص",sex:"الجنس",age:"العمر",acc:"رقم القيد",at:"صدور التقرير",by:"اعتمده",range:"المجال المرجعي",
+ sumok:"جميع النتائج ضمن المجال المرجعي.",sumab:function(k,n){return k===1?"فحص واحد من أصل "+n+" خارج المجال المرجعي.":"عدد الفحوص خارج المجال المرجعي: "+k+" من أصل "+n+"."},
+ note:"يفسّر الطبيب المعالج النتائج في ضوء الحالة السريرية.",share:"مشاركة",pdf:"حفظ PDF",
+ okT:"تقرير موثّق",okS:"موقّع رقمياً من المخبر، ولم يُعدَّل منذ اعتماده",unT:"لم يُتحقق من التوقيع",unS:"المخبر غير معروف لهذه الصفحة",
+ priv:"🔒 تُقرأ النتائج من الرمز نفسه على هاتفك، ولا تُرسل إلى أي خادم.",sample:"نموذج توضيحي ببيانات مريض وهمية",
+ tests:"الفحوص",normal:"طبيعي",high:"مرتفع",low:"منخفض",crit:"حرج"},
+ en:{title:"Laboratory report",sex:"Sex",age:"Age",acc:"Accession",at:"Reported",by:"Approved by",range:"Reference range",
+ sumok:"All results are within the reference range.",sumab:function(k,n){return k+" of "+n+" tests outside the reference range."},
+ note:"Results are interpreted by the treating clinician in the light of the clinical picture.",share:"Share",pdf:"Save PDF",
+ okT:"Verified report",okS:"Signed by the laboratory, unchanged since approval",unT:"Signature not checked",unS:"This laboratory is not known to this page",
+ priv:"🔒 The results are read from the code on your phone and are not sent to any server.",sample:"Sample with a fictional patient",
+ tests:"Tests",normal:"Normal",high:"High",low:"Low",crit:"Critical"}};
+var MONTHS=["كانون الثاني","شباط","آذار","نيسان","أيار","حزيران","تموز","آب","أيلول","تشرين الأول","تشرين الثاني","كانون الأول"];
+var card=document.getElementById("card");
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function b64(s){s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";var b=atob(s),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u}
+function inflate(bytes){
+ if(window.DecompressionStream){var ds=new DecompressionStream("deflate-raw"),w=ds.writable.getWriter();w.write(bytes);w.close();return new Response(ds.readable).arrayBuffer().then(function(b){return new TextDecoder().decode(b)})}
+ return new Promise(function(res,rej){var s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js";s.onload=function(){try{res(pako.inflateRaw(bytes,{to:"string"}))}catch(e){rej(e)}};s.onerror=rej;document.head.appendChild(s)})}
+function empty(h,p,cls,ic){card.innerHTML='<div class="empty '+(cls||"")+'"><div class="ic">'+(ic||"▣")+'</div><h2>'+esc(h)+'</h2><p>'+esc(p||"")+'</p></div>'}
+function badPage(lab){empty("تعذّر التحقق من هذه النسخة","قد تكون معدَّلة أو غير صادرة عن المخبر. اعتمدوا التقرير الورقي أو اتصلوا بالمخبر"+(lab&&lab.phone?" على "+lab.phone:"")+".","bad","⚠")}
+var parts=(location.hash||"").slice(1).split(".");
+if(parts.length!==4||(parts[0]!=="1"&&parts[0]!=="2")){empty("امسح رمز النتائج المطبوع على تقريرك","تفتح هذه الصفحة نتائجك من رمز QR المطبوع على تقرير المخبر. لا تُحفظ النتائج على أي خادم.");return}
+if(!(window.crypto&&crypto.subtle)){empty("هاتفك لا يدعم فتح هذا الرمز","حدّث المتصفح أو استخدم متصفح Chrome.","bad","⚠");return}
+var ver=parts[0],lid=parts[1],signed=parts[0]+"."+parts[1]+"."+parts[2],sig,body;
+try{sig=b64(parts[3]);body=b64(parts[2])}catch(e){badPage();return}
+fetch("labs.json",{cache:"no-cache"}).then(function(r){return r.json()}).catch(function(){return {labs:[]}}).then(function(reg){
+ var lab=(reg.labs||[]).filter(function(l){return l.id===lid})[0]||null;
+ var check=Promise.resolve("unknown");
+ if(lab&&lab.key){check=crypto.subtle.importKey("jwk",lab.key,{name:"ECDSA",namedCurve:"P-256"},false,["verify"])
+   .then(function(k){return crypto.subtle.verify({name:"ECDSA",hash:"SHA-256"},k,sig,new TextEncoder().encode(signed))})
+   .then(function(ok){return ok?"ok":"bad"}).catch(function(){return "bad"})}
+ return check.then(function(v){
+  if(v==="bad"){badPage(lab);return}
+  if(ver==="2")return gate(lab||{},v);
+  return inflate(body).then(JSON.parse).then(function(d){render(d,lab||{},v)},function(){badPage(lab)})})
+});
+function gate(lab,v){
+ var lname=lab.name||"المخبر",days="",years="",y=new Date().getFullYear(),i;
+ for(i=1;i<=31;i++)days+='<option value="'+i+'">'+i+'</option>';
+ for(i=y;i>=y-110;i--)years+='<option value="'+i+'">'+i+'</option>';
+ var mo=MONTHS.map(function(m,k){return '<option value="'+(k+1)+'">'+(k+1)+' · '+m+'</option>'}).join("");
+ card.innerHTML=(lab.sample?'<div class="sample">'+T.ar.sample+'</div>':'')+
+  '<div class="hd" style="padding-bottom:22px"><div class="row"><div><h1>'+esc(lname)+'</h1><div class="sub">'+T.ar.title+'</div></div>'+(lab.logo?'<div class="logo"><img src="'+esc(lab.logo)+'" alt=""></div>':'<div class="mono-ic">🔒</div>')+'</div></div>'+
+  '<form class="gate" id="g"><h2>أدخل تاريخ ميلاد المريض</h2><p>النتائج محفوظة داخل الرمز ومقفلة بتاريخ الميلاد. لا تُرسل إلى أي خادم.</p>'+
+  '<div class="dob"><div><label>اليوم</label><select id="dd"><option value="">--</option>'+days+'</select></div><div><label>الشهر</label><select id="mm"><option value="">--</option>'+mo+'</select></div><div><label>السنة</label><select id="yy"><option value="">----</option>'+years+'</select></div></div>'+
+  '<div class="err" id="er"></div><button id="go" type="submit">عرض النتائج</button></form>';
+ document.getElementById("g").onsubmit=function(e){e.preventDefault();
+  var d=document.getElementById("dd").value,m=document.getElementById("mm").value,yy=document.getElementById("yy").value,er=document.getElementById("er"),btn=document.getElementById("go");
+  if(!d||!m||!yy){er.textContent="اختر اليوم والشهر والسنة.";return}
+  var dob=yy+"-"+("0"+m).slice(-2)+"-"+("0"+d).slice(-2);btn.disabled=true;er.textContent="";btn.textContent="جارٍ الفتح…";
+  var salt=body.slice(0,16),iv=body.slice(16,28),ct=body.slice(28);
+  crypto.subtle.importKey("raw",new TextEncoder().encode(dob),"PBKDF2",false,["deriveKey"])
+   .then(function(k){return crypto.subtle.deriveKey({name:"PBKDF2",salt:salt,iterations:200000,hash:"SHA-256"},k,{name:"AES-GCM",length:256},false,["decrypt"])})
+   .then(function(key){return crypto.subtle.decrypt({name:"AES-GCM",iv:iv},key,ct)})
+   .then(function(plain){return inflate(new Uint8Array(plain)).then(JSON.parse).then(function(data){render(data,lab,v)})},
+     function(){btn.disabled=false;btn.textContent="عرض النتائج";er.textContent="تاريخ الميلاد غير مطابق. تحقّق منه وحاول مرة أخرى."})};
+}
+function num(x){var m=String(x).replace(",",".").match(/-?\d+(\.\d+)?/);return m?parseFloat(m[0]):null}
+function rng(r){var t=String(r||""),m;if((m=t.match(/(-?\d+(?:[.,]\d+)?)\s*[-–]\s*(-?\d+(?:[.,]\d+)?)/)))return [num(m[1]),num(m[2])];
+ if((m=t.match(/(<=?|≤)\s*(-?\d+(?:[.,]\d+)?)/)))return [0,num(m[2])];if((m=t.match(/(>=?|≥)\s*(-?\d+(?:[.,]\d+)?)/)))return [num(m[2]),null];return null}
+function bar(val,r){var v=num(val),g=rng(r);if(v===null||!g)return "";var lo=g[0],hi=g[1];if(hi===null)hi=lo*2;if(lo===null)lo=0;
+ var span=(hi-lo)||1,min=lo-span*.5,max=hi+span*.5,pc=function(x){return Math.max(3,Math.min(97,(x-min)/(max-min)*100))};
+ var a=pc(lo),b=pc(hi),side=document.documentElement.dir==="rtl"?"right":"left";
+ return '<div class="bar"><div class="in" style="'+side+':'+a+'%;width:'+(b-a)+'%"></div><div class="dot" style="'+side+':calc('+pc(v)+'% - 6.5px)"></div></div>'}
+function tag(r,t){var w=r[6]||"",f=r[4];if(f==="C")return '<span class="tag cr">'+esc(w||t.crit)+'</span>';
+ if(f==="A"){var g=rng(r[3]),v=num(r[1]),lo=!!(g&&g[0]!==null&&v!==null&&v<g[0]);return '<span class="tag '+(lo?"lo":"hi")+'">'+esc(w||(lo?t.low:t.high))+'</span>'}
+ return '<span class="tag ok">'+esc(w||t.normal)+'</span>'}
+function render(d,lab,v){
+ var en=d.l==="en",t=en?T.en:T.ar;document.documentElement.lang=en?"en":"ar";document.documentElement.dir=en?"ltr":"rtl";
+ document.getElementById("priv").textContent=t.priv;var lname=en&&lab.name_en?lab.name_en:(lab.name||t.title);document.title=t.title+" · "+lname;
+ if(lab.color)document.documentElement.style.setProperty("--brand",lab.color);
+ var rows=d.r||[],ab=rows.filter(function(r){return r[4]==="A"||r[4]==="C"}),p=d.p||[],h="";
+ if(lab.sample)h+='<div class="sample">'+t.sample+'</div>';
+ h+='<div class="hd"><div class="row"><div><h1>'+esc(lname)+'</h1><div class="sub">'+t.title+'</div></div>'+(lab.logo?'<div class="logo"><img src="'+esc(lab.logo)+'" alt=""></div>':'<div class="mono-ic">'+esc((lname||"م").trim().charAt(0))+'</div>')+'</div></div>';
+ h+='<div class="seal '+(v==="ok"?"ok":"wait")+'"><div class="ic">'+(v==="ok"?"✔":"?")+'</div><div><b>'+(v==="ok"?t.okT:t.unT)+'</b><span>'+(v==="ok"?t.okS:t.unS)+'</span></div></div>';
+ h+='<div class="pt"><div class="name">'+esc(p[0])+'</div><div class="chips">'+(p[1]?'<span class="chip">'+t.sex+': <b>'+esc(p[1])+'</b></span>':'')+(p[2]?'<span class="chip">'+t.age+': <b>'+esc(p[2])+'</b></span>':'')+
+  '<span class="chip">'+t.acc+': <b class="mono">'+esc(d.a)+'</b></span><span class="chip">'+t.at+': <b class="mono">'+esc(d.t)+'</b></span></div></div>';
+ h+='<div class="sum '+(ab.length?"ab":"ok")+'"><div class="big mono">'+(ab.length?ab.length+"/"+rows.length:"✔")+'</div><div class="txt">'+(ab.length?t.sumab(ab.length,rows.length):t.sumok)+'<small>'+t.note+'</small></div></div>';
+ var groups=[],by={};rows.forEach(function(r){var g=r[5]||t.tests;if(!by[g]){by[g]=[];groups.push(g)}by[g].push(r)});
+ groups.forEach(function(g){h+='<div class="grp"><h2>'+esc(g)+'</h2>'+by[g].map(function(r){
+  return '<div class="res '+esc(r[4])+'"><div class="top"><div class="n">'+esc(r[0])+'</div><div class="v mono">'+esc(r[1])+'<small>'+esc(r[2])+'</small></div></div>'+bar(r[1],r[3])+
+   '<div class="meta"><span>'+(r[3]?t.range+': <span class="mono">'+esc(r[3])+'</span>':'')+'</span>'+tag(r,t)+'</div></div>'}).join("")+'</div>'});
+ h+='<div class="btns"><button id="b-share">'+t.share+'</button><button class="alt" id="b-pdf">'+t.pdf+'</button></div>';
+ h+='<div class="ft">'+(d.b?t.by+': '+esc(d.b)+'<br>':'')+(lab.address?esc(lab.address)+'<br>':'')+(lab.phone?'<span class="mono">'+esc(lab.phone)+'</span>':'')+'</div>';
+ card.innerHTML=h;
+ document.getElementById("b-pdf").onclick=function(){window.print()};
+ document.getElementById("b-share").onclick=function(){var u=location.href;if(navigator.share){navigator.share({title:document.title,url:u}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(u)}};
+}
+})();
+</script>
+</body>
+</html>

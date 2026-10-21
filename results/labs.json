@@ -1,0 +1,19 @@
+{
+ "labs": [
+  {
+   "id": "niaziomarlab",
+   "name": "مخبر الدكتور نيازي عمر للتحاليل الطبية",
+   "name_en": "Niazi Omar Medical Laboratory",
+   "phone": "",
+   "address": "",
+   "color": "",
+   "sample": true,
+   "key": {
+    "kty": "EC",
+    "crv": "P-256",
+    "x": "1GBlQeBwB1GI3uOQaSPxRaIQCAncLVF0HSOoMvJk3f8",
+    "y": "OdBnMpQJneaiSpT7hrHdZjnYyMcyM7KvYJP4nXwS6XY"
+   }
+  }
+ ]
+}
