@@ -168,14 +168,14 @@ function render(d,lab,v){
  h+='<div class="hd"><div class="row"><div><h1>'+esc(lname)+'</h1><div class="sub">'+t.title+'</div></div>'+(lab.logo?'<div class="logo"><img src="'+esc(lab.logo)+'" alt=""></div>':'<div class="mono-ic">'+esc((lname||"م").trim().charAt(0))+'</div>')+'</div></div>';
  h+='<div class="seal '+(v==="ok"?"ok":"wait")+'"><div class="ic">'+(v==="ok"?"✔":"?")+'</div><div><b>'+(v==="ok"?t.okT:t.unT)+'</b><span>'+(v==="ok"?t.okS:t.unS)+'</span></div></div>';
  h+='<div class="pt"><div class="name">'+esc(p[0])+'</div><div class="chips">'+(p[1]?'<span class="chip">'+t.sex+': <b>'+esc(p[1])+'</b></span>':'')+(p[2]?'<span class="chip">'+t.age+': <b>'+esc(p[2])+'</b></span>':'')+
-  '<span class="chip">'+t.acc+': <b class="mono">'+esc(d.a)+'</b></span><span class="chip">'+t.at+': <b class="mono">'+esc(d.t)+'</b></span></div></div>';
- h+='<div class="sum '+(ab.length?"ab":"ok")+'"><div class="big mono">'+(ab.length?ab.length+"/"+rows.length:"✔")+'</div><div class="txt">'+(ab.length?t.sumab(ab.length,rows.length):t.sumok)+'<small>'+t.note+'</small></div></div>';
+  '<span class="chip">'+t.acc+': <b class="mono" dir="ltr">'+esc(d.a)+'</b></span><span class="chip">'+t.at+': <b class="mono" dir="ltr">'+esc(d.t)+'</b></span></div></div>';
+ h+='<div class="sum '+(ab.length?"ab":"ok")+'"><div class="big mono" dir="ltr">'+(ab.length?ab.length+"/"+rows.length:"✔")+'</div><div class="txt">'+(ab.length?t.sumab(ab.length,rows.length):t.sumok)+'<small>'+t.note+'</small></div></div>';
  var groups=[],by={};rows.forEach(function(r){var g=r[5]||t.tests;if(!by[g]){by[g]=[];groups.push(g)}by[g].push(r)});
  groups.forEach(function(g){h+='<div class="grp"><h2>'+esc(g)+'</h2>'+by[g].map(function(r){
-  return '<div class="res '+esc(r[4])+'"><div class="top"><div class="n">'+esc(r[0])+'</div><div class="v mono">'+esc(r[1])+'<small>'+esc(r[2])+'</small></div></div>'+bar(r[1],r[3])+
-   '<div class="meta"><span>'+(r[3]?t.range+': <span class="mono">'+esc(r[3])+'</span>':'')+'</span>'+tag(r,t)+'</div></div>'}).join("")+'</div>'});
+  return '<div class="res '+esc(r[4])+'"><div class="top"><div class="n">'+esc(r[0])+'</div><div class="v mono" dir="ltr">'+esc(r[1])+'<small>'+esc(r[2])+'</small></div></div>'+bar(r[1],r[3])+
+   '<div class="meta"><span>'+(r[3]?t.range+': <span class="mono" dir="ltr">'+esc(r[3])+'</span>':'')+'</span>'+tag(r,t)+'</div></div>'}).join("")+'</div>'});
  h+='<div class="btns"><button id="b-share">'+t.share+'</button><button class="alt" id="b-pdf">'+t.pdf+'</button></div>';
- h+='<div class="ft">'+(d.b?t.by+': '+esc(d.b)+'<br>':'')+(lab.address?esc(lab.address)+'<br>':'')+(lab.phone?'<span class="mono">'+esc(lab.phone)+'</span>':'')+'</div>';
+ h+='<div class="ft">'+(d.b?t.by+': '+esc(d.b)+'<br>':'')+(lab.address?esc(lab.address)+'<br>':'')+(lab.phone?'<span class="mono" dir="ltr">'+esc(lab.phone)+'</span>':'')+'</div>';
  card.innerHTML=h;
  document.getElementById("b-pdf").onclick=function(){window.print()};
  document.getElementById("b-share").onclick=function(){var u=location.href;if(navigator.share){navigator.share({title:document.title,url:u}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(u)}};
