@@ -2,10 +2,10 @@
   "product": "Catenix",
   "channel": "stable",
   "version": "1.0.20",
-  "url": "https://github.com/adnan8474/labsyria/releases/download/v1.0.20/CatenixSetup-1.0.20.exe",
+  "url": "https://labsyriaportal.blob.core.windows.net/releases/CatenixSetup-1.0.20.exe?spr=https&sv=2026-02-06&si=appliance-read&sr=b&sig=OC3%2FMw23FsT5jELDtpau5w%2FB9yEc1LMIcQspBbBMULU%3D",
   "sha256": "3e40c431a99725a9cc85a6ebdb060b0ed0bfa18607771d06a8c8dfbead2821cf",
   "size": 120700574,
-  "released_at": "2026-10-23T18:16:49Z",
+  "released_at": "2026-10-23T18:47:03Z",
   "notes": "Clearer results screen, one place to send a report, results inside the QR, reference-range unit fix",
-  "sig": "GGhYNNAtJsRuFt+uYSNGE55Bo5IZYjpdYsRo6+JyY/CPL0ZzgbkIIrO7NUwgA3oi7yaI4QwyAc0SS5wildfmDQ=="
+  "sig": "K/uSbu1WPvH+PLLVlQXA8t8MBdjt2ZFwtkFmneTQrxRQb9hJB0KR2ys9Tm2P8EZj7Of5dYqAzZDgSOxqGOyLCg=="
 }
