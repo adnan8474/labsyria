@@ -1,11 +1,11 @@
 {
   "product": "Catenix",
   "channel": "stable",
-  "version": "1.0.20",
-  "url": "https://labsyriaportal.blob.core.windows.net/releases/CatenixSetup-1.0.20.exe?spr=https&sv=2026-02-06&si=appliance-read&sr=b&sig=OC3%2FMw23FsT5jELDtpau5w%2FB9yEc1LMIcQspBbBMULU%3D",
-  "sha256": "3e40c431a99725a9cc85a6ebdb060b0ed0bfa18607771d06a8c8dfbead2821cf",
-  "size": 120700574,
-  "released_at": "2026-10-23T18:47:03Z",
-  "notes": "Clearer results screen, one place to send a report, results inside the QR, reference-range unit fix",
-  "sig": "K/uSbu1WPvH+PLLVlQXA8t8MBdjt2ZFwtkFmneTQrxRQb9hJB0KR2ys9Tm2P8EZj7Of5dYqAzZDgSOxqGOyLCg=="
+  "version": "1.0.21",
+  "url": "https://labsyriaportal.blob.core.windows.net/releases/CatenixSetup-1.0.21.exe?spr=https&sv=2026-02-06&si=appliance-read&sr=b&sig=uVIHi8rzxKOZfE2aQo2d4mh%2B8GpI7fSNkUE4HArffIc%3D",
+  "sha256": "1e35416b58ab0e7a556b34ef31ce367c76251f5bb6c1b10b9e172e3ecdda6ce9",
+  "size": 120689732,
+  "released_at": "2026-10-23T22:32:13Z",
+  "notes": "Updates download in the background and resume after drops; served from Azure so Syria needs no VPN",
+  "sig": "ibcKJXRKnlixwwDKtex25JKq4vd+d/RxaWy0rGBpvBxO4Obzt9NkZuKNionamxvKOMrxMoAH7WPKaHFfqsSAAg=="
 }
