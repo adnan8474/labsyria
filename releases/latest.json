@@ -1,11 +1,11 @@
 {
   "product": "Catenix",
   "channel": "stable",
-  "version": "1.0.18",
-  "url": "https://github.com/adnan8474/labsyria/releases/download/v1.0.18/CatenixSetup-1.0.18.exe",
-  "sha256": "a8260906a16aeb2474a72727252e5b2c9ba1db59065ce112dcd4356cd0087ac9",
-  "size": 122444054,
-  "released_at": "2026-10-23T14:53:25Z",
-  "notes": "Automatic updates with rollback, LabSyria remote support, new sign-in",
-  "sig": "63+0GchJLqZhqq1p47AMAUpSzvr4lV94+xYa5QZ0HNtYvzNr0DbNx8PBCtqjl6wJpAajHhh8OhwCzoKRlY2BDQ=="
+  "version": "1.0.20",
+  "url": "https://github.com/adnan8474/labsyria/releases/download/v1.0.20/CatenixSetup-1.0.20.exe",
+  "sha256": "3e40c431a99725a9cc85a6ebdb060b0ed0bfa18607771d06a8c8dfbead2821cf",
+  "size": 120700574,
+  "released_at": "2026-10-23T18:16:49Z",
+  "notes": "Clearer results screen, one place to send a report, results inside the QR, reference-range unit fix",
+  "sig": "GGhYNNAtJsRuFt+uYSNGE55Bo5IZYjpdYsRo6+JyY/CPL0ZzgbkIIrO7NUwgA3oi7yaI4QwyAc0SS5wildfmDQ=="
 }
