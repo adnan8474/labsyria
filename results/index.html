@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
-<title>نتائج الفحوص · Laboratory results</title>
+<title>نتائج التحاليل · Laboratory results</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet">
 <!--
@@ -82,6 +82,41 @@ select{width:100%;font:inherit;font-size:16px;padding:11px 10px;border:1px solid
 .err{color:var(--red);font-size:.86rem;min-height:1.3em;margin:4px 0 8px}
 .gate button{width:100%}
 .sample{background:#FFF4E0;color:#7A4A00;text-align:center;font-weight:600;padding:8px;font-size:.82rem}
+.hidden{display:none!important}
+.wait{padding:22px 20px 6px}
+.wait .hi{font-family:"Alexandria",sans-serif;color:var(--ink);font-size:1.12rem;margin:0 0 6px}
+.wait p{margin:0 0 8px}
+.wait .exp{color:var(--brand2);font-weight:500}
+.journey{list-style:none;margin:18px 0 10px;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;text-align:center;font-size:.76rem;color:var(--muted);line-height:1.35}
+.journey li{position:relative;padding-top:30px}
+.journey li:before{content:"";position:absolute;top:0;left:50%;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:#EEF2F0;border:2px solid var(--line);box-sizing:border-box;z-index:1}
+.journey li:not(:first-child):after{content:"";position:absolute;top:10px;height:2px;background:var(--line);inset-inline-start:calc(-50% + 5px);width:calc(100% - 16px)}
+.journey li.done:before{background:var(--ok);border-color:var(--ok)}
+.journey li.now:before{background:#fff;border:6px solid var(--brand2)}
+.journey li.done:after,.journey li.now:after{background:var(--ok)}
+.journey li.now{color:var(--ink);font-weight:600}
+.tests{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
+.lbl{font-size:.8rem;color:var(--muted);margin-top:12px}
+.upd{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 20px 20px;font-size:.8rem;color:var(--muted)}
+.upd button{padding:9px 18px;font-size:.88rem;flex:none}
+.backbar{padding:8px 10px;background:var(--paper);border-bottom:1px solid var(--line)}
+.backbar button{background:none;color:var(--brand2);padding:6px 8px;font-weight:500}
+.res .o{font-size:.78rem;color:var(--muted)}
+.res .prev{font-size:.78rem;color:var(--muted);margin-top:6px}
+.note{font-size:.82rem;background:var(--paper);border-radius:10px;padding:8px 10px;margin-top:8px;color:var(--ink)}
+.spark{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:.74rem;color:var(--muted)}
+.spark polyline{fill:none;stroke:var(--brand2);stroke-width:1.6}.spark circle{fill:var(--brand2)}.spark circle.now{fill:var(--ink)}.spark .band{fill:#E3F3E8}
+table.abx{width:100%;border-collapse:collapse;font-size:.8rem;margin-top:6px}table.abx td{border-bottom:1px solid var(--line);padding:4px 6px}table.abx td.abn{color:var(--red)}table.abx td.ok{color:var(--ok)}
+.sum.cr{background:var(--red)}.sum.cr .big,.sum.cr .txt,.sum.cr .txt small{color:#fff}
+.pin input{width:100%;font:inherit;font-size:1.6rem;letter-spacing:.45em;text-align:center;padding:12px;border:1px solid var(--line);border-radius:12px;direction:ltr;margin-bottom:6px;color:var(--ink)}
+.search{padding:14px 16px 4px}.search input{width:100%;font:inherit;font-size:16px;padding:11px 12px;border:1px solid var(--line);border-radius:12px;color:var(--ink)}
+.vl{padding:8px 12px 6px}
+.vi{display:flex;width:100%;justify-content:space-between;align-items:center;gap:10px;background:#fff;color:var(--body);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:8px;text-align:start;font-weight:400}
+.vi b{display:block;color:var(--ink);font-weight:500}.vi small{color:var(--muted);font-size:.78rem}
+.chip.st-signed{background:#EAF7EF;color:var(--ok);border-color:#CBEBD6;white-space:nowrap}.chip.st{white-space:nowrap}
+a.btn{display:block;text-align:center;text-decoration:none;border-radius:14px;padding:13px 14px;background:var(--brand);color:#fff;font-weight:600}
+a.btn.alt{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
+.empty button{margin-top:14px;padding:11px 22px}
 @media print{body{background:#fff}.btns,.priv{display:none}.card{box-shadow:none}.res{break-inside:avoid}}
 </style>
 </head>
@@ -91,12 +126,12 @@ select{width:100%;font:inherit;font-size:16px;padding:11px 10px;border:1px solid
 <script>
 window.addEventListener("hashchange",function(){location.reload()});
 (function(){
-var T={ar:{title:"تقرير نتائج الفحوص",sex:"الجنس",age:"العمر",acc:"رقم القيد",at:"صدور التقرير",by:"اعتمده",range:"المجال المرجعي",
- sumok:"جميع النتائج ضمن المجال المرجعي.",sumab:function(k,n){return k===1?"فحص واحد من أصل "+n+" خارج المجال المرجعي.":"عدد الفحوص خارج المجال المرجعي: "+k+" من أصل "+n+"."},
+var T={ar:{title:"تقرير نتائج التحاليل",sex:"الجنس",age:"العمر",acc:"رقم القيد",at:"صدور التقرير",by:"اعتمده",range:"المجال المرجعي",
+ sumok:"جميع النتائج ضمن المجال المرجعي.",sumab:function(k,n){return k===1?"تحليل واحد من أصل "+n+" خارج المجال المرجعي.":"عدد التحاليل خارج المجال المرجعي: "+k+" من أصل "+n+"."},
  note:"يفسّر الطبيب المعالج النتائج في ضوء الحالة السريرية.",share:"مشاركة",pdf:"حفظ PDF",
- okT:"تقرير موثّق",okS:"موقّع رقمياً من المخبر، ولم يُعدَّل منذ اعتماده",unT:"لم يُتحقق من التوقيع",unS:"المخبر غير معروف لهذه الصفحة",
+ okT:"تقرير موثّق",okS:"موقّع رقمياً من المخبر، ومطابق لما اعتمده",unT:"لم يُتحقق من التوقيع",unS:"المخبر غير معروف لهذه الصفحة",
  priv:"🔒 تُقرأ النتائج من الرمز نفسه على هاتفك، ولا تُرسل إلى أي خادم.",sample:"نموذج توضيحي ببيانات مريض وهمية",
- tests:"الفحوص",normal:"طبيعي",high:"مرتفع",low:"منخفض",crit:"حرج"},
+ tests:"التحاليل",normal:"طبيعي",high:"مرتفع",low:"منخفض",crit:"حرج"},
  en:{title:"Laboratory report",sex:"Sex",age:"Age",acc:"Accession",at:"Reported",by:"Approved by",range:"Reference range",
  sumok:"All results are within the reference range.",sumab:function(k,n){return k+" of "+n+" tests outside the reference range."},
  note:"Results are interpreted by the treating clinician in the light of the clinical picture.",share:"Share",pdf:"Save PDF",
@@ -112,12 +147,51 @@ function inflate(bytes){
  return new Promise(function(res,rej){var s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js";s.onload=function(){try{res(pako.inflateRaw(bytes,{to:"string"}))}catch(e){rej(e)}};s.onerror=rej;document.head.appendChild(s)})}
 function empty(h,p,cls,ic){card.innerHTML='<div class="empty '+(cls||"")+'"><div class="ic">'+(ic||"▣")+'</div><h2>'+esc(h)+'</h2><p>'+esc(p||"")+'</p></div>'}
 function badPage(lab){empty("تعذّر التحقق من هذه النسخة","قد تكون معدَّلة أو غير صادرة عن المخبر. اعتمدوا التقرير الورقي أو اتصلوا بالمخبر"+(lab&&lab.phone?" على "+lab.phone:"")+".","bad","⚠")}
+var L={ar:{sub:"نتائج التحاليل",wait:"نتائجك قيد التحليل. احتفظ بهذا الرابط، وستظهر النتائج عليه حال صدورها.",hello:"مرحباً {n}،",
+ notyet:"لم تصل نتائج هذه الزيارة بعد. ستظهر هنا حال صدورها.",steps:["تسجيل الطلب","سحب العيّنة","التحليل","صدور النتائج"],
+ expected:"النتائج متوقعة بحلول {w}.",ordered:"التحاليل المطلوبة",auto:"تتحدّث هذه الصفحة تلقائياً.",last:"آخر تحديث",refresh:"تحديث",acc:"رقم القيد",
+ gone:"ألغى المختبر هذا الرابط. راجع المختبر.",goneP:"إن كانت لديك زيارة في المختبر، فاطلب منه رابطاً جديداً.",
+ net:"تعذّر الاتصال",netP:"تحقّق من اتصال الإنترنت ثم حاول مرة أخرى.",retry:"إعادة المحاولة",
+ unknown:"لم يُتعرّف على المخبر",unknownP:"هذا الرابط صادر عن مخبر غير مسجّل لدى هذه الصفحة. اتصلوا بالمخبر.",
+ ready:"تقريرك جاهز.",readyN:"{n}، تقريرك جاهز.",sumCrit:"توجد نتيجة حرجة تستدعي مراجعة الطبيب دون تأخير.",
+ open:"فتح التقرير",save:"حفظ التقرير (PDF)",share:"مشاركة",print:"طباعة",shareText:"نتائج تحاليلي في المختبر",
+ prev:"السابق",trend:"النتائج السابقة",collected:"سحب العيّنة",reported:"صدور التقرير",
+ abx_S:"حساس",abx_I:"متوسط",abx_R:"مقاوم",
+ priv:"🔒 النتائج مشفّرة، ولا يفتحها إلا من يحمل هذا الرابط.",privDob:"🔒 النتائج مشفّرة، ولا تُفتح إلا بهذا الرابط وتاريخ الميلاد.",
+ dobH:"أدخل تاريخ ميلاد المريض",dobP:"هذه النتائج مقفلة بتاريخ الميلاد، وتُفتح على هاتفك.",dobPick:"اختر اليوم والشهر والسنة.",
+ dobWrong:"تاريخ الميلاد غير مطابق. تحقّق منه وحاول مرة أخرى.",go:"عرض النتائج",opening:"جارٍ الفتح…",day:"اليوم",month:"الشهر",year:"السنة",
+ pinH:"أدخل الرمز السري",pinP:"رمز من ستة أرقام أرسله المختبر إليك مع هذا الرابط. تُفتح قائمة مرضاك على هاتفك فقط.",pinGo:"فتح القائمة",
+ pinWrong:"الرمز غير صحيح.",pinShort:"الرمز ستة أرقام.",pinLock:"محاولات كثيرة. انتظر نصف دقيقة ثم حاول مرة أخرى.",
+ listH:"المرضى المحالون",listSub:"بوابة الطبيب",search:"ابحث بالاسم أو رقم القيد",none:"لا توجد زيارات بعد.",noMatch:"لا توجد نتائج مطابقة.",
+ back:"العودة إلى قائمة المرضى",docNotYet:"لم تُنشر قائمة المرضى بعد. ستظهر هنا حال إرسالها من المختبر.",
+ privDoc:"🔒 القائمة مشفّرة، ولا تُفتح إلا بهذا الرابط والرمز السري.",
+ st:{registered:"مسجّل",collected:"سُحبت العيّنة",in_analysis:"قيد التحليل",signed:"النتائج جاهزة"}},
+ en:{sub:"Laboratory results",wait:"Your results are being analysed. Keep this link: the results will appear here as soon as they are issued.",hello:"Hello {n},",
+ notyet:"The results of this visit have not arrived yet. They will appear here as soon as they are issued.",steps:["Order registered","Sample collected","Analysis","Results issued"],
+ expected:"The results are expected by {w}.",ordered:"Tests ordered",auto:"This page updates by itself.",last:"Last checked",refresh:"Refresh",acc:"Accession",
+ gone:"The laboratory has cancelled this link. Please contact the laboratory.",goneP:"If you visited the laboratory, ask it for a new link.",
+ net:"Could not connect",netP:"Check your internet connection and try again.",retry:"Try again",
+ unknown:"Laboratory not recognised",unknownP:"This link comes from a laboratory this page does not know. Please contact the laboratory.",
+ ready:"Your report is ready.",readyN:"{n}, your report is ready.",sumCrit:"A critical value needs a clinician's attention without delay.",
+ open:"Open the report",save:"Save the report (PDF)",share:"Share",print:"Print",shareText:"My laboratory results",
+ prev:"Previous",trend:"Earlier results",collected:"Sample collected",reported:"Reported",
+ abx_S:"Sensitive",abx_I:"Intermediate",abx_R:"Resistant",
+ priv:"🔒 The results are encrypted; only someone holding this link can open them.",privDob:"🔒 The results are encrypted and open only with this link and the date of birth.",
+ dobH:"Enter the patient's date of birth",dobP:"These results are locked with the date of birth and open on your phone.",dobPick:"Choose the day, month and year.",
+ dobWrong:"The date of birth does not match. Check it and try again.",go:"Show the results",opening:"Opening…",day:"Day",month:"Month",year:"Year",
+ st:{registered:"Registered",collected:"Sample collected",in_analysis:"In analysis",signed:"Results ready"}}};
+var STAGES=["registered","collected","in_analysis","signed"],GEN=0,REG=null,PUBS={};
+var Q=new URLSearchParams(location.search),LOCAL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+var LABS=(LOCAL&&Q.get("labs"))||"labs.json",RELAY="https://labsyria-results.azurewebsites.net/api";
 var parts=(location.hash||"").slice(1).split(".");
+if(parts.length===4&&/^[345]$/.test(parts[0])){
+ if(!(window.crypto&&crypto.subtle)){empty("هاتفك لا يدعم فتح هذا الرابط","حدّث المتصفح أو استخدم متصفح Chrome.","bad","⚠");return}
+ linkEntry(parts);return}
 if(parts.length!==4||(parts[0]!=="1"&&parts[0]!=="2")){empty("امسح رمز النتائج المطبوع على تقريرك","تفتح هذه الصفحة نتائجك من رمز QR المطبوع على تقرير المخبر. لا تُحفظ النتائج على أي خادم.");return}
 if(!(window.crypto&&crypto.subtle)){empty("هاتفك لا يدعم فتح هذا الرمز","حدّث المتصفح أو استخدم متصفح Chrome.","bad","⚠");return}
 var ver=parts[0],lid=parts[1],signed=parts[0]+"."+parts[1]+"."+parts[2],sig,body;
 try{sig=b64(parts[3]);body=b64(parts[2])}catch(e){badPage();return}
-fetch("labs.json",{cache:"no-cache"}).then(function(r){return r.json()}).catch(function(){return {labs:[]}}).then(function(reg){
+fetch(LABS,{cache:"no-cache"}).then(function(r){return r.json()}).catch(function(){return {labs:[]}}).then(function(reg){
  var lab=(reg.labs||[]).filter(function(l){return l.id===lid})[0]||null;
  var check=Promise.resolve("unknown");
  if(lab&&lab.key){check=crypto.subtle.importKey("jwk",lab.key,{name:"ECDSA",namedCurve:"P-256"},false,["verify"])
@@ -180,6 +254,200 @@ function render(d,lab,v){
  document.getElementById("b-pdf").onclick=function(){window.print()};
  document.getElementById("b-share").onclick=function(){var u=location.href;if(navigator.share){navigator.share({title:document.title,url:u}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(u)}};
 }
+// ── Results link (versions 3, 4, 5): docs/syria/RESULTS-LINK.md in Catenix ──
+// The visit is fetched from the relay as ciphertext. The key is in the part of
+// the link after "#", which the browser never sends anywhere. The laboratory's
+// signature is checked before anything is decrypted.
+function str(x){return typeof x==="string"?x:new TextDecoder().decode(x)}
+function U8(s){return new TextEncoder().encode(s)}
+function u64(u){var s="";for(var i=0;i<u.length;i++)s+=String.fromCharCode(u[i]);return btoa(s).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
+function pad(n){return (n<10?"0":"")+n}
+function when(s,time){if(!s)return "";var iso=String(s).replace(" ","T");if(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(iso)&&!/(Z|[+-]\d{2}:?\d{2})$/.test(iso))iso+="Z";
+ var d=new Date(iso);if(isNaN(d))return String(s);var o=pad(d.getDate())+"/"+pad(d.getMonth()+1)+"/"+d.getFullYear();return time?o+" "+pad(d.getHours())+":"+pad(d.getMinutes()):o}
+function localTime(s){var m=String(s||"").match(/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2}))?/);return m?m[3]+"/"+m[2]+"/"+m[1]+(m[4]?" "+m[4]+":"+m[5]:""):String(s||"")}
+function ltr(s){return s?'<span class="mono" dir="ltr">'+esc(s)+'</span>':""}
+function setLang(en,privText){document.documentElement.lang=en?"en":"ar";document.documentElement.dir=en?"ltr":"rtl";if(privText!=null)document.getElementById("priv").textContent=privText}
+function relayFor(lab){return (lab&&lab.relay)||(LOCAL&&Q.get("relay"))||RELAY}
+function registry(){return REG?Promise.resolve(REG):fetch(LABS,{cache:"no-cache"}).then(function(r){return r.json()}).catch(function(){return {labs:[]}}).then(function(r){REG=r;return r})}
+function labOf(id){return ((REG&&REG.labs)||[]).filter(function(l){return l.id===id})[0]||null}
+function pubOf(lab){if(!PUBS[lab.id])PUBS[lab.id]=crypto.subtle.importKey("jwk",lab.key,{name:"ECDSA",namedCurve:"P-256"},false,["verify"]);return PUBS[lab.id]}
+function getEnv(relay,kind,lid,id){return fetch(relay+"/r/"+kind+"/"+encodeURIComponent(lid)+"/"+encodeURIComponent(id),{cache:"no-store"})
+ .then(function(r){if(r.status===404)return null;if(!r.ok)throw new Error("relay "+r.status);return r.json()})}
+function verifyEnv(env,pub){var ct;try{ct=env.ct?b64(env.ct):new Uint8Array(0)}catch(e){return Promise.resolve(false)}
+ return crypto.subtle.digest("SHA-256",ct).then(function(h){
+  var text="LSR1|"+env.lab+"|"+env.kind+"|"+env.id+"|"+env.seq+"|"+(env.z||0)+"|"+(env.iv||"")+"|"+u64(new Uint8Array(h));
+  return crypto.subtle.verify({name:"ECDSA",hash:"SHA-256"},pub,b64(env.sig),U8(text))}).catch(function(){return false})}
+function rawKey(raw){return crypto.subtle.importKey("raw",raw,{name:"AES-GCM"},false,["decrypt"])}
+function pbkKey(pw,salt){return crypto.subtle.importKey("raw",U8(pw),"PBKDF2",false,["deriveKey"]).then(function(k){
+ return crypto.subtle.deriveKey({name:"PBKDF2",salt:U8(salt),iterations:200000,hash:"SHA-256"},k,{name:"AES-GCM",length:256},false,["decrypt"])})}
+function openEnv(env,key){return crypto.subtle.decrypt({name:"AES-GCM",iv:b64(env.iv),additionalData:U8(env.lab+"|"+env.kind+"|"+env.id)},key,b64(env.ct))
+ .then(function(p){p=new Uint8Array(p);return env.z?inflate(p):p})}
+function slotOk(env,lid,kind,id){return env&&env.lab===lid&&env.kind===kind&&env.id===id&&typeof env.seq==="number"}
+function backBar(o,t){return o.back?'<div class="backbar"><button type="button" id="b-back">'+(document.documentElement.dir==="ltr"?"← ":"→ ")+esc(L.ar.back)+'</button></div>':""}
+function wireBack(o){var b=document.getElementById("b-back");if(b)b.onclick=o.back}
+function headHtml(lab,t,sub,tall){var lname=(t===L.en&&lab.name_en)?lab.name_en:(lab.name||"");
+ return (lab.sample?'<div class="sample">'+(t===L.en?T.en.sample:T.ar.sample)+'</div>':'')+'<div class="hd"'+(tall?'':' style="padding-bottom:22px"')+'><div class="row"><div><h1>'+esc(lname||sub)+'</h1><div class="sub">'+esc(sub)+'</div></div>'+
+  (lab.logo?'<div class="logo"><img src="'+esc(lab.logo)+'" alt=""></div>':'<div class="mono-ic">'+esc((lname||"م").trim().charAt(0))+'</div>')+'</div></div>'}
+function emptyBack(o,h,p,cls,ic,btn){card.innerHTML=backBar(o)+'<div class="empty '+(cls||"")+'"><div class="ic">'+(ic||"▣")+'</div><h2>'+esc(h)+'</h2><p>'+esc(p||"")+'</p>'+(btn?'<button type="button" id="b-retry">'+esc(btn[0])+'</button>':'')+'</div>';
+ wireBack(o);if(btn)document.getElementById("b-retry").onclick=btn[1]}
+function linkEntry(p){
+ setLang(false,p[0]==="5"?L.ar.privDoc:p[0]==="4"?L.ar.privDob:L.ar.priv);
+ registry().then(function(){var lab=labOf(p[1]);
+  if(!lab||!lab.key){empty(L.ar.unknown,L.ar.unknownP,"bad","⚠");return}
+  pubOf(lab).then(function(pub){
+   var o={ver:p[0],lid:p[1],sid:p[2],k:p[3],lab:lab,pub:pub,relay:relayFor(lab)};
+   if(p[0]==="5")openDoctor(o);else openVisit(o)},function(){badPage(lab)})})}
+
+// ── a visit ──
+function openVisit(o){
+ var g=++GEN,key=null,lastSeq=-1,cur=null,timer=null,t=L.ar;
+ function alive(){return g===GEN}
+ function schedule(){clearTimeout(timer);timer=setTimeout(function(){if(!alive())return;if(document.visibilityState&&document.visibilityState!=="visible"){schedule();return}load(false)},60000)}
+ function makeKey(){if(o.ver==="4")return pbkKey(o.k+"|"+o.dob,"lsr-visit|"+o.sid);var raw;try{raw=b64(o.k)}catch(e){return Promise.reject(e)}
+  return raw.length===32?rawKey(raw):Promise.reject(new Error("key"))}
+ function load(manual){
+  return getEnv(o.relay,"visit",o.lid,o.sid).then(function(env){
+   if(!alive())return;
+   if(!env){if(!cur)notYet();else stamp();schedule();return}
+   if(!slotOk(env,o.lid,"visit",o.sid)){badPage(o.lab);return}
+   if(env.seq===lastSeq){stamp();schedule();return}
+   return verifyEnv(env,o.pub).then(function(ok){
+    if(!alive())return;
+    if(!ok){badPage(o.lab);return}
+    if(env.gone){clearTimeout(timer);emptyBack(o,t.gone,t.goneP,"bad","✕");return}
+    var kp=key?Promise.resolve(key):(o.ver==="4"&&!o.dob)?askDob(env):makeKey();
+    return kp.then(function(k){key=k;return openEnv(env,k)}).then(function(txt){
+     if(!alive())return;var v=JSON.parse(str(txt));lastSeq=env.seq;cur=v;show(v)},function(){if(alive())badPage(o.lab)})})
+  },function(){if(!alive())return;if(!cur)emptyBack(o,t.net,t.netP,"","⚠",[t.retry,function(){load(true)}]);else{stamp();schedule()}})}
+ // version 4: the date of birth, tried against this envelope before it is accepted
+ function askDob(env){return new Promise(function(resolve){
+  var days="",years="",y=new Date().getFullYear(),i;
+  for(i=1;i<=31;i++)days+='<option value="'+i+'">'+i+'</option>';
+  for(i=y;i>=y-110;i--)years+='<option value="'+i+'">'+i+'</option>';
+  var mo=MONTHS.map(function(m,k){return '<option value="'+(k+1)+'">'+(k+1)+' · '+m+'</option>'}).join("");
+  card.innerHTML=backBar(o)+headHtml(o.lab,t,t.sub,false)+'<form class="gate" id="g"><h2>'+t.dobH+'</h2><p>'+t.dobP+'</p>'+
+   '<div class="dob"><div><label>'+t.day+'</label><select id="dd"><option value="">--</option>'+days+'</select></div><div><label>'+t.month+'</label><select id="mm"><option value="">--</option>'+mo+'</select></div><div><label>'+t.year+'</label><select id="yy"><option value="">----</option>'+years+'</select></div></div>'+
+   '<div class="err" id="er"></div><button id="go" type="submit">'+t.go+'</button></form>';
+  wireBack(o);
+  document.getElementById("g").onsubmit=function(e){e.preventDefault();
+   var d=document.getElementById("dd").value,m=document.getElementById("mm").value,yy=document.getElementById("yy").value,er=document.getElementById("er"),btn=document.getElementById("go");
+   if(!d||!m||!yy){er.textContent=t.dobPick;return}
+   var dob=yy+"-"+pad(+m)+"-"+pad(+d);btn.disabled=true;er.textContent="";btn.textContent=t.opening;
+   pbkKey(o.k+"|"+dob,"lsr-visit|"+o.sid).then(function(k){return openEnv(env,k).then(function(){resolve(k)})})
+    .catch(function(){if(!alive())return;btn.disabled=false;btn.textContent=t.go;er.textContent=t.dobWrong})}})}
+ function stamp(){var el=document.getElementById("upd-at");if(el){var d=new Date();el.textContent=pad(d.getHours())+":"+pad(d.getMinutes())}}
+ function journey(stage){var i=Math.max(0,STAGES.indexOf(stage));return '<ol class="journey">'+t.steps.map(function(s,k){return '<li class="'+(k<i?"done":k===i?"now":"")+'">'+esc(s)+'</li>'}).join("")+'</ol>'}
+ function updBar(){return '<div class="upd"><span>'+esc(t.auto)+' '+esc(t.last)+': <span class="mono" dir="ltr" id="upd-at"></span></span><button type="button" class="alt" id="b-ref">'+esc(t.refresh)+'</button></div>'}
+ function wireUpd(){stamp();var b=document.getElementById("b-ref");b.onclick=function(){b.disabled=true;Promise.resolve(load(true)).then(function(){b.disabled=false},function(){b.disabled=false})}}
+ function notYet(){card.innerHTML=backBar(o)+headHtml(o.lab,t,t.sub,false)+'<div class="wait"><div class="ic" style="font-size:1.8rem">⏳</div><p class="hi">'+esc(t.notyet)+'</p>'+journey("registered")+'</div>'+updBar();wireBack(o);wireUpd()}
+ function show(v){var en=v.lang==="en";t=en?L.en:L.ar;setLang(en,o.ver==="4"?t.privDob:t.priv);
+  if(v.stage==="signed"&&v.summary){clearTimeout(timer);signed(v)}else{waiting(v);schedule()}}
+ function waiting(v){var p=v.p||{},h=backBar(o)+headHtml(v.lab&&v.lab.name?mergeLab(v.lab):o.lab,t,t.sub,false)+'<div class="wait">';
+  if(p.first||p.name)h+='<p class="hi">'+esc(t.hello.replace("{n}",p.first||p.name))+'</p>';
+  h+='<p>'+esc(t.wait)+'</p>';
+  if(v.expected)h+='<p class="exp">'+t.expected.replace("{w}",ltr(localTime(v.expected)))+'</p>';
+  h+=journey(v.stage);
+  if(v.tests&&v.tests.length)h+='<div class="lbl">'+esc(t.ordered)+'</div><div class="tests">'+v.tests.map(function(x){return '<span class="chip">'+esc(x)+'</span>'}).join("")+'</div>';
+  if(v.a)h+='<div class="chips"><span class="chip">'+esc(t.acc)+': <b class="mono" dir="ltr">'+esc(v.a)+'</b></span></div>';
+  card.innerHTML=h+'</div>'+updBar();wireBack(o);wireUpd()}
+ function mergeLab(l){var m={};for(var k in o.lab)m[k]=o.lab[k];["name","name_en","phone","address"].forEach(function(k){if(!m[k]&&l[k])m[k]=l[k]});return m}
+ function signed(v){var s=v.summary,lab=mergeLab(v.lab||{}),p=v.p||{},en=t===L.en,tt=en?T.en:T.ar,h=backBar(o)+headHtml(lab,t,tt.title,true);
+  h+='<div class="seal ok"><div class="ic">✔</div><div><b>'+tt.okT+'</b><span>'+tt.okS+'</span></div></div>';
+  h+='<div class="pt"><div class="name">'+esc(p.name||s.first_name||"")+'</div><div class="chips">'+(p.sex?'<span class="chip">'+tt.sex+': <b>'+esc(p.sex)+'</b></span>':'')+(p.age?'<span class="chip">'+tt.age+': <b>'+esc(p.age)+'</b></span>':'')+
+   '<span class="chip">'+tt.acc+': <b class="mono" dir="ltr">'+esc(s.accession||v.a)+'</b></span>'+(s.reported?'<span class="chip">'+tt.at+': <b class="mono" dir="ltr">'+esc(when(s.reported,true))+'</b></span>':'')+'</div></div>';
+  var total=s.total||0,ab=s.abnormal||0;
+  h+='<div class="sum '+(s.critical?"cr":ab?"ab":"ok")+'"><div class="big mono" dir="ltr">'+(ab?ab+"/"+total:"✔")+'</div><div class="txt">'+(s.critical?t.sumCrit:ab?tt.sumab(ab,total):tt.sumok)+'<small>'+tt.note+'</small></div></div>';
+  (s.groups||[]).forEach(function(grp){h+='<div class="grp"><h2>'+esc(grp.category||tt.tests)+'</h2>'+(grp.rows||[]).map(function(r){return row(r,tt)}).join("")+'</div>'});
+  h+='<div class="btns" id="btns"><button type="button" id="b-share">'+t.share+'</button><button type="button" class="alt" id="b-print">'+t.print+'</button></div>';
+  var m=[];if(s.collected)m.push(esc(t.collected)+": "+ltr(when(s.collected,true)));if(s.approved_by)m.push(esc(tt.by)+": "+esc(s.approved_by));
+  if(lab.address)m.push(esc(lab.address));if(lab.phone)m.push(ltr(lab.phone));
+  h+='<div class="ft">'+m.join("<br>")+'</div>';
+  card.innerHTML=h;wireBack(o);
+  document.getElementById("b-print").onclick=function(){window.print()};
+  document.getElementById("b-share").onclick=function(){var u=location.href;if(navigator.share)navigator.share({title:t.shareText,url:u}).catch(function(){});else if(navigator.clipboard)navigator.clipboard.writeText(u)};
+  if(v.pdf>0)loadPdf(v)}
+ function row(r,tt){var cls=r.tone==="critical"?"C":r.tone==="abnormal"?"A":"",v=r.value==null?"":String(r.value);
+  var tg="";if(r.word||(r.tone&&num(v)!==null)){var lo=r.lo!=null&&num(v)!==null&&num(v)<r.lo;
+   tg='<span class="tag '+(r.tone==="critical"?"cr":r.tone==="abnormal"?(lo?"lo":"hi"):"ok")+'">'+esc(r.word||(r.tone==="critical"?tt.crit:r.tone==="abnormal"?(lo?tt.low:tt.high):tt.normal))+'</span>'}
+  var h='<div class="res '+cls+'"><div class="top"><div><div class="n">'+esc(r.name)+'</div>'+(r.other_name?'<div class="o">'+esc(r.other_name)+'</div>':'')+'</div>'+
+   '<div class="v'+(/[؀-ۿ]/.test(v)?'':' mono')+'"'+(/[؀-ۿ]/.test(v)?'':' dir="ltr"')+'>'+esc(v)+(r.unit?'<small>'+esc(r.unit)+'</small>':'')+'</div></div>'+bar(v,r.range);
+  if(r.range||tg)h+='<div class="meta"><span>'+(r.range?tt.range+': <span class="mono" dir="ltr">'+esc(r.range)+'</span>':'')+'</span>'+tg+'</div>';
+  if(r.previous)h+='<div class="prev">'+esc(t.prev)+': <span class="mono" dir="ltr">'+esc(r.previous.value)+(r.previous.same_unit===false&&r.previous.unit?' '+esc(r.previous.unit):'')+'</span>'+(r.previous.at?' ('+ltr(when(r.previous.at))+')':'')+'</div>';
+  if(r.history&&r.history.length>1)h+=spark(r);
+  if(r.notes&&r.notes.length)h+='<div class="note">'+esc(r.notes.join("  "))+'</div>';
+  if(r.culture)h+=cult(r.culture);
+  return h+'</div>'}
+ function spark(r){var p=r.history,W=150,H=34,P=4,vs=p.map(function(x){return +x.v}).filter(function(x){return !isNaN(x)});if(vs.length<2)return "";
+  var lo=r.lo!=null?r.lo:null,hi=r.hi!=null?r.hi:null,all=vs.slice();if(lo!=null)all.push(lo);if(hi!=null)all.push(hi);
+  var mn=Math.min.apply(null,all),mx=Math.max.apply(null,all);if(mx===mn){mx+=1;mn-=1}var pd=(mx-mn)*0.3;mn-=pd;mx+=pd;
+  function y(v){return (H-P)-(v-mn)/(mx-mn)*(H-2*P)}function x(i){return P+i*(W-2*P)/Math.max(1,vs.length-1)}
+  var band=(lo!=null&&hi!=null)?'<rect x="0" width="'+W+'" y="'+y(hi).toFixed(1)+'" height="'+Math.max(1,y(lo)-y(hi)).toFixed(1)+'" class="band"/>':'';
+  var pts=vs.map(function(q,i){return x(i).toFixed(1)+','+y(q).toFixed(1)}).join(' ');
+  var dots=vs.map(function(q,i){return '<circle cx="'+x(i).toFixed(1)+'" cy="'+y(q).toFixed(1)+'" r="'+(i===vs.length-1?3:2)+'"'+(i===vs.length-1?' class="now"':'')+'></circle>'}).join('');
+  return '<div class="spark"><svg dir="ltr" viewBox="0 0 '+W+' '+H+'" width="'+W+'" height="'+H+'">'+band+'<polyline points="'+pts+'"/>'+dots+'</svg><span>'+esc(t.trend)+'</span></div>'}
+ function cult(c){var h='';(c.organisms||[]).forEach(function(og){h+='<div class="note" dir="ltr" style="text-align:start"><strong>'+esc(og.name)+'</strong>'+(og.count?' '+esc(og.count):'')+'</div>';
+   if(og.antibiotics&&og.antibiotics.length){h+='<table class="abx">';og.antibiotics.forEach(function(a){h+='<tr><td dir="ltr">'+esc(a.name)+'</td><td class="'+(a.result==="R"?"abn":a.result==="S"?"ok":"")+'">'+esc(t["abx_"+a.result]||a.result)+'</td></tr>'});h+='</table>'}});
+  if(c.comment)h+='<div class="note">'+esc(c.comment)+'</div>';return h}
+ // the signed PDF, sealed with the same key as the visit
+ function loadPdf(v){getEnv(o.relay,"pdf",o.lid,o.sid).then(function(env){
+   if(!env||!alive()||!slotOk(env,o.lid,"pdf",o.sid)||env.gone)return;
+   return verifyEnv(env,o.pub).then(function(ok){if(!ok||!alive())return;return openEnv(env,key).then(function(bytes){
+    if(!alive())return;var name="report-"+String(v.a||"lab").replace(/[^\w.-]+/g,"_")+".pdf",blob=new Blob([bytes],{type:"application/pdf"}),url=URL.createObjectURL(blob);
+    var file=null;try{file=new File([blob],name,{type:"application/pdf"})}catch(e){}
+    var b=document.getElementById("btns");if(!b)return;
+    b.innerHTML='<a class="btn" id="b-open" href="'+url+'" target="_blank" rel="noopener">'+t.open+'</a><a class="btn alt" id="b-save" href="'+url+'" download="'+esc(name)+'">'+t.save+'</a>'+
+     '<button type="button" class="alt" id="b-share" style="grid-column:1 / -1">'+t.share+'</button>';
+    document.getElementById("b-share").onclick=function(){
+     if(file&&navigator.canShare&&navigator.canShare({files:[file]}))navigator.share({files:[file],title:t.shareText}).catch(function(){});
+     else if(navigator.share)navigator.share({title:t.shareText,url:location.href}).catch(function(){});
+     else if(navigator.clipboard)navigator.clipboard.writeText(location.href)}})})}).catch(function(){})}
+ card.innerHTML=backBar(o)+'<div class="empty"><div class="ic">⏳</div><h2>'+esc(L.ar.opening)+'</h2></div>';wireBack(o);
+ load(true)}
+
+// ── a referring doctor's list ──
+function openDoctor(o){
+ var g=++GEN,t=L.ar,env=null,key=null,data=null,q="";
+ function alive(){return g===GEN}
+ function fetchList(){return getEnv(o.relay,"doctor",o.lid,o.sid).then(function(e){
+   if(!alive())return;
+   if(!e){emptyBack({},t.docNotYet,"","","⏳",[t.refresh,fetchList]);return}
+   if(!slotOk(e,o.lid,"doctor",o.sid)){badPage(o.lab);return}
+   return verifyEnv(e,o.pub).then(function(ok){if(!alive())return;if(!ok){badPage(o.lab);return}
+    if(e.gone){emptyBack({},t.gone,t.goneP,"bad","✕");return}
+    env=e;if(key)return openEnv(env,key).then(function(txt){data=JSON.parse(str(txt));list()},function(){key=null;pinGate()});pinGate()})},
+  function(){if(alive())emptyBack({},t.net,t.netP,"","⚠",[t.retry,fetchList])})}
+ function tries(n){try{if(n!=null)sessionStorage.setItem("lsr-pin-"+o.sid,JSON.stringify(n));var v=JSON.parse(sessionStorage.getItem("lsr-pin-"+o.sid)||"null");return v||{n:0,until:0}}catch(e){return n||tries.mem||(tries.mem={n:0,until:0})}}
+ function pinGate(){
+  card.innerHTML=headHtml(o.lab,t,t.listSub,false)+'<form class="gate pin" id="g"><h2>'+t.pinH+'</h2><p>'+t.pinP+'</p>'+
+   '<input id="pin" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="one-time-code" aria-label="'+esc(t.pinH)+'"><div class="err" id="er"></div><button id="go" type="submit">'+t.pinGo+'</button></form>';
+  var inp=document.getElementById("pin");inp.oninput=function(){inp.value=inp.value.replace(/\D/g,"").slice(0,6)};try{inp.focus()}catch(e){}
+  document.getElementById("g").onsubmit=function(ev){ev.preventDefault();
+   var er=document.getElementById("er"),btn=document.getElementById("go"),pin=inp.value,st=tries();
+   if(st.until>Date.now()){er.textContent=t.pinLock;return}
+   if(!/^\d{6}$/.test(pin)){er.textContent=t.pinShort;return}
+   btn.disabled=true;er.textContent="";btn.textContent=t.opening;
+   pbkKey(o.k+"|"+pin,"lsr-doctor|"+o.sid).then(function(k){return openEnv(env,k).then(function(txt){key=k;tries({n:0,until:0});data=JSON.parse(str(txt));list()})})
+    .catch(function(){if(!alive())return;var s2=tries(),n=s2.n+1;tries({n:n>=5?0:n,until:n>=5?Date.now()+30000:0});
+     btn.disabled=false;btn.textContent=t.pinGo;er.textContent=n>=5?t.pinLock:t.pinWrong;inp.value="";try{inp.focus()}catch(e){}})}}
+ function list(){
+  if(!alive())return;setLang(false,t.privDoc);
+  var lab=o.lab;card.innerHTML=headHtml(lab,t,t.listH,false)+(data.doctor?'<div class="pt" style="padding-bottom:0"><div class="name" style="font-size:1.05rem">'+esc(data.doctor)+'</div></div>':'')+
+   '<div class="search"><input id="q" type="search" placeholder="'+esc(t.search)+'" value="'+esc(q)+'"></div><div class="vl" id="vl"></div>'+
+   '<div class="upd"><span>'+esc(t.last)+': '+ltr(when(data.updated,true))+'</span><button type="button" class="alt" id="b-ref">'+esc(t.refresh)+'</button></div>';
+  var inp=document.getElementById("q");inp.oninput=function(){q=inp.value;items()};
+  document.getElementById("b-ref").onclick=function(){this.disabled=true;fetchList()};items()}
+ function items(){var vs=(data.visits||[]).slice().sort(function(a,b){return String(b.at||"").localeCompare(String(a.at||""))}),qq=q.trim().toLowerCase();
+  if(qq)vs=vs.filter(function(v){return (String(v.name||"")+" "+String(v.a||"")).toLowerCase().indexOf(qq)>=0});
+  var el=document.getElementById("vl");if(!el)return;
+  if(!vs.length){el.innerHTML='<p class="ft" style="text-align:center;padding:18px">'+esc(qq?t.noMatch:t.none)+'</p>';return}
+  el.innerHTML=vs.map(function(v,i){return '<button type="button" class="vi" data-i="'+i+'"><span><b>'+esc(v.name)+'</b><small>'+esc([v.age,v.sex].filter(Boolean).join(" · "))+(v.a?' · '+ltr(v.a):'')+' · '+ltr(when(v.at))+'</small></span><span class="chip st '+(v.stage==="signed"?"st-signed":"")+'">'+esc(t.st[v.stage]||v.stage||"")+'</span></button>'}).join("");
+  Array.prototype.forEach.call(el.querySelectorAll(".vi"),function(b){b.onclick=function(){openFromList(vs[+b.getAttribute("data-i")])}})}
+ function openFromList(v){var p=String(v.link||"").split(".");if(p.length!==4||(p[0]!=="3"&&p[0]!=="4"))return;
+  var lab=labOf(p[1])||o.lab;
+  pubOf(lab).then(function(pub){openVisit({ver:p[0],lid:p[1],sid:p[2],k:p[3],dob:v.dob||"",lab:lab,pub:pub,relay:relayFor(lab),
+   back:function(){GEN++;g=GEN;setLang(false,t.privDoc);list();window.scrollTo(0,0)}});window.scrollTo(0,0)})}
+ card.innerHTML='<div class="empty"><div class="ic">⏳</div><h2>'+esc(t.opening)+'</h2></div>';
+ fetchList()}
 })();
 </script>
 </body>
