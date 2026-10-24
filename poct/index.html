@@ -288,15 +288,17 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   var name=fv(f,'name'),waRaw=fv(f,'whatsapp'),wa=waRaw?normWa(waRaw):'',email=fv(f,'email'),city=fv(f,'city'),lab=fv(f,'lab'),role=fv(f,'role'),message=fv(f,'message');
   var cons=el(f,'consent'),x;
   if(!name){x=bad(f,'name');say(f,'الرجاء كتابة اسمك.','Please enter your name.',1);if(x)x.focus();return;}
+  if(kind==='lims'&&!wa){x=bad(f,'whatsapp');say(f,'الرجاء كتابة رقم واتساب لنرسل لك عرض السعر عليه.','Please enter a WhatsApp number so we can send you the quote.',1);if(x)x.focus();return;}
   if(!wa&&!email){bad(f,'whatsapp');bad(f,'email');openMore(f);say(f,'أدخل رقم واتساب أو بريداً إلكترونياً، أحدهما على الأقل، لنتمكّن من التواصل معك.','Please enter a WhatsApp number or an email address (at least one) so we can reach you.',1);x=el(f,'whatsapp');if(x)x.focus();return;}
   if(wa&&!okWa(wa)){x=bad(f,'whatsapp');say(f,'رقم واتساب غير صحيح. اكتبه مع رمز الدولة، مثل ‎+963 9xx xxx xxx، أو بصيغة 09 المحلية.','That WhatsApp number does not look right. Include the country code, for example +963 9xx xxx xxx, or use the local 09 format.',1);if(x)x.focus();return;}
   if(email&&!okEmail(email)){openMore(f);x=bad(f,'email');say(f,'الرجاء إدخال بريد إلكتروني صحيح.','Please enter a valid email address.',1);if(x)x.focus();return;}
   if(nl&&!city){x=bad(f,'city');say(f,'الرجاء اختيار المحافظة أو «خارج سوريا».','Please choose your governorate, or Outside Syria.',1);if(x)x.focus();return;}
   if(cons&&!cons.checked){cons.setAttribute('aria-invalid','true');say(f,'الرجاء الموافقة على تلقّي النشرة للمتابعة.','Please tick the consent box to continue.',1);cons.focus();return;}
   var place=f.getAttribute('data-lead-place')||kind,path=location.pathname;
-  var xs={};f.querySelectorAll('[data-x]').forEach(function(x){var v=(x.value||'').trim();if(v)xs[x.name]=v.slice(0,300);});
+  var xs={};f.querySelectorAll('[data-x]').forEach(function(x){var v=(x.value||'').trim();if(v)xs[x.name]=v.slice(0,x.name==='analysers'?600:300);});
+  if(kind==='lims'&&!xs.analysers){x=bad(f,'analysers');say(f,'اكتب أجهزة التحليل في مختبرك، ولو بالاسم التقريبي.','Please list the analysers in your laboratory, even roughly.',1);if(x)x.focus();return;}
   if(kind==='service'&&!xs.service){x=bad(f,'service');say(f,'الرجاء اختيار نوع الخدمة.','Please choose the service you need.',1);if(x)x.focus();return;}
-  var lbl={quote:'LabSyria QUOTE',service:'LabSyria SERVICE',partner:'LabSyria PARTNER',request:'LabSyria REQUEST'}[kind],tag=kind==='request'?(xs.item||'').slice(0,60):(xs.category||xs.service||xs.company||'');
+  var lbl={lims:'LabSyria LAB SYSTEM',quote:'LabSyria QUOTE',service:'LabSyria SERVICE',partner:'LabSyria PARTNER',request:'LabSyria REQUEST'}[kind],tag=kind==='request'?(xs.item||'').slice(0,60):kind==='lims'?(xs.analysers||'').slice(0,60):(xs.category||xs.service||xs.company||'');
   if(kind==='request'&&!xs.item){x=bad(f,'item');say(f,'اكتب اسم المنتج أو التحليل الذي تبحث عنه.','Please write the product or test you are looking for.',1);if(x)x.focus();return;}
   if(kind==='partner'&&!xs.company){x=bad(f,'company');say(f,'الرجاء كتابة اسم الشركة.','Please enter your company name.',1);if(x)x.focus();return;}
   var body={_subject:nl?('LabSyria newsletter: '+name+' ('+city+')'):lbl?(lbl+(tag?' ['+tag+']':'')+': '+name+(city?' ('+city+')':'')):('LabSyria contact: '+name+(city?' ('+city+')':'')),_template:'table',_captcha:'false',
