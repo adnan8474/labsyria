@@ -1,11 +1,11 @@
 {
   "product": "Catenix",
   "channel": "stable",
-  "version": "1.0.22",
-  "url": "https://labsyriaportal.blob.core.windows.net/releases/CatenixSetup-1.0.22.exe?spr=https&sv=2026-02-06&si=appliance-read&sr=b&sig=aw3TQ5AsCJFsW9coKdLICX74XVLEdtchcZkencBFJtQ%3D",
-  "sha256": "e729d7edebe39271433d915f52a9d0dbe70bb04823a88b7bbe2e5dcb7ebe59ba",
-  "size": 120708136,
-  "released_at": "2026-10-24T03:49:55Z",
-  "notes": "Sign all normal reports in one step, due-time lights, faster reception, your own WhatsApp messages, trends on the patient page, dark mode",
-  "sig": "mZ5BNSqTNgr16bpOQTDCJkkwX3GUjHxuPT+vdweygDgoMPMvsbYlhhLdS62tpT4hvGqH3gCJiqSwjVlsELkeDQ=="
+  "version": "1.0.24",
+  "url": "https://labsyriaportal.blob.core.windows.net/releases/CatenixSetup-1.0.24.exe?spr=https&sv=2026-02-06&si=appliance-read&sr=b&sig=%2FKS19QkfDPegcS2g34Xgw61UYSjWOzsmFdpUXACs8jI%3D",
+  "sha256": "d8d70bb13829c947c8edb30f81b10c6c840981b25ef344ede22e99e8728f489c",
+  "size": 121506707,
+  "released_at": "2026-10-25T07:30:03Z",
+  "notes": "",
+  "sig": "f4b0x+x/G/ZbTQkiw7Cz4piMhuRpQaQMAQUu4ubG+KGMj0QmABGt3KKv5o50YdmnkWlcPVKGxBTvk5jFtZJYCw=="
 }
