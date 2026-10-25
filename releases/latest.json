@@ -1,11 +1,11 @@
 {
   "product": "Catenix",
   "channel": "stable",
-  "version": "1.0.24",
-  "url": "https://labsyriaportal.blob.core.windows.net/releases/CatenixSetup-1.0.24.exe?spr=https&sv=2026-02-06&si=appliance-read&sr=b&sig=%2FKS19QkfDPegcS2g34Xgw61UYSjWOzsmFdpUXACs8jI%3D",
-  "sha256": "d8d70bb13829c947c8edb30f81b10c6c840981b25ef344ede22e99e8728f489c",
-  "size": 121506707,
-  "released_at": "2026-10-25T07:30:03Z",
+  "version": "1.0.26",
+  "url": "https://labsyriaportal.blob.core.windows.net/releases/CatenixSetup-1.0.26.exe?spr=https&sv=2026-02-06&si=appliance-read&sr=b&sig=XgviKZaqtZMnzoaJJ7qyDTuwMJFUOyQmIOkASY77mRo%3D",
+  "sha256": "f03c3d337db348a17a5ca2d13318b8289d0c1c6c7becfb1aee72501de44c6c59",
+  "size": 121630728,
+  "released_at": "2026-10-25T18:04:10Z",
   "notes": "",
-  "sig": "f4b0x+x/G/ZbTQkiw7Cz4piMhuRpQaQMAQUu4ubG+KGMj0QmABGt3KKv5o50YdmnkWlcPVKGxBTvk5jFtZJYCw=="
+  "sig": "qNfI1slm4+gYJwMgjMVGADMAau+wVYYkkttLDEeA/qxwht/zRY66FW/D9dLAYGI8UkN0vTz5IBAwBxN55jodDw=="
 }
