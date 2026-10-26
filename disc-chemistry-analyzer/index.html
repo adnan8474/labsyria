@@ -298,6 +298,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   .catch(function(){return false;})
   .then(function(good){f.removeAttribute('data-busy');if(btn)btn.disabled=false;
    if(!good){say(f,'تعذّر الإرسال الآن. حاول مرة أخرى بعد قليل، أو راسلنا على واتساب.','We could not send this right now. Please try again shortly, or message us on WhatsApp.',1);return;}
+   try{if(window.lsLead)lsLead(kind);}catch(e){}
    if(nl){try{localStorage.setItem('labsyria_nl','1');}catch(e){}}
    f.reset();say(f,'','');
    var w=f.closest('[data-lead-wrap]'),d=w&&w.querySelector('[data-lead-done]');

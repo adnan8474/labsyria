@@ -202,6 +202,7 @@ f.addEventListener('submit',function(e){e.preventDefault();if(f.getAttribute('da
   try{fetch(NOTE,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'LabSyria CAREERS ['+v('position').slice(0,40)+']: '+v('name')+' ('+v('city')+', b.'+v('birth_year')+', '+v('experience')+', '+v('expected_salary')+') '+j.ref,_template:'table',_captcha:'false',ref:j.ref,name:v('name'),position:v('position'),city:v('city'),experience:v('experience'),cv:file?'uploading':'none',source:location.pathname,utm_source:utm})});}catch(x){}
   try{if(window.gtag)gtag('event','generate_lead',{form:'careers'});}catch(x){}
   try{if(window.lsTrack)lsTrack('JobApplication');}catch(x){}
+  try{if(window.lsLead)lsLead('job_application');}catch(x){}
   document.getElementById('cr-ref').textContent=j.ref;f.hidden=true;
   if(!file||!j.token)return done(!!file);
   REF=j.ref;TOK=j.token;CVF=file;sendCv();
@@ -408,6 +409,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   .catch(function(){return false;})
   .then(function(good){f.removeAttribute('data-busy');if(btn)btn.disabled=false;
    if(!good){say(f,'تعذّر الإرسال الآن. حاول مرة أخرى بعد قليل، أو راسلنا على واتساب.','We could not send this right now. Please try again shortly, or message us on WhatsApp.',1);return;}
+   try{if(window.lsLead)lsLead(kind);}catch(e){}
    if(nl){try{localStorage.setItem('labsyria_nl','1');}catch(e){}}
    f.reset();say(f,'','');
    var w=f.closest('[data-lead-wrap]'),d=w&&w.querySelector('[data-lead-done]');

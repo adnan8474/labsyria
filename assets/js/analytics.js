@@ -31,6 +31,37 @@
 
   var sent = false;
 
+  /* Lead events. Called by the site's forms after a submission succeeds, so
+     leads can be counted next to traffic. Carries the lead kind, page and ad
+     source only: never a name, phone number or anything typed into the form.
+     Sent through the SDK when it loaded, otherwise straight to ingestion. */
+  window.lsLead = function (kind) {
+    try {
+      var props = { kind: String(kind || 'other').slice(0, 40), page: location.pathname || '/' };
+      try {
+        var utm = new URLSearchParams(location.search).get('utm_source');
+        if (utm) { props.utm_source = utm.slice(0, 80); }
+      } catch (e) { /* old browser */ }
+      if (window.labsyriaAI) {
+        window.labsyriaAI.trackEvent({ name: 'Lead' }, props);
+        window.labsyriaAI.flush();
+        return;
+      }
+      fetch(INGEST + '/v2/track', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: 'Microsoft.ApplicationInsights.' + IKEY.replace(/-/g, '') + '.Event',
+          time: new Date().toISOString(),
+          iKey: IKEY,
+          tags: { 'ai.device.type': 'Browser', 'ai.operation.name': props.page, 'ai.internal.sdkVersion': 'labsyria-fallback:1' },
+          data: { baseType: 'EventData', baseData: { ver: 2, name: 'Lead', properties: props } }
+        }),
+        mode: 'cors',
+        keepalive: true
+      })['catch'](function () { /* offline or blocked */ });
+    } catch (e) { /* analytics must never break the page */ }
+  };
+
   /* Fallback beacon. Much of the audience is inside Syria, where the Azure CDN
      that hosts the SDK may be slow or unreachable. If the SDK never loads we
      would silently count nobody, so post one minimal pageview straight to the

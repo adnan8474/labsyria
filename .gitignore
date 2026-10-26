@@ -62,3 +62,6 @@ pages_febrile.py
 pages_careers.py
 out_build*.log
 pages_relaunch.py
+
+# internal notes, never publish
+briefs/
