@@ -278,6 +278,16 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
  function say(f,ar,en,bad){var m=f.querySelector('[data-lead-msg]');if(m){m.textContent=html.lang!=='en'?ar:en;m.classList.toggle('bad',!!bad);}}
  function bad(f,n){var x=el(f,n);if(x){x.setAttribute('aria-invalid','true');}return x;}
  function openMore(f){var b=f.querySelector('[data-nl-more]');if(b&&b.getAttribute('aria-expanded')!=='true')b.click();}
+ /* 9 Nov 2026: visitors outside Syria (e.g. Iraq) could not say where they are. Relabel the option and
+    show a country box when it is chosen; the country is folded into the city value on submit. */
+ document.querySelectorAll('select[name="city"]').forEach(function(s){
+  var o=s.querySelector('option[value="Outside Syria"]');if(!o)return;
+  o.setAttribute('data-oar','خارج سوريا (العراق، لبنان، الأردن…)');o.setAttribute('data-oen','Outside Syria (Iraq, Lebanon, Jordan…)');
+  o.textContent=html.lang!=='en'?o.getAttribute('data-oar'):o.getAttribute('data-oen');
+  var c=document.createElement('input');c.type='text';c.name='country';c.maxLength=60;c.hidden=true;c.autocomplete='country-name';
+  c.placeholder=html.lang!=='en'?'اكتب اسم الدولة، مثل العراق':'Type your country, e.g. Iraq';c.style.marginTop='8px';
+  s.parentNode.insertBefore(c,s.nextSibling);
+  s.addEventListener('change',function(){c.hidden=s.value!=='Outside Syria';if(!c.hidden)c.focus();});});
  document.querySelectorAll('[data-nl-more]').forEach(function(b){b.addEventListener('click',function(){
   var p=document.getElementById(b.getAttribute('aria-controls'));var o=b.getAttribute('aria-expanded')==='true';
   b.setAttribute('aria-expanded',o?'false':'true');if(p)p.hidden=o;
@@ -288,6 +298,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   var kind=f.getAttribute('data-lead-kind')||'contact',nl=kind==='newsletter';
   f.querySelectorAll('[aria-invalid]').forEach(function(x){x.removeAttribute('aria-invalid');});
   var name=fv(f,'name'),waRaw=fv(f,'whatsapp'),wa=waRaw?normWa(waRaw):'',email=fv(f,'email'),city=fv(f,'city'),lab=fv(f,'lab'),role=fv(f,'role'),message=fv(f,'message');
+  if(city==='Outside Syria'&&fv(f,'country'))city='Outside Syria: '+fv(f,'country').slice(0,60);
   var cons=el(f,'consent'),x;
   if(!name){x=bad(f,'name');say(f,'الرجاء كتابة اسمك.','Please enter your name.',1);if(x)x.focus();return;}
   if(kind==='lims'&&!wa){x=bad(f,'whatsapp');say(f,'الرجاء كتابة رقم واتساب لنرسل لك عرض السعر عليه.','Please enter a WhatsApp number so we can send you the quote.',1);if(x)x.focus();return;}
